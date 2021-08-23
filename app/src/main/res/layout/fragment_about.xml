@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.fragments.AboutFragment">
+
+    <TextView
+        android:id="@+id/team_watermelon"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="@string/watermelon_team_members"
+        android:background="@color/secondaryBrandColor"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/myCardViewOne"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/myCardViewOne"
+        android:layout_width="0dp"
+        android:layout_height="175dp"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:layout_constraintTop_toBottomOf="@id/team_watermelon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/profileImageOne"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/male1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/member_one"
+                android:layout_width="120dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@string/ahmed_mones"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="@+id/profileImageOne"
+                app:layout_constraintRight_toRightOf="@+id/profileImageOne"
+                app:layout_constraintTop_toBottomOf="@+id/profileImageOne" />
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@string/team_leader"
+                android:textColor="@color/secondaryBrandColor"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="@+id/profileImageOne"
+                app:layout_constraintRight_toRightOf="@+id/profileImageOne"
+                app:layout_constraintTop_toBottomOf="@+id/member_one" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <ScrollView
+        android:orientation="vertical"
+        android:scrollbars="none"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/myCardViewOne"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp">
+
+        <LinearLayout
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_margin="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/myCardViewTwo"
+                android:layout_width="165dp"
+                android:layout_height="170dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/myCardViewOne">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/profileImageTwo"
+                        android:layout_width="95dp"
+                        android:layout_height="95dp"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/male3"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/member_two"
+                        android:layout_width="120dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintLeft_toLeftOf="@+id/profileImageTwo"
+                        app:layout_constraintRight_toRightOf="@+id/profileImageTwo"
+                        app:layout_constraintTop_toBottomOf="@+id/profileImageTwo"
+                        android:text="@string/ammar_thaaer"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center"
+                        android:text="@string/team_member"
+                        android:textColor="@color/secondaryBrandColor"
+                        android:textSize="16sp"
+                        app:layout_constraintLeft_toLeftOf="@+id/profileImageTwo"
+                        app:layout_constraintRight_toRightOf="@+id/profileImageTwo"
+                        app:layout_constraintTop_toBottomOf="@+id/member_two" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/myCardViewThree"
+                android:layout_width="165dp"
+                android:layout_height="170dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:layout_constraintLeft_toRightOf="@+id/myCardViewTwo"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/myCardViewOne">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/profileImageThree"
+                        android:layout_width="95dp"
+                        android:layout_height="95dp"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/female1"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/member_three"
+                        android:layout_width="120dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintLeft_toLeftOf="@+id/profileImageThree"
+                        app:layout_constraintRight_toRightOf="@+id/profileImageThree"
+                        app:layout_constraintTop_toBottomOf="@+id/profileImageThree"
+                        android:text="@string/shahlaa_haider"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center"
+                        android:text="@string/team_member"
+                        android:textColor="@color/secondaryBrandColor"
+                        android:textSize="16sp"
+                        app:layout_constraintLeft_toLeftOf="@+id/profileImageThree"
+                        app:layout_constraintRight_toRightOf="@+id/profileImageThree"
+                        app:layout_constraintTop_toBottomOf="@+id/member_three" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="horizontal">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/myCardViewFour"
+                android:layout_width="165dp"
+                android:layout_height="170dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/myCardViewTwo"
+                tools:ignore="MissingConstraints">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/profileImageFour"
+                        android:layout_width="95dp"
+                        android:layout_height="95dp"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/female2"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingClass" />
+
+                    <TextView
+                        android:id="@+id/member_four"
+                        android:layout_width="120dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintLeft_toLeftOf="@+id/profileImageFour"
+                        app:layout_constraintRight_toRightOf="@+id/profileImageFour"
+                        app:layout_constraintTop_toBottomOf="@+id/profileImageFour"
+                        android:text="@string/zahraa_zahir"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:text="@string/team_member"
+                        android:textColor="@color/secondaryBrandColor"
+                        android:textSize="16sp"
+                        app:layout_constraintLeft_toLeftOf="@+id/profileImageFour"
+                        app:layout_constraintRight_toRightOf="@+id/profileImageFour"
+                        app:layout_constraintTop_toBottomOf="@+id/member_four" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/myCardViewFive"
+                android:layout_width="165dp"
+                android:layout_height="170dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:layout_constraintLeft_toRightOf="@+id/myCardViewFour"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/myCardViewThree"
+                tools:ignore="MissingConstraints">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/profileImageFive"
+                        android:layout_width="95dp"
+                        android:layout_height="95dp"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/male2"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingClass" />
+
+                    <TextView
+                        android:id="@+id/member_five"
+                        android:layout_width="120dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintLeft_toLeftOf="@+id/profileImageFive"
+                        app:layout_constraintRight_toRightOf="@+id/profileImageFive"
+                        app:layout_constraintTop_toBottomOf="@+id/profileImageFive"
+                        android:text="@string/nofel_jummaa"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:text="@string/team_member"
+                        android:textColor="@color/secondaryBrandColor"
+                        android:textSize="16sp"
+                        app:layout_constraintLeft_toLeftOf="@+id/profileImageFive"
+                        app:layout_constraintRight_toRightOf="@+id/profileImageFive"
+                        app:layout_constraintTop_toBottomOf="@+id/member_five" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_margin="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/myCardViewSix"
+                android:layout_width="165dp"
+                android:layout_height="170dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginEnd="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/myCardViewFour">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/profileImageSix"
+                        android:layout_width="95dp"
+                        android:layout_height="95dp"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/female1"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingClass" />
+
+                    <TextView
+                        android:id="@+id/member_six"
+                        android:layout_width="120dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintLeft_toLeftOf="@+id/profileImageSix"
+                        app:layout_constraintRight_toRightOf="@+id/profileImageSix"
+                        app:layout_constraintTop_toBottomOf="@+id/profileImageSix"
+                        android:text="@string/anwar_alfarhany"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:text="@string/team_member"
+                        android:textColor="@color/secondaryBrandColor"
+                        android:textSize="16sp"
+                        app:layout_constraintLeft_toLeftOf="@+id/profileImageSix"
+                        app:layout_constraintRight_toRightOf="@+id/profileImageSix"
+                        app:layout_constraintTop_toBottomOf="@+id/member_six" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/myCardViewSeven"
+                android:layout_width="165dp"
+                android:layout_height="170dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:layout_constraintLeft_toRightOf="@+id/myCardViewSix"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/myCardViewFive"
+                tools:ignore="MissingConstraints">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/profileImageSeven"
+                        android:layout_width="95dp"
+                        android:layout_height="95dp"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/female2"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingClass" />
+
+                    <TextView
+                        android:id="@+id/member_seven"
+                        android:layout_width="120dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintLeft_toLeftOf="@+id/profileImageSeven"
+                        app:layout_constraintRight_toRightOf="@+id/profileImageSeven"
+                        app:layout_constraintTop_toBottomOf="@+id/profileImageSeven"
+                        android:text="@string/tamara_mouneer"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:text="@string/team_member"
+                        android:textColor="@color/secondaryBrandColor"
+                        android:textSize="16sp"
+                        app:layout_constraintLeft_toLeftOf="@+id/profileImageSeven"
+                        app:layout_constraintRight_toRightOf="@+id/profileImageSeven"
+                        app:layout_constraintTop_toBottomOf="@+id/member_seven" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+</LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

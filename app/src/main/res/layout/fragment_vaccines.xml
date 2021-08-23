@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    tools:context=".ui.fragments.VaccinesFragment">
+
+    <!-- this constraintLayout contains all the cards for the vaccines -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragment_container_two"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main_con"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/vaccines_guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.38" />
+
+            <!--PFIZER VACCINE-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/firstCard"
+                style="@style/CardStyle"
+                app:cardBackgroundColor="@color/brandColor"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/pfizer_vaccine_text"
+                style="@style/CardTitle"
+                android:text="@string/pfizer"
+                app:layout_constraintBottom_toBottomOf="@id/firstCard"
+                app:layout_constraintStart_toEndOf="@+id/vaccines_guideline"
+                app:layout_constraintTop_toTopOf="@id/firstCard"
+                app:layout_constraintVertical_bias="0.3" />
+
+            <TextView
+                android:id="@+id/textView8"
+                style="@style/CardDetails"
+                android:text="@string/recommended_for_12"
+                app:layout_constraintBottom_toBottomOf="@id/firstCard"
+                app:layout_constraintStart_toEndOf="@+id/vaccines_guideline"
+                app:layout_constraintTop_toBottomOf="@+id/pfizer_vaccine_text"
+                app:layout_constraintVertical_bias="0.1" />
+
+            <ImageView
+                android:id="@+id/pfizer_image"
+                style="@style/CardImage"
+                app:layout_constraintBottom_toBottomOf="@id/firstCard"
+                app:layout_constraintStart_toStartOf="@id/firstCard"
+                app:layout_constraintTop_toTopOf="@id/firstCard" />
+
+            <ImageView
+                style="@style/red_dot"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/pfizer_image"
+                app:layout_constraintStart_toStartOf="@id/pfizer_image"
+                app:layout_constraintTop_toTopOf="@id/pfizer_image"
+                app:layout_constraintVertical_bias="0.15" />
+
+            <ImageView
+                style="@style/red_dot"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/pfizer_image"
+                app:layout_constraintEnd_toEndOf="@id/pfizer_image"
+                app:layout_constraintTop_toTopOf="@id/pfizer_image"
+                app:layout_constraintVertical_bias="0.85" />
+
+            <ImageButton
+                android:id="@+id/show_pfizer_details_button"
+                style="@style/CardButton"
+                app:layout_constraintBottom_toBottomOf="@id/firstCard"
+                app:layout_constraintEnd_toEndOf="@id/firstCard"
+                app:layout_constraintTop_toTopOf="@id/firstCard"
+                app:layout_constraintVertical_bias="0.85" />
+
+
+            <!--ASTRAZENECA VACCINE-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card2"
+                style="@style/CardStyle"
+                app:cardBackgroundColor="@color/secondaryBrandColor"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/firstCard" />
+
+            <TextView
+                android:id="@+id/astrazeneca_vaccine"
+                style="@style/CardTitle"
+                android:text="@string/astrazeneca"
+                app:layout_constraintBottom_toBottomOf="@id/card2"
+                app:layout_constraintStart_toEndOf="@+id/vaccines_guideline"
+                app:layout_constraintTop_toTopOf="@id/card2"
+                app:layout_constraintVertical_bias="0.3" />
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/CardDetails"
+                android:text="@string/recommended_for_18"
+                app:layout_constraintBottom_toBottomOf="@id/card2"
+                app:layout_constraintStart_toEndOf="@+id/vaccines_guideline"
+                app:layout_constraintTop_toBottomOf="@id/astrazeneca_vaccine"
+                app:layout_constraintVertical_bias="0.1" />
+
+            <ImageView
+                android:id="@+id/astrazeneca_image"
+                style="@style/CardImage"
+                app:layout_constraintBottom_toBottomOf="@id/card2"
+                app:layout_constraintStart_toStartOf="@id/card2"
+                app:layout_constraintTop_toTopOf="@id/card2" />
+
+            <ImageView
+                style="@style/red_dot"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/astrazeneca_image"
+                app:layout_constraintStart_toStartOf="@id/astrazeneca_image"
+                app:layout_constraintTop_toTopOf="@id/astrazeneca_image"
+                app:layout_constraintVertical_bias="0.15" />
+
+            <ImageView
+                style="@style/red_dot"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/astrazeneca_image"
+                app:layout_constraintEnd_toEndOf="@id/astrazeneca_image"
+                app:layout_constraintTop_toTopOf="@id/astrazeneca_image"
+                app:layout_constraintVertical_bias="0.85" />
+
+            <ImageButton
+                android:id="@+id/show_astrazeneca_details_button"
+                style="@style/CardButton"
+                app:layout_constraintBottom_toBottomOf="@id/card2"
+                app:layout_constraintEnd_toEndOf="@id/card2"
+                app:layout_constraintTop_toTopOf="@id/card2"
+                app:layout_constraintVertical_bias="0.85" />
+
+
+            <!--MODERNA VACCINE-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card3"
+                style="@style/CardStyle"
+                app:cardBackgroundColor="@color/brandColor"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card2" />
+
+            <TextView
+                android:id="@+id/moderna_vaccine"
+                style="@style/CardTitle"
+                android:text="@string/moderna"
+                app:layout_constraintBottom_toBottomOf="@id/card3"
+                app:layout_constraintStart_toEndOf="@id/vaccines_guideline"
+                app:layout_constraintTop_toTopOf="@id/card3"
+                app:layout_constraintVertical_bias="0.3" />
+
+            <TextView
+                style="@style/CardDetails"
+                android:text="@string/recommended_for_18"
+                app:layout_constraintBottom_toBottomOf="@id/card3"
+                app:layout_constraintStart_toEndOf="@+id/vaccines_guideline"
+                app:layout_constraintTop_toBottomOf="@id/moderna_vaccine"
+                app:layout_constraintVertical_bias="0.1" />
+
+            <ImageView
+                android:id="@+id/moderna_image"
+                style="@style/CardImage"
+                app:layout_constraintBottom_toBottomOf="@id/card3"
+                app:layout_constraintStart_toStartOf="@id/card3"
+                app:layout_constraintTop_toTopOf="@id/card3" />
+
+            <ImageView
+                style="@style/red_dot"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/moderna_image"
+                app:layout_constraintStart_toStartOf="@id/moderna_image"
+                app:layout_constraintTop_toTopOf="@id/moderna_image"
+                app:layout_constraintVertical_bias="0.15" />
+
+            <ImageView
+                style="@style/red_dot"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/moderna_image"
+                app:layout_constraintEnd_toEndOf="@id/moderna_image"
+                app:layout_constraintTop_toTopOf="@id/moderna_image"
+                app:layout_constraintVertical_bias="0.85" />
+
+            <ImageButton
+                android:id="@+id/show_moderna_details_button"
+                style="@style/CardButton"
+                app:layout_constraintBottom_toBottomOf="@id/card3"
+                app:layout_constraintEnd_toEndOf="@id/card3"
+                app:layout_constraintTop_toTopOf="@id/card3"
+                app:layout_constraintVertical_bias="0.85" />
+
+
+            <!--J&J VACCINE-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card4"
+                style="@style/CardStyle"
+                app:cardBackgroundColor="@color/secondaryBrandColor"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card3" />
+
+            <TextView
+                android:id="@+id/j_and_j_vaccine"
+                style="@style/CardTitle"
+                android:text="@string/j_and_j"
+                app:layout_constraintBottom_toBottomOf="@id/card4"
+                app:layout_constraintStart_toEndOf="@id/vaccines_guideline"
+                app:layout_constraintTop_toTopOf="@id/card4"
+                app:layout_constraintVertical_bias="0.3" />
+
+            <TextView
+                style="@style/CardDetails"
+                android:text="@string/recommended_for_18"
+                app:layout_constraintBottom_toBottomOf="@id/card4"
+                app:layout_constraintStart_toEndOf="@+id/vaccines_guideline"
+                app:layout_constraintTop_toBottomOf="@id/j_and_j_vaccine"
+                app:layout_constraintVertical_bias="0.1" />
+
+            <ImageView
+                android:id="@+id/j_and_j_image"
+                style="@style/CardImage"
+                app:layout_constraintBottom_toBottomOf="@id/card4"
+                app:layout_constraintStart_toStartOf="@id/card4"
+                app:layout_constraintTop_toTopOf="@id/card4" />
+
+            <ImageView
+                style="@style/red_dot"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/j_and_j_image"
+                app:layout_constraintStart_toStartOf="@id/j_and_j_image"
+                app:layout_constraintTop_toTopOf="@id/j_and_j_image"
+                app:layout_constraintVertical_bias="0.15" />
+
+            <ImageView
+                style="@style/red_dot"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/j_and_j_image"
+                app:layout_constraintEnd_toEndOf="@id/j_and_j_image"
+                app:layout_constraintTop_toTopOf="@id/j_and_j_image"
+                app:layout_constraintVertical_bias="0.85" />
+
+            <ImageButton
+                android:id="@+id/show_jandj_details_button"
+                style="@style/CardButton"
+                app:layout_constraintBottom_toBottomOf="@id/card4"
+                app:layout_constraintEnd_toEndOf="@id/card4"
+                app:layout_constraintTop_toTopOf="@id/card4"
+                app:layout_constraintVertical_bias="0.85" />
+
+
+            <!--SINOPHARM VACCINE-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card5"
+                style="@style/CardStyle.marginBottom"
+                app:cardBackgroundColor="@color/brandColor"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card4" />
+
+            <TextView
+                android:id="@+id/sinopharm_vaccine"
+                style="@style/CardTitle"
+                android:text="@string/sinopharm"
+                app:layout_constraintBottom_toBottomOf="@id/card5"
+                app:layout_constraintStart_toEndOf="@id/vaccines_guideline"
+                app:layout_constraintTop_toTopOf="@id/card5"
+                app:layout_constraintVertical_bias="0.3" />
+
+            <TextView
+                style="@style/CardDetails"
+                android:text="@string/recommended_for_18"
+                app:layout_constraintBottom_toBottomOf="@id/card5"
+                app:layout_constraintStart_toEndOf="@+id/vaccines_guideline"
+                app:layout_constraintTop_toBottomOf="@id/sinopharm_vaccine"
+                app:layout_constraintVertical_bias="0.1" />
+
+            <ImageView
+                android:id="@+id/sinopharm_image"
+                style="@style/CardImage"
+                app:layout_constraintBottom_toBottomOf="@id/card5"
+                app:layout_constraintStart_toStartOf="@id/card5"
+                app:layout_constraintTop_toTopOf="@id/card5" />
+
+            <ImageView
+                style="@style/red_dot"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/sinopharm_image"
+                app:layout_constraintStart_toStartOf="@id/sinopharm_image"
+                app:layout_constraintTop_toTopOf="@id/sinopharm_image"
+                app:layout_constraintVertical_bias="0.15" />
+
+            <ImageView
+                style="@style/red_dot"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/sinopharm_image"
+                app:layout_constraintEnd_toEndOf="@id/sinopharm_image"
+                app:layout_constraintTop_toTopOf="@id/sinopharm_image"
+                app:layout_constraintVertical_bias="0.85" />
+
+            <ImageButton
+                android:id="@+id/show_sinopharm_details_button"
+                style="@style/CardButton"
+                app:layout_constraintBottom_toBottomOf="@id/card5"
+                app:layout_constraintEnd_toEndOf="@id/card5"
+                app:layout_constraintTop_toTopOf="@id/card5"
+                app:layout_constraintVertical_bias="0.85" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

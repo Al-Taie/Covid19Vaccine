@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:enabled="true"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home"/>
+
+    <item
+        android:id="@+id/vaccines"
+        android:enabled="true"
+        android:icon="@drawable/ic_vaccine"
+        android:title="@string/vaccines"/>
+
+    <item
+        android:id="@+id/search"
+        android:enabled="true"
+        android:icon="@drawable/ic_search"
+        android:title="@string/search"/>
+
+    <item
+        android:id="@+id/statistics"
+        android:enabled="true"
+        android:icon="@drawable/ic_stats"
+        android:title="@string/statistics"/>
+
+    <item
+        android:id="@+id/about"
+        android:enabled="true"
+        android:icon="@drawable/ic_about"
+        android:title="@string/about"/>
+</menu>

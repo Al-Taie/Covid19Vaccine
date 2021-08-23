@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CardButton">
+        <item name="android:layout_width">45dp</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:elevation">10dp</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:src">@drawable/arrow</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:layout_marginEnd">12dp</item>
+        <item name="android:background">@drawable/show_details_background</item>
+    </style>
+
+    <style name="red_dot">
+        <item name="android:elevation">8.5dp</item>
+        <item name="android:layout_width">14dp</item>
+        <item name="android:layout_height">14dp</item>
+        <item name="android:background">@drawable/circle</item>
+    </style>
+
+    <style name="CardTitle">
+        <item name="android:textSize">23sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:elevation">8.5dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="CardDetails" parent="CardTitle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="CardImage">
+        <item name="android:layout_width">85dp</item>
+        <item name="android:layout_height">85dp</item>
+        <item name="android:layout_marginStart">22dp</item>
+        <item name="android:elevation">8.5dp</item>
+        <item name="android:padding">25dp</item>
+        <item name="android:src">@drawable/syringe</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:layout_marginEnd">12dp</item>
+        <item name="android:background">@drawable/syringe_background</item>
+    </style>
+
+    <style name="CardStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">160dp</item>
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginEnd">24dp</item>
+        <item name="android:layout_marginTop">14dp</item>
+    </style>
+
+    <style name="CardStyle.marginBottom">
+        <item name="android:layout_marginBottom">14dp</item>
+    </style>
+
+    <style name="StatisticsCardStyle">
+        <item name="android:layout_width">130dp</item>
+        <item name="android:layout_height">180dp</item>
+        <item name="android:layout_margin">24dp</item>
+        <item name="cardCornerRadius">24dp</item>
+        <item name="cardElevation">8dp</item>
+        <item name="cardBackgroundColor">@color/brandColor</item>
+
+    </style>
+
+    <style name="StatisticsCardStyleBackgroundColor">
+        <item name="android:layout_width">130dp</item>
+        <item name="android:layout_height">180dp</item>
+        <item name="android:layout_margin">24dp</item>
+        <item name="cardCornerRadius">24dp</item>
+        <item name="cardElevation">8dp</item>
+        <item name="cardBackgroundColor">@color/secondaryBrandColor</item>
+    </style>
+
+    <style name="StatisticsTextCountryNameStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">24dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:elevation">8.5dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+
+
+    </style>
+
+    <style name="StatisticsTextStyleTotalCases">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:elevation">8.5dp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="MyLayoutBackground">
+        <item name="android:background">@drawable/my_fragment_statistics</item>
+        <item name="android:color">@color/white</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_marginTop">150dp</item>
+
+    </style>
+
+    <style name="totalCasesText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:gravity">start</item>
+        <item name="android:text">@string/total_cases</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:maxHeight">150dp</item>
+        <item name="android:minWidth">10dp</item>
+    </style>
+
+    <!-- Home fragment styles -->
+    <style name="circle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+
+
+
+    <style name="card_view_home_fragment">
+
+        <item name="cardBackgroundColor">#F2F3F4</item>
+        <item name="cardCornerRadius">30dp</item>
+        <item name="cardElevation">8dp</item>
+        <item name="android:layout_marginEnd">24dp</item>
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+
+    </style>
+
+
+    <style name="text_view_titles_of_cards_home_fragment">
+        <item name="android:layout_width">345dp</item>
+        <item name="android:layout_height">28dp</item>
+        <item name="android:background">#348A7B</item>
+        <item name="android:elevation">8dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+
+    </style>
+    <style name="shapable_image_view_home_fragment">
+        <item name="android:layout_width">68dp</item>
+        <item name="android:layout_height">68dp</item>
+        <item name="android:layout_marginTop">32dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:elevation">8dp</item>
+        <item name="shapeAppearanceOverlay">@style/circle</item>
+    </style>
+
+    <style name="linear_layout_home_fragment">
+        <item name="android:layout_width">230dp</item>
+        <item name="android:layout_height">150dp</item>
+        <item name="android:elevation">8dp</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingTop">25dp</item>
+
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+    <style name="text_details_home_fragment">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:paddingBottom">3dp</item>
+
+    </style>
+
+
+    <style name="ParentCard">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="ParentCard.maxHeight">
+        <item name="android:layout_height">match_parent</item>
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+    </style>
+
+    <style name="MainCardImage">
+        <item name="layout_constraintTop_toTopOf">parent</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="android:layout_width">128dp</item>
+        <item name="android:layout_height">128dp</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:elevation">8dp</item>
+        <item name="android:padding">24dp</item>
+        <item name="android:src">@drawable/syringe</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:background">@drawable/main_card_image_background</item>
+    </style>
+
+
+    <style name="texts">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="texts.main">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="texts.cardDet">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:elevation">10dp</item>
+        <item name="android:textColor">#999999</item>
+    </style>
+
+    <style name="vaccineInfoHeadlines">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_margin">28dp</item>
+    </style>
+
+    <style name="vaccineInfoHeadlinesDetails">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minWidth">400dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_margin">20dp</item>
+    </style>
+</resources>
