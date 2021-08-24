@@ -7,7 +7,6 @@
     android:orientation="vertical"
     tools:context=".ui.fragments.AboutFragment">
 
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/about_guideline1"
         android:layout_width="wrap_content"
@@ -25,10 +24,10 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/upper_card"
         android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_margin="12dp"
-        app:cardElevation="8dp"
-        app:cardCornerRadius="20dp"
+        android:layout_height="42dp"
+        android:layout_margin="16dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -40,7 +39,7 @@
         android:elevation="8dp"
         android:text="@string/about_upper_card_text"
         android:textColor="@color/black"
-        android:textSize="19sp"
+        android:textSize="13.5sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/upper_card"
         app:layout_constraintEnd_toEndOf="@+id/upper_card"
@@ -56,29 +55,31 @@
         app:layout_constraintTop_toBottomOf="@id/upper_card" />
 
     <com.google.android.material.imageview.ShapeableImageView
-        style="@style/developerImage"
         android:id="@+id/bareq_avatar"
+        style="@style/developerImage"
         android:src="@drawable/male1"
         app:layout_constraintBottom_toBottomOf="@+id/bareq_altaamah"
+        app:layout_constraintEnd_toEndOf="@+id/bareq_altaamah"
         app:layout_constraintStart_toStartOf="@+id/bareq_altaamah"
         app:layout_constraintTop_toTopOf="@+id/bareq_altaamah"
         app:shapeAppearanceOverlay="@style/circularAvatar" />
 
     <TextView
+        android:id="@+id/bareq_name"
         style="@style/developerInfo.name"
         android:text="@string/bareq_al_taamah"
         app:layout_constraintBottom_toBottomOf="@+id/bareq_altaamah"
         app:layout_constraintEnd_toEndOf="@+id/bareq_altaamah"
-        app:layout_constraintStart_toEndOf="@+id/bareq_avatar"
-        app:layout_constraintTop_toTopOf="@+id/bareq_altaamah" />
+        app:layout_constraintStart_toStartOf="@+id/bareq_altaamah"
+        app:layout_constraintTop_toBottomOf="@+id/bareq_avatar" />
 
     <TextView
         style="@style/developerInfo.role"
         android:text="@string/instructor"
         app:layout_constraintBottom_toBottomOf="@+id/bareq_altaamah"
         app:layout_constraintEnd_toEndOf="@+id/bareq_altaamah"
-        app:layout_constraintStart_toEndOf="@+id/bareq_avatar"
-        app:layout_constraintTop_toTopOf="@+id/bareq_altaamah"/>
+        app:layout_constraintStart_toStartOf="@+id/bareq_altaamah"
+        app:layout_constraintTop_toBottomOf="@+id/bareq_name" />
 
     <!--Ahmed Info-->
     <androidx.cardview.widget.CardView
@@ -93,25 +94,27 @@
         android:id="@+id/ahmed_avatar"
         android:src="@drawable/male3"
         app:layout_constraintBottom_toBottomOf="@+id/ahmed_mones"
+        app:layout_constraintEnd_toEndOf="@+id/ahmed_mones"
         app:layout_constraintStart_toStartOf="@+id/ahmed_mones"
         app:layout_constraintTop_toTopOf="@+id/ahmed_mones"
         app:shapeAppearanceOverlay="@style/circularAvatar" />
 
     <TextView
+        android:id="@+id/ahmed_name"
         style="@style/developerInfo.name"
         android:text="@string/ahmed_mones"
         app:layout_constraintBottom_toBottomOf="@+id/ahmed_mones"
         app:layout_constraintEnd_toEndOf="@+id/ahmed_mones"
-        app:layout_constraintStart_toEndOf="@+id/ahmed_avatar"
-        app:layout_constraintTop_toTopOf="@+id/ahmed_mones" />
+        app:layout_constraintStart_toStartOf="@+id/ahmed_mones"
+        app:layout_constraintTop_toBottomOf="@+id/ahmed_avatar" />
 
     <TextView
         style="@style/developerInfo.role"
         android:text="@string/team_leader"
         app:layout_constraintBottom_toBottomOf="@+id/ahmed_mones"
         app:layout_constraintEnd_toEndOf="@+id/ahmed_mones"
-        app:layout_constraintStart_toEndOf="@+id/ahmed_avatar"
-        app:layout_constraintTop_toTopOf="@+id/ahmed_mones"/>
+        app:layout_constraintStart_toStartOf="@+id/ahmed_mones"
+        app:layout_constraintTop_toBottomOf="@+id/ahmed_name" />
 
 
     <!--Zahraa Info-->
@@ -182,139 +185,71 @@
         app:layout_constraintTop_toTopOf="@+id/ammar_thaaer"/>
 
 
-    <!--Tamara Info-->
+    <!--Zainab Info-->
     <androidx.cardview.widget.CardView
         style="@style/developerCard.magrinStart"
-        android:id="@+id/tamara_mouneer"
+        android:id="@+id/zainab_mahmood"
         app:layout_constraintEnd_toEndOf="@id/about_guideline1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/zahraa_zahir"/>
 
     <com.google.android.material.imageview.ShapeableImageView
         style="@style/developerImage"
-        android:id="@+id/tamara_avatar"
+        android:id="@+id/zainab_avatar"
         android:src="@drawable/female3"
-        app:layout_constraintBottom_toBottomOf="@+id/tamara_mouneer"
-        app:layout_constraintStart_toStartOf="@+id/tamara_mouneer"
-        app:layout_constraintTop_toTopOf="@+id/tamara_mouneer"
+        app:layout_constraintBottom_toBottomOf="@+id/zainab_mahmood"
+        app:layout_constraintStart_toStartOf="@+id/zainab_mahmood"
+        app:layout_constraintTop_toTopOf="@+id/zainab_mahmood"
         app:shapeAppearanceOverlay="@style/circularAvatar" />
 
     <TextView
         style="@style/developerInfo.name"
-        android:text="@string/tamara_mouneer"
-        app:layout_constraintBottom_toBottomOf="@+id/tamara_mouneer"
-        app:layout_constraintEnd_toEndOf="@+id/tamara_mouneer"
-        app:layout_constraintStart_toEndOf="@+id/tamara_avatar"
-        app:layout_constraintTop_toTopOf="@+id/tamara_mouneer" />
+        android:text="@string/zainab_mahmood"
+        app:layout_constraintBottom_toBottomOf="@+id/zainab_mahmood"
+        app:layout_constraintEnd_toEndOf="@+id/zainab_mahmood"
+        app:layout_constraintStart_toEndOf="@+id/zainab_avatar"
+        app:layout_constraintTop_toTopOf="@+id/zainab_mahmood" />
 
     <TextView
         style="@style/developerInfo.role"
         android:text="@string/team_member"
-        app:layout_constraintBottom_toBottomOf="@+id/tamara_mouneer"
-        app:layout_constraintEnd_toEndOf="@+id/tamara_mouneer"
-        app:layout_constraintStart_toEndOf="@+id/tamara_avatar"
-        app:layout_constraintTop_toTopOf="@+id/tamara_mouneer"/>
+        app:layout_constraintBottom_toBottomOf="@+id/zainab_mahmood"
+        app:layout_constraintEnd_toEndOf="@+id/zainab_mahmood"
+        app:layout_constraintStart_toEndOf="@+id/zainab_avatar"
+        app:layout_constraintTop_toTopOf="@+id/zainab_mahmood"/>
 
 
-    <!--Anwar Info-->
+    <!--Karrar Info-->
     <androidx.cardview.widget.CardView
         style="@style/developerCard.marginEnd"
-        android:id="@+id/anwar_alfarhany"
+        android:id="@+id/karrar_mohammed"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/about_guideline2"
         app:layout_constraintTop_toBottomOf="@id/ammar_thaaer"/>
 
     <com.google.android.material.imageview.ShapeableImageView
         style="@style/developerImage"
-        android:id="@+id/anwar_avatar"
-        android:src="@drawable/female1"
-        app:layout_constraintBottom_toBottomOf="@+id/anwar_alfarhany"
-        app:layout_constraintStart_toStartOf="@+id/anwar_alfarhany"
-        app:layout_constraintTop_toTopOf="@+id/anwar_alfarhany"
-        app:shapeAppearanceOverlay="@style/circularAvatar" />
-
-    <TextView
-        style="@style/developerInfo.name"
-        android:text="@string/anwar_alfarhany"
-        app:layout_constraintBottom_toBottomOf="@+id/anwar_alfarhany"
-        app:layout_constraintEnd_toEndOf="@+id/anwar_alfarhany"
-        app:layout_constraintStart_toEndOf="@+id/anwar_avatar"
-        app:layout_constraintTop_toTopOf="@+id/anwar_alfarhany" />
-
-    <TextView
-        style="@style/developerInfo.role"
-        android:text="@string/team_member"
-        app:layout_constraintBottom_toBottomOf="@+id/anwar_alfarhany"
-        app:layout_constraintEnd_toEndOf="@+id/anwar_alfarhany"
-        app:layout_constraintStart_toEndOf="@+id/anwar_avatar"
-        app:layout_constraintTop_toTopOf="@+id/anwar_alfarhany"/>
-
-
-    <!--Nofel Info-->
-    <androidx.cardview.widget.CardView
-        style="@style/developerCard.magrinStart"
-        android:id="@+id/nofel_jummaa"
-        app:layout_constraintEnd_toEndOf="@id/about_guideline1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tamara_mouneer"/>
-
-    <com.google.android.material.imageview.ShapeableImageView
-        style="@style/developerImage"
-        android:id="@+id/nofel_avatar"
+        android:id="@+id/karrar_avatar"
         android:src="@drawable/male2"
-        app:layout_constraintBottom_toBottomOf="@+id/nofel_jummaa"
-        app:layout_constraintStart_toStartOf="@+id/nofel_jummaa"
-        app:layout_constraintTop_toTopOf="@+id/nofel_jummaa"
+        app:layout_constraintBottom_toBottomOf="@+id/karrar_mohammed"
+        app:layout_constraintStart_toStartOf="@+id/karrar_mohammed"
+        app:layout_constraintTop_toTopOf="@+id/karrar_mohammed"
         app:shapeAppearanceOverlay="@style/circularAvatar" />
 
     <TextView
         style="@style/developerInfo.name"
-        android:text="@string/nofel_jummaa"
-        app:layout_constraintBottom_toBottomOf="@+id/nofel_jummaa"
-        app:layout_constraintEnd_toEndOf="@+id/nofel_jummaa"
-        app:layout_constraintStart_toEndOf="@+id/nofel_avatar"
-        app:layout_constraintTop_toTopOf="@+id/nofel_jummaa" />
+        android:text="@string/karrar_mohammed"
+        app:layout_constraintBottom_toBottomOf="@+id/karrar_mohammed"
+        app:layout_constraintEnd_toEndOf="@+id/karrar_mohammed"
+        app:layout_constraintStart_toEndOf="@+id/karrar_avatar"
+        app:layout_constraintTop_toTopOf="@+id/karrar_mohammed" />
 
     <TextView
         style="@style/developerInfo.role"
         android:text="@string/team_member"
-        app:layout_constraintBottom_toBottomOf="@+id/nofel_jummaa"
-        app:layout_constraintEnd_toEndOf="@+id/nofel_jummaa"
-        app:layout_constraintStart_toEndOf="@+id/nofel_avatar"
-        app:layout_constraintTop_toTopOf="@+id/nofel_jummaa"/>
-
-
-    <!--Shahlaa Info-->
-    <androidx.cardview.widget.CardView
-        style="@style/developerCard.marginEnd"
-        android:id="@+id/shahlaa_haider"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/about_guideline2"
-        app:layout_constraintTop_toBottomOf="@id/anwar_alfarhany"/>
-
-    <com.google.android.material.imageview.ShapeableImageView
-        style="@style/developerImage"
-        android:id="@+id/shahlaa_avatar"
-        android:src="@drawable/female2"
-        app:layout_constraintBottom_toBottomOf="@+id/shahlaa_haider"
-        app:layout_constraintStart_toStartOf="@+id/shahlaa_haider"
-        app:layout_constraintTop_toTopOf="@+id/shahlaa_haider"
-        app:shapeAppearanceOverlay="@style/circularAvatar" />
-
-    <TextView
-        style="@style/developerInfo.name"
-        android:text="@string/shahlaa_haider"
-        app:layout_constraintBottom_toBottomOf="@+id/shahlaa_haider"
-        app:layout_constraintEnd_toEndOf="@+id/shahlaa_haider"
-        app:layout_constraintStart_toEndOf="@+id/shahlaa_avatar"
-        app:layout_constraintTop_toTopOf="@+id/shahlaa_haider" />
-
-    <TextView
-        style="@style/developerInfo.role"
-        android:text="@string/team_member"
-        app:layout_constraintBottom_toBottomOf="@+id/shahlaa_haider"
-        app:layout_constraintEnd_toEndOf="@+id/shahlaa_haider"
-        app:layout_constraintStart_toEndOf="@+id/shahlaa_avatar"
-        app:layout_constraintTop_toTopOf="@+id/shahlaa_haider"/>
+        app:layout_constraintBottom_toBottomOf="@+id/karrar_mohammed"
+        app:layout_constraintEnd_toEndOf="@+id/karrar_mohammed"
+        app:layout_constraintStart_toEndOf="@+id/karrar_avatar"
+        app:layout_constraintTop_toTopOf="@+id/karrar_mohammed"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
