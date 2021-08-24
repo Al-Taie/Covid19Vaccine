@@ -2,7 +2,6 @@ package com.melon.covid_19_vaccine.util
 
 import android.view.View
 import com.melon.covid_19_vaccine.data.DataManager
-import com.melon.covid_19_vaccine.data.domain.Vaccinated
 import com.melon.covid_19_vaccine.databinding.FragmentSearchBinding
 
 object SearchAdapter {

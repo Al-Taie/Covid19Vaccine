@@ -22,22 +22,22 @@ fun LocalDate.monthName(): String {
     return this.month.getDisplayName(TextStyle.SHORT, Locale.ENGLISH)
 }
 
-fun  List<List<Vaccinated>>.firstCountry(): Vaccinated {
+fun List<List<Vaccinated>>.firstCountry(): Vaccinated {
     return this.first().last()
 }
 
-fun  List<List<Vaccinated>>.secondCountry(): Vaccinated {
+fun List<List<Vaccinated>>.secondCountry(): Vaccinated {
     return this[Constant.Index.ONE].last()
 }
 
-fun  List<List<Vaccinated>>.thirdCountry(): Vaccinated {
+fun List<List<Vaccinated>>.thirdCountry(): Vaccinated {
     return this[Constant.Index.TWO].last()
 }
 
-fun  List<List<Vaccinated>>.fourthCountry(): Vaccinated {
+fun List<List<Vaccinated>>.fourthCountry(): Vaccinated {
     return this[Constant.Index.THREE].last()
 }
 
-fun  List<List<Vaccinated>>.lastCountry(): Vaccinated {
+fun List<List<Vaccinated>>.lastCountry(): Vaccinated {
     return this.last().last()
 }

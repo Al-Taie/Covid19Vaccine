@@ -1,20 +1,10 @@
 package com.melon.covid_19_vaccine.ui.fragments
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import com.melon.covid_19_vaccine.R
-import com.melon.covid_19_vaccine.databinding.ActivityHomeBinding
+import androidx.fragment.app.Fragment
 import com.melon.covid_19_vaccine.databinding.FragmentVaccineDetailsBinding
 import com.melon.covid_19_vaccine.ui.BaseFragment
-import com.melon.covid_19_vaccine.ui.HomeActivity
-
-
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-//private const val ARG_PARAM1 = "param1"
-//private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
@@ -22,44 +12,9 @@ import com.melon.covid_19_vaccine.ui.HomeActivity
  * create an instance of this fragment.
  */
 class VaccineDetailsFragment : BaseFragment<FragmentVaccineDetailsBinding>() {
-    private var param1: String? = null
-    private var param2: String? = null
+    override fun setup() {}
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-//            param1 = it.getString(ARG_PARAM1)
-//            param2 = it.getString(ARG_PARAM2)
-        }
-    }
-
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment VaccineDetailsFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            VaccineDetailsFragment().apply {
-                arguments = Bundle().apply {
-//                    putString(ARG_PARAM1, param1)
-//                    putString(ARG_PARAM2, param2)
-                }
-            }
-    }
-
-    override fun setup() {
-        //
-    }
-
-    override fun callBack() {
-
-    }
+    override fun callBack() {}
 
     override val inflate: (LayoutInflater, ViewGroup?, attachToRoot: Boolean) -> FragmentVaccineDetailsBinding
         get() = FragmentVaccineDetailsBinding::inflate
