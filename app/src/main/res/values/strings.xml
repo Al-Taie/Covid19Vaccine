@@ -33,16 +33,6 @@
     <string name="free_safe_protected">FREE, SAFE, PROTECTED</string>
     <string name="recommended_for_nadults_18_and_older">Recommended for:\nAdults 18 and older</string>
     <string name="sinopharm">SINOPHARM</string>
-    <string name="watermelon_team_members">WATERMELON TEAM MEMBERS</string>
-    <string name="ahmed_mones">Ahmed Mones</string>
-    <string name="team_leader">Team Leader</string>
-    <string name="ammar_thaaer">Ammar Thaaer</string>
-    <string name="team_member">Team Member</string>
-    <string name="shahlaa_haider">Shahlaa Haider</string>
-    <string name="zahraa_zahir">Zahraa Zahir</string>
-    <string name="nofel_jummaa">Nofel Jummaa</string>
-    <string name="anwar_alfarhany">Anwar Alfarhany</string>
-    <string name="tamara_mouneer">Tamara Mouneer</string>
     <string name="pfizer">PFIZER</string>
     <string name="recommended_for_12">Recommended for:\nAnyone 12 or older.</string>
     <string name="astrazeneca">ASTRAZENECA</string>
@@ -61,4 +51,19 @@
     <string name="iraq_salahuddin_samarra_company">Iraq, Salahuddin  Samarra Company</string>
     <string name="date_of_production">Date of Production</string>
     <string name="the_vaccine_is_start_active_in_june_2021">The vaccine is start active in June, 2021.</string>
+
+
+    <string name="about_upper_card_text">Developers Behind This Project </string>
+    <string name="ahmed_mones">Ahmed Mones</string>
+    <string name="team_leader">(Team Leader)</string>
+    <string name="ammar_thaaer">Ammar Thaaer</string>
+    <string name="team_member">(Team Member)</string>
+    <string name="shahlaa_haider">Shahlaa Haider</string>
+    <string name="zahraa_zahir">Zahraa Zahir</string>
+    <string name="nofel_jummaa">Nofel Jummaa</string>
+    <string name="anwar_alfarhany">Anwar Alfarhany</string>
+    <string name="tamara_mouneer">Tamara Mouneer</string>
+    <string name="instructor">(Instructor)</string>
+    <string name="bareq_al_taamah">Bareq AL-Taamah</string>
+
 </resources>
