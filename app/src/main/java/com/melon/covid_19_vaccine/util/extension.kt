@@ -13,6 +13,8 @@ fun String.toLong() = (this.toDoubleOrNull() ?: 0).toLong()
 
 fun String.toDouble() = (this.toDoubleOrNull() ?: 0.0)
 
+fun String.capitalize() = this.lowercase().replaceFirstChar { it.titlecase() }
+
 fun LocalDate.monthName(): String = this.month.getDisplayName(TextStyle.SHORT, Locale.ENGLISH)
 
 fun List<List<Vaccinated>>.firstCountry() = this.first().last()
