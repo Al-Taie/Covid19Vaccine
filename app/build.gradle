@@ -72,6 +72,6 @@ dependencies {
     implementation 'com.github.JastAir:Android-BackgroundChart:1.0.1-alpha'
 
     implementation "com.airbnb.android:lottie:4.0.0"
-
+//    implementation 'com.github.arimorty:floatingsearchview:2.1.1'
 
 }

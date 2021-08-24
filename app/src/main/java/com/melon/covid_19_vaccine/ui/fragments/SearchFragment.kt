@@ -11,6 +11,7 @@ import com.melon.covid_19_vaccine.util.SearchAdapter
 import com.melon.covid_19_vaccine.util.SearchAdapter.initData
 import com.melon.covid_19_vaccine.util.capitalize
 
+
 /**
  * A simple [Fragment] subclass.
  * Use the [SearchFragment.newInstance] factory method to
@@ -20,6 +21,10 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>() {
     override fun setup() {}
 
     override fun callBack() {
+        binding.searchBar.apply {
+            onActionViewExpanded()
+        }
+
         search()
     }
 
