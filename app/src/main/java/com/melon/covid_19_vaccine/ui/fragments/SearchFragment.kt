@@ -9,7 +9,7 @@ import com.melon.covid_19_vaccine.databinding.FragmentSearchBinding
 import com.melon.covid_19_vaccine.ui.BaseFragment
 import com.melon.covid_19_vaccine.util.SearchAdapter
 import com.melon.covid_19_vaccine.util.SearchAdapter.initData
-import java.util.*
+import com.melon.covid_19_vaccine.util.capitalize
 
 /**
  * A simple [Fragment] subclass.
@@ -28,34 +28,23 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>() {
 
     private fun search() {
         binding.searchBar.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
-            override fun onQueryTextSubmit(query: String): Boolean {
-                val searchQuery = query.lowercase()
-                    .replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }
-                if (SearchAdapter.isFounded(searchQuery)) {
-                    initData(binding = binding, query = searchQuery)
-                    binding.searchAnimation.visibility = View.GONE
-                    return true
-                } else {
-                    binding.pieChart.visibility = View.GONE
-                    binding.searchAnimation.visibility = View.VISIBLE
-                }
-                return false
-            }
+            override fun onQueryTextSubmit(query: String) = startSearch(query = query.capitalize())
 
-            override fun onQueryTextChange(query: String): Boolean {
-                val searchQuery = query.lowercase()
-                    .replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }
-                if (SearchAdapter.isFounded(searchQuery)) {
-                    initData(binding = binding, query = searchQuery)
-                    binding.searchAnimation.visibility = View.GONE
-                    return true
-                } else {
-                    binding.pieChart.visibility = View.GONE
-                    binding.searchAnimation.visibility = View.VISIBLE
-
-                }
-                return false
-            }
+            override fun onQueryTextChange(query: String) = startSearch(query = query.capitalize())
         })
+    }
+
+    private fun startSearch(query: String): Boolean {
+        binding.apply {
+            if (SearchAdapter.isFounded(query)) {
+                initData(view = pieChart, query = query)
+                pieChart.visibility = View.VISIBLE
+                searchAnimation.visibility = View.GONE
+                return true
+            }
+            pieChart.visibility = View.GONE
+            searchAnimation.visibility = View.VISIBLE
+            return false
+        }
     }
 }

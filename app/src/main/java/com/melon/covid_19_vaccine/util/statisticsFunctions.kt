@@ -8,7 +8,6 @@ import com.razerdp.widget.animatedpieview.data.SimplePieInfo
 
 
 fun initPieChart(binding: FragmentStatisticsBinding) {
-
     val config = AnimatedPieViewConfig()
     with(DataManager.vaccinatedTop5) {
         config.apply {
@@ -33,35 +32,35 @@ fun initPieChart(binding: FragmentStatisticsBinding) {
             addData(
                 SimplePieInfo(
                     firstCountry().totalVaccinations.toDouble(),
-                    getColor("FF446767"), firstCountry().country
+                   randomColor, firstCountry().country
                 )
             )
 
             addData(
                 SimplePieInfo(
                     secondCountry().totalVaccinations.toDouble(),
-                    getColor("FFFFD28C"), secondCountry().country
+                    randomColor, secondCountry().country
                 )
             )
 
             addData(
                 SimplePieInfo(
                     thirdCountry().totalVaccinations.toDouble(),
-                    getColor("FF2BBC80"), thirdCountry().country
+                    randomColor, thirdCountry().country
                 )
             )
 
             addData(
                 SimplePieInfo(
                     fourthCountry().totalVaccinations.toDouble(),
-                    getColor("FF8BE8FF"), fourthCountry().country
+                    randomColor, fourthCountry().country
                 )
             )
 
             addData(
                 SimplePieInfo(
                     lastCountry().totalVaccinations.toDouble(),
-                    getColor("FFFA734D"), lastCountry().country
+                    randomColor, lastCountry().country
                 )
             )
 

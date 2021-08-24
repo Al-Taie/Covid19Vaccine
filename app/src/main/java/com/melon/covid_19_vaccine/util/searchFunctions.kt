@@ -1,13 +1,14 @@
 package com.melon.covid_19_vaccine.util
 
+import android.view.View
 import android.view.animation.DecelerateInterpolator
 import com.melon.covid_19_vaccine.data.domain.Vaccinated
-import com.melon.covid_19_vaccine.databinding.FragmentSearchBinding
+import com.razerdp.widget.animatedpieview.AnimatedPieView
 import com.razerdp.widget.animatedpieview.AnimatedPieViewConfig
 import com.razerdp.widget.animatedpieview.data.SimplePieInfo
 
 
-fun initPieChart(binding: FragmentSearchBinding, data: List<Vaccinated>) {
+fun initPieChart(view: View, data: List<Vaccinated>?) {
 
     val config = AnimatedPieViewConfig()
     config.apply {
@@ -27,16 +28,18 @@ fun initPieChart(binding: FragmentSearchBinding, data: List<Vaccinated>) {
         floatShadowRadius(4F)
         floatExpandSize(4F)
 
-        data.forEach {
+        data?.forEach {
             addData(
                 SimplePieInfo(
                     it.dailyVaccinations.toDouble(),
-                    randomColor(), it.date.monthName()
+                    randomColor, it.date.monthName()
                 )
             )
         }
     }
 
-    binding.pieChart.applyConfig(config)
-    binding.pieChart.start()
+    (view as AnimatedPieView).apply {
+        applyConfig(config)
+        start()
+    }
 }

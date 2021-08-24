@@ -9,9 +9,8 @@ object SearchAdapter {
         return DataManager.vaccinatedMap.containsKey(query)
     }
 
-    fun initData(query: String, binding: FragmentSearchBinding) {
+    fun initData(query: String, view: View) {
         val data = DataManager.vaccinatedMap[query]
-        initPieChart(binding = binding, data = data!!)
-        binding.pieChart.visibility = View.VISIBLE
+        initPieChart(view = view, data = data)
     }
 }
