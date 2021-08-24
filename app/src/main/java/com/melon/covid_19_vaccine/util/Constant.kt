@@ -2,7 +2,6 @@ package com.melon.covid_19_vaccine.util
 
 object Constant {
     const val DATA_FILE: String = "country_vaccinations.csv"
-    val countries = mutableSetOf<String>()
 
     object ColumnIndex {
         const val COUNTRY = 0

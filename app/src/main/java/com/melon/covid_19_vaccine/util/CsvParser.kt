@@ -1,4 +1,5 @@
 package com.melon.covid_19_vaccine.util
+
 import com.melon.covid_19_vaccine.data.DataManager
 import com.melon.covid_19_vaccine.data.domain.Vaccinated
 import java.io.BufferedReader

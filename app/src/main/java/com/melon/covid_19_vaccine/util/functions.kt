@@ -23,7 +23,9 @@ fun getColor(colorStr: String): Int {
     return Color.parseColor(colorString)
 }
 
-fun randomColor() = Color.argb(255,
-                        Random().nextInt(256),
-                        Random().nextInt(256),
-                        Random().nextInt(256))
+fun randomColor() = Color.argb(
+    255,
+    Random().nextInt(256),
+    Random().nextInt(256),
+    Random().nextInt(256)
+)
