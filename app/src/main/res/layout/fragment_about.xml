@@ -57,7 +57,7 @@
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/bareq_avatar"
         style="@style/developerImage"
-        android:src="@drawable/male1"
+        android:src="@drawable/male_one"
         app:layout_constraintBottom_toBottomOf="@+id/bareq_altaamah"
         app:layout_constraintEnd_toEndOf="@+id/bareq_altaamah"
         app:layout_constraintStart_toStartOf="@+id/bareq_altaamah"
@@ -92,7 +92,7 @@
     <com.google.android.material.imageview.ShapeableImageView
         style="@style/developerImage"
         android:id="@+id/ahmed_avatar"
-        android:src="@drawable/male3"
+        android:src="@drawable/male_two"
         app:layout_constraintBottom_toBottomOf="@+id/ahmed_mones"
         app:layout_constraintEnd_toEndOf="@+id/ahmed_mones"
         app:layout_constraintStart_toStartOf="@+id/ahmed_mones"
@@ -128,27 +128,31 @@
     <com.google.android.material.imageview.ShapeableImageView
         style="@style/developerImage"
         android:id="@+id/zahraa_avatar"
-        android:src="@drawable/female4"
+        android:src="@drawable/female_one"
         app:layout_constraintBottom_toBottomOf="@+id/zahraa_zahir"
         app:layout_constraintStart_toStartOf="@+id/zahraa_zahir"
         app:layout_constraintTop_toTopOf="@+id/zahraa_zahir"
+        app:layout_constraintEnd_toEndOf="@id/zahraa_zahir"
         app:shapeAppearanceOverlay="@style/circularAvatar" />
 
+
     <TextView
+        android:id="@+id/zahraa_name"
         style="@style/developerInfo.name"
         android:text="@string/zahraa_zahir"
         app:layout_constraintBottom_toBottomOf="@+id/zahraa_zahir"
         app:layout_constraintEnd_toEndOf="@+id/zahraa_zahir"
-        app:layout_constraintStart_toEndOf="@+id/zahraa_avatar"
-        app:layout_constraintTop_toTopOf="@+id/zahraa_zahir" />
+        app:layout_constraintStart_toStartOf="@+id/zahraa_zahir"
+        app:layout_constraintTop_toBottomOf="@+id/zahraa_avatar" />
 
     <TextView
         style="@style/developerInfo.role"
         android:text="@string/team_member"
         app:layout_constraintBottom_toBottomOf="@+id/zahraa_zahir"
         app:layout_constraintEnd_toEndOf="@+id/zahraa_zahir"
-        app:layout_constraintStart_toEndOf="@+id/zahraa_avatar"
-        app:layout_constraintTop_toTopOf="@+id/zahraa_zahir"/>
+        app:layout_constraintStart_toStartOf="@id/zahraa_zahir"
+        app:layout_constraintTop_toBottomOf="@+id/zahraa_name" />
+
 
 
     <!--Ammar Info-->
@@ -160,29 +164,31 @@
         app:layout_constraintTop_toBottomOf="@id/ahmed_mones"/>
 
     <com.google.android.material.imageview.ShapeableImageView
-        style="@style/developerImage"
         android:id="@+id/ammar_avatar"
-        android:src="@drawable/male1"
+        style="@style/developerImage"
+        android:src="@drawable/male_one"
         app:layout_constraintBottom_toBottomOf="@+id/ammar_thaaer"
+        app:layout_constraintEnd_toEndOf="@+id/ammar_thaaer"
         app:layout_constraintStart_toStartOf="@+id/ammar_thaaer"
         app:layout_constraintTop_toTopOf="@+id/ammar_thaaer"
         app:shapeAppearanceOverlay="@style/circularAvatar" />
 
     <TextView
+        android:id="@+id/ammar_name"
         style="@style/developerInfo.name"
         android:text="@string/ammar_thaaer"
         app:layout_constraintBottom_toBottomOf="@+id/ammar_thaaer"
         app:layout_constraintEnd_toEndOf="@+id/ammar_thaaer"
-        app:layout_constraintStart_toEndOf="@+id/ammar_avatar"
-        app:layout_constraintTop_toTopOf="@+id/ammar_thaaer" />
+        app:layout_constraintStart_toStartOf="@+id/ammar_thaaer"
+        app:layout_constraintTop_toBottomOf="@+id/ammar_avatar" />
 
     <TextView
         style="@style/developerInfo.role"
         android:text="@string/team_member"
         app:layout_constraintBottom_toBottomOf="@+id/ammar_thaaer"
         app:layout_constraintEnd_toEndOf="@+id/ammar_thaaer"
-        app:layout_constraintStart_toEndOf="@+id/ammar_avatar"
-        app:layout_constraintTop_toTopOf="@+id/ammar_thaaer"/>
+        app:layout_constraintStart_toStartOf="@+id/ammar_thaaer"
+        app:layout_constraintTop_toBottomOf="@+id/ammar_name"/>
 
 
     <!--Zainab Info-->
@@ -194,29 +200,31 @@
         app:layout_constraintTop_toBottomOf="@id/zahraa_zahir"/>
 
     <com.google.android.material.imageview.ShapeableImageView
-        style="@style/developerImage"
         android:id="@+id/zainab_avatar"
-        android:src="@drawable/female3"
+        style="@style/developerImage"
+        android:src="@drawable/female_two"
         app:layout_constraintBottom_toBottomOf="@+id/zainab_mahmood"
+        app:layout_constraintEnd_toStartOf="@+id/about_guideline1"
         app:layout_constraintStart_toStartOf="@+id/zainab_mahmood"
         app:layout_constraintTop_toTopOf="@+id/zainab_mahmood"
         app:shapeAppearanceOverlay="@style/circularAvatar" />
 
     <TextView
+        android:id="@+id/zainab_name"
         style="@style/developerInfo.name"
         android:text="@string/zainab_mahmood"
         app:layout_constraintBottom_toBottomOf="@+id/zainab_mahmood"
         app:layout_constraintEnd_toEndOf="@+id/zainab_mahmood"
-        app:layout_constraintStart_toEndOf="@+id/zainab_avatar"
-        app:layout_constraintTop_toTopOf="@+id/zainab_mahmood" />
+        app:layout_constraintStart_toStartOf="@+id/zainab_mahmood"
+        app:layout_constraintTop_toBottomOf="@+id/zainab_avatar" />
 
     <TextView
         style="@style/developerInfo.role"
         android:text="@string/team_member"
         app:layout_constraintBottom_toBottomOf="@+id/zainab_mahmood"
         app:layout_constraintEnd_toEndOf="@+id/zainab_mahmood"
-        app:layout_constraintStart_toEndOf="@+id/zainab_avatar"
-        app:layout_constraintTop_toTopOf="@+id/zainab_mahmood"/>
+        app:layout_constraintStart_toStartOf="@+id/zainab_mahmood"
+        app:layout_constraintTop_toBottomOf="@+id/zainab_name" />
 
 
     <!--Karrar Info-->
@@ -228,28 +236,30 @@
         app:layout_constraintTop_toBottomOf="@id/ammar_thaaer"/>
 
     <com.google.android.material.imageview.ShapeableImageView
-        style="@style/developerImage"
         android:id="@+id/karrar_avatar"
-        android:src="@drawable/male2"
+        style="@style/developerImage"
+        android:src="@drawable/male_two"
         app:layout_constraintBottom_toBottomOf="@+id/karrar_mohammed"
+        app:layout_constraintEnd_toEndOf="@+id/karrar_mohammed"
         app:layout_constraintStart_toStartOf="@+id/karrar_mohammed"
         app:layout_constraintTop_toTopOf="@+id/karrar_mohammed"
         app:shapeAppearanceOverlay="@style/circularAvatar" />
 
     <TextView
+        android:id="@+id/karrar_name"
         style="@style/developerInfo.name"
         android:text="@string/karrar_mohammed"
         app:layout_constraintBottom_toBottomOf="@+id/karrar_mohammed"
         app:layout_constraintEnd_toEndOf="@+id/karrar_mohammed"
-        app:layout_constraintStart_toEndOf="@+id/karrar_avatar"
-        app:layout_constraintTop_toTopOf="@+id/karrar_mohammed" />
+        app:layout_constraintStart_toStartOf="@+id/karrar_mohammed"
+        app:layout_constraintTop_toBottomOf="@+id/karrar_avatar" />
 
     <TextView
         style="@style/developerInfo.role"
         android:text="@string/team_member"
         app:layout_constraintBottom_toBottomOf="@+id/karrar_mohammed"
         app:layout_constraintEnd_toEndOf="@+id/karrar_mohammed"
-        app:layout_constraintStart_toEndOf="@+id/karrar_avatar"
-        app:layout_constraintTop_toTopOf="@+id/karrar_mohammed"/>
+        app:layout_constraintStart_toStartOf="@+id/karrar_mohammed"
+        app:layout_constraintTop_toBottomOf="@+id/karrar_name" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
