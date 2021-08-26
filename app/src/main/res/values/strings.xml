@@ -37,7 +37,7 @@
     <string name="recommended_for_12">Recommended for:\nAnyone 12 or older.</string>
     <string name="astrazeneca">ASTRAZENECA</string>
     <string name="recommended_for_18">Recommended for:\nAdults 18 and older.</string>
-    <string name="moderna">MODERNA</string>
+    <string name="moderna"><li>MODERNA</li></string>
     <string name="j_and_j"><![CDATA[J&J]]></string>
     <string name="total_cases">TOTAL CASES</string>
     <string name="vaccine_name">Vaccine Name</string>
