@@ -8,56 +8,30 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/main_card_view"
-        android:layout_width="match_parent"
-        android:layout_height="240dp"
-        android:layout_margin="8dp"
-        android:maxHeight="200dp"
-        app:cardBackgroundColor="@color/secondaryBrandColor"
-        app:cardCornerRadius="30dp"
-        app:cardElevation="8dp"
+        style="@style/MainCardInHomeFragment"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottie_animation_view"
-        android:layout_width="280dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="28dp"
-        android:visibility="visible"
+        style="@style/LottieAnimationView"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/lets_vaccine" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/text_view_Title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:elevation="10dp"
-        android:gravity="center"
+        style="@style/TextViewTitle"
         android:text="@string/let_s_get_vaccinated"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_marginTop="8dp"
         app:layout_constraintLeft_toLeftOf="@id/lottie_animation_view"
         app:layout_constraintRight_toRightOf="@id/lottie_animation_view"
         app:layout_constraintTop_toBottomOf="@+id/lottie_animation_view" />
 
     <TextView
-        android:id="@+id/textView7"
-        android:layout_width="match_parent"
-        android:layout_height="19dp"
-        android:layout_marginBottom="8dp"
-        android:gravity="center"
-        android:elevation="10dp"
-
+        android:id="@+id/text_View_in_main_card"
+        style="@style/TextViewTitleTwo"
         android:text="@string/free_safe_protected"
-        android:textColor="@color/white"
-        android:textSize="11sp"
         app:layout_constraintLeft_toLeftOf="@id/text_view_Title"
         app:layout_constraintRight_toRightOf="@id/text_view_Title"
         app:layout_constraintTop_toBottomOf="@+id/text_view_Title" />
@@ -81,7 +55,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/my_first_card"
-                style="@style/card_view_home_fragment"
+                style="@style/Card_View_Home_Fragment"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -125,7 +99,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/my_second_card"
-                style="@style/card_view_home_fragment"
+                style="@style/Card_View_Home_Fragment"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/my_first_card" />
@@ -177,7 +151,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/my_third_card"
-                style="@style/card_view_home_fragment"
+                style="@style/Card_View_Home_Fragment"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/my_second_card" />
@@ -220,7 +194,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/my_fourth_card"
-                style="@style/card_view_home_fragment"
+                style="@style/Card_View_Home_Fragment"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/my_third_card" />
@@ -272,7 +246,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/my_fifth_card"
-                style="@style/card_view_home_fragment"
+                style="@style/Card_View_Home_Fragment"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/my_fourth_card" />

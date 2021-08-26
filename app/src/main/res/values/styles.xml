@@ -128,7 +128,7 @@
     </style>
 
 
-    <style name="card_view_home_fragment">
+    <style name="Card_View_Home_Fragment">
         <item name="cardBackgroundColor">@color/white</item>
         <item name="cardCornerRadius">30dp</item>
         <item name="cardElevation">8dp</item>
@@ -136,28 +136,6 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">130dp</item>
 
-    </style>
-
-    <style name="text_view_titles_of_cards_home_fragment">
-        <item name="android:layout_width">345dp</item>
-        <item name="android:layout_height">28dp</item>
-        <item name="android:background">#348A7B</item>
-        <item name="android:elevation">8dp</item>
-        <item name="android:textAlignment">center</item>
-        <item name="android:textSize">14sp</item>
-        <item name="android:textStyle">bold</item>
-        <item name="layout_constraintEnd_toEndOf">parent</item>
-        <item name="layout_constraintStart_toStartOf">parent</item>
-
-    </style>
-
-    <style name="shapable_image_view_home_fragment">
-        <item name="android:layout_width">55dp</item>
-        <item name="android:layout_height">55dp</item>
-        <item name="android:elevation">8.5dp</item>
-        <item name="android:layout_margin">8dp</item>
-        <item name="android:scaleType">centerCrop</item>
-        <item name="shapeAppearanceOverlay">@style/circle</item>
     </style>
 
     <style name="Text_Details_Home_Fragment">
@@ -175,6 +153,16 @@
 
     </style>
 
+    <style name="shapable_image_view_home_fragment">
+        <item name="android:layout_width">55dp</item>
+        <item name="android:layout_height">55dp</item>
+        <item name="android:elevation">8.5dp</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="shapeAppearanceOverlay">@style/circle</item>
+    </style>
+
+
     <style name="Text_Describe_Home_Fragment">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">20dp</item>
@@ -184,10 +172,57 @@
         <item name="android:textSize">11.5sp</item>
         <item name="android:elevation">8.5dp</item>
     </style>
+
     <style name="Text_Describe_Home_Fragment.MarginTop">
         <item name="android:layout_marginTop">8dp</item>
     </style>
 
+    <style name="MainCardInHomeFragment">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">240dp</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:maxHeight">300dp</item>
+        <item name="cardBackgroundColor">@color/secondaryBrandColor</item>
+        <item name="cardCornerRadius">30dp</item>
+        <item name="cardElevation">8dp</item>
+
+    </style>
+
+    <style name="LottieAnimationView">
+        <item name="android:layout_width">280dp</item>
+        <item name="android:layout_height">150dp</item>
+        <item name="android:layout_marginTop">28dp</item>
+        <item name="android:visibility">visible</item>
+        <item name="lottie_autoPlay">true</item>
+        <item name="lottie_loop">true</item>
+        <item name="lottie_rawRes">@raw/lets_vaccine</item>
+    </style>
+
+    <style name="TextViewTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:elevation">10dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+
+    <style name="TextViewTitleTwo">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">19dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:elevation">10dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+
+    <!-- End Home fragment styles -->
 
     <style name="ParentCard">
         <item name="android:layout_width">match_parent</item>
