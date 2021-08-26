@@ -57,6 +57,7 @@
         <item name="android:layout_marginBottom">14dp</item>
     </style>
 
+    <!-- statistic fragment styles -->
     <style name="StatisticsCardStyle">
         <item name="android:layout_width">130dp</item>
         <item name="android:layout_height">180dp</item>
@@ -127,21 +128,15 @@
     </style>
 
 
-
-
     <style name="card_view_home_fragment">
-
-        <item name="cardBackgroundColor">#F2F3F4</item>
+        <item name="cardBackgroundColor">@color/white</item>
         <item name="cardCornerRadius">30dp</item>
         <item name="cardElevation">8dp</item>
-        <item name="android:layout_marginEnd">24dp</item>
-        <item name="android:layout_marginStart">24dp</item>
-        <item name="android:layout_marginBottom">16dp</item>
-        <item name="layout_constraintEnd_toEndOf">parent</item>
-        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="android:layout_margin">16dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">130dp</item>
 
     </style>
-
 
     <style name="text_view_titles_of_cards_home_fragment">
         <item name="android:layout_width">345dp</item>
@@ -155,31 +150,42 @@
         <item name="layout_constraintStart_toStartOf">parent</item>
 
     </style>
+
     <style name="shapable_image_view_home_fragment">
-        <item name="android:layout_width">68dp</item>
-        <item name="android:layout_height">68dp</item>
-        <item name="android:layout_marginTop">32dp</item>
-        <item name="android:layout_marginEnd">16dp</item>
-        <item name="android:elevation">8dp</item>
+        <item name="android:layout_width">55dp</item>
+        <item name="android:layout_height">55dp</item>
+        <item name="android:elevation">8.5dp</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:scaleType">centerCrop</item>
         <item name="shapeAppearanceOverlay">@style/circle</item>
     </style>
 
-    <style name="linear_layout_home_fragment">
-        <item name="android:layout_width">230dp</item>
-        <item name="android:layout_height">150dp</item>
-        <item name="android:elevation">8dp</item>
-        <item name="android:orientation">vertical</item>
-        <item name="android:paddingTop">25dp</item>
-
-        <item name="android:layout_marginTop">10dp</item>
+    <style name="Text_Details_Home_Fragment">
+        <item name="android:background">@drawable/home_fragment_text_view_style</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">28dp</item>
+        <item name="android:elevation">8.5dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="text_details_home_fragment">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">12sp</item>
-        <item name="android:paddingBottom">3dp</item>
+    <style name="Text_Details_Home_Fragment.SecondaryBrandColor">
+        <item name="android:background">@drawable/home_fragment_text_view_style_secondary</item>
 
+    </style>
+
+    <style name="Text_Describe_Home_Fragment">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:minWidth">250dp</item>
+        <item name="android:maxHeight">50dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:textSize">11.5sp</item>
+        <item name="android:elevation">8.5dp</item>
+    </style>
+    <style name="Text_Describe_Home_Fragment.MarginTop">
+        <item name="android:layout_marginTop">8dp</item>
     </style>
 
 
@@ -262,6 +268,7 @@
         <item name="android:elevation">4dp</item>
         <item name="android:textStyle">bold</item>
     </style>
+
     <style name="developerInfo.name">
         <item name="android:layout_marginBottom">16dp</item>
         <item name="android:textColor">@color/black</item>
@@ -290,6 +297,11 @@
 
     <style name="developerCard.marginEnd">
         <item name="android:layout_marginEnd">16dp</item>
+    </style>
+    <!-- Round picture -->
+    <style name="circleImageStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
     </style>
 
 </resources>
