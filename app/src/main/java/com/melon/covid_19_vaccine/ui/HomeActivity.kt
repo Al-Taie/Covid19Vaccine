@@ -1,7 +1,6 @@
 package com.melon.covid_19_vaccine.ui
 
-import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import android.view.LayoutInflater
 import androidx.fragment.app.Fragment
 import com.melon.covid_19_vaccine.R
 import com.melon.covid_19_vaccine.databinding.ActivityHomeBinding
@@ -10,23 +9,22 @@ import com.melon.covid_19_vaccine.util.Constant
 import com.melon.covid_19_vaccine.util.CsvParser
 import com.melon.covid_19_vaccine.util.initData
 
-class HomeActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityHomeBinding
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setTheme(R.style.Theme_Covid19Vaccine)
-        binding = ActivityHomeBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+class HomeActivity : BaseActivity<ActivityHomeBinding>() {
+    override fun setup() {
         callBack()
     }
 
-    private fun callBack() {
+    override fun callBack() {
         val inputStream = assets.open(Constant.DATA_FILE)
         CsvParser.parseFileData(inputStream)
         initData()
         addNavigationListener()
     }
+
+    override val theme = R.style.Theme_Covid19Vaccine
+
+    override val inflate: (LayoutInflater) -> ActivityHomeBinding
+        get() = ActivityHomeBinding::inflate
 
     private fun addNavigationListener() {
         binding.bottomNav.setOnItemSelectedListener { item ->
@@ -64,5 +62,4 @@ class HomeActivity : AppCompatActivity() {
             commit()
         }
     }
-
 }
