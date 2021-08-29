@@ -72,7 +72,7 @@ fun initPieChart(binding: FragmentStatisticsBinding) {
 
 
 fun initTopFiveBinding(binding: FragmentStatisticsBinding) {
-    DataManager.vaccinatedListSorted.sortByDescending { it.last().totalVaccinations }
+    DataManager.vaccineList.sortByDescending { it.last().totalVaccinations }
     with(DataManager.vaccinatedTop5) {
         binding.apply {
             countryNameOne.text = firstCountry().country

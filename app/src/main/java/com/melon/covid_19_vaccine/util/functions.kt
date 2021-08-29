@@ -10,8 +10,8 @@ fun initData() {
     DataManager.groupByCountry().forEach { (key, value) ->
         val list = mutableListOf<Vaccinated>()
         value.groupBy { it.date.month }.forEach { (_, v) -> list.add(v.last()) }
-        DataManager.vaccinatedMap[key] = list
-        DataManager.vaccinatedListSorted.add(list)
+        DataManager.addToVaccinatedMap(key,list)
+        DataManager.addToVaccinatedListSorted(list)
     }
 }
 
