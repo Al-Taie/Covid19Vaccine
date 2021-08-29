@@ -3,6 +3,9 @@
 
     <item android:drawable="@color/brandColor"/>
 
-    <item android:drawable="@drawable/ic_application_logo" android:gravity="center"/>
+    <item android:drawable="@drawable/ic_application_logo"
+        android:width="130dp"
+        android:height="80dp"
+        android:gravity="center"/>
 
 </layer-list>
