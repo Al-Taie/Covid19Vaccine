@@ -13,8 +13,10 @@
 
     <style name="splashScreenTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="android:windowBackground">@drawable/splash_screen</item>
-        <item name="android:statusBarColor">@color/brandColor</item>
+        <item name="android:statusBarColor">@color/secondaryBrandColor</item>
     </style>
+
+
 
     <style name="circleImage">
         <item name="cornerFamily">rounded</item>
