@@ -53,15 +53,16 @@
     <string name="the_vaccine_is_start_active_in_june_2021">The vaccine is start active in June, 2021.</string>
 
 
-    <string name="about_upper_card_text">Developers Behind This Project </string>
+
     <string name="ahmed_mones">Ahmed Mones</string>
-    <string name="team_leader">(Team Leader)</string>
+    <string name="team_leader">( Team Leader )</string>
     <string name="ammar_thaaer">Ammar Thaaer</string>
-    <string name="team_member">(Team Member)</string>
+    <string name="team_member"> ( Team Members )</string>
     <string name="zahraa_zahir">Zahraa Zahir</string>
     <string name="zainab_mahmood">Zainab Mahmood</string>
     <string name="karrar_mohammed">Karrar Mohammed</string>
-    <string name="instructor">(Instructor)</string>
-    <string name="bareq_al_taamah">Bareq AL-Taamah</string>
+    <string name="about_headline_text">Who Are We?</string>
+    <string name="team_description_text">Watermelon Team is a team of developers who are currently learning Android Development under the supervision of the brilliant Bareq AL-Taamah. ( Please note that this project is for learning purpose only. )</string>
+
 
 </resources>
