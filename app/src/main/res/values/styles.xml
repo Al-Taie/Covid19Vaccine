@@ -292,8 +292,9 @@
     <style name="aboutHeadlineText">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/red</item>
+        <item name="android:textColor">#DA5D53</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:layout_margin">10dp</item>
         <item name="android:gravity">center</item>
     </style>
 
@@ -303,8 +304,9 @@
         <item name="android:elevation">8.5dp</item>
         <item name="android:gravity">center</item>
         <item name="android:textColor">@color/black</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">18sp</item>
         <item name="android:layout_marginTop">12dp</item>
     </style>
+
 
 </resources>
