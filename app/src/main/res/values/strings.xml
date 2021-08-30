@@ -13,7 +13,7 @@
     <string name="some_of_covid_19_companies">Some of COVID-19 companies :</string>
     <string name="pfizer_biontech"><li>Pfizer-BioNTech</li></string>
     <string name="oxford_uni_astrazeneca"><li>Oxford Uni-AstraZeneca</li></string>
-    <string name="gamaleye_sputnik_v"><li>Gamaleye(Sputnik V)</li></string>
+    <string name="moderna_company"><li>Moderna, Inc.</li></string>
     <string name="the_facts_of_vaccines">Facts About COVID-19 Vaccines :</string>
     <string name="safe_for_pregnant_and_breastfeeding_women"><li>Free and Safe for pregnant women.</li></string>
     <string name="previous_infection_doesnt_qualify_as_protection"><li>First infection doesn\'t mean protection.</li></string>
@@ -37,7 +37,7 @@
     <string name="recommended_for_12">Recommended for:\nAnyone 12 or older.</string>
     <string name="astrazeneca">ASTRAZENECA</string>
     <string name="recommended_for_18">Recommended for:\nAdults 18 and older.</string>
-    <string name="moderna"><li>MODERNA</li></string>
+    <string name="moderna">MODERNA</string>
     <string name="j_and_j"><![CDATA[J&J]]></string>
     <string name="total_cases">TOTAL CASES</string>
     <string name="vaccine_name">Vaccine Name</string>

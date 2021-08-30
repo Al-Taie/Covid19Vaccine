@@ -136,7 +136,7 @@
             <TextView
                 android:id="@+id/text_view_three_inside_second_card"
                 style="@style/Text_Describe_Home_Fragment"
-                android:text="@string/moderna"
+                android:text="@string/moderna_company"
                 app:layout_constraintLeft_toLeftOf="@id/my_second_card"
                 app:layout_constraintTop_toBottomOf="@id/text_view_two_inside_second_card" />
 

@@ -10,13 +10,12 @@
     <!-- this constraintLayout contains all the cards for the vaccines -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragment_container_two"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -69,25 +68,12 @@
             <ImageView
                 android:id="@+id/pfizer_image"
                 style="@style/CardImage"
+                android:src="@drawable/pfizer"
+                android:padding="12dp"
                 app:layout_constraintBottom_toBottomOf="@id/firstCard"
                 app:layout_constraintStart_toStartOf="@id/firstCard"
                 app:layout_constraintTop_toTopOf="@id/firstCard" />
 
-            <ImageView
-                style="@style/red_dot"
-                android:layout_marginStart="10dp"
-                app:layout_constraintBottom_toBottomOf="@id/pfizer_image"
-                app:layout_constraintStart_toStartOf="@id/pfizer_image"
-                app:layout_constraintTop_toTopOf="@id/pfizer_image"
-                app:layout_constraintVertical_bias="0.15" />
-
-            <ImageView
-                style="@style/red_dot"
-                android:layout_marginEnd="10dp"
-                app:layout_constraintBottom_toBottomOf="@id/pfizer_image"
-                app:layout_constraintEnd_toEndOf="@id/pfizer_image"
-                app:layout_constraintTop_toTopOf="@id/pfizer_image"
-                app:layout_constraintVertical_bias="0.85" />
 
             <ImageButton
                 android:id="@+id/show_pfizer_details_button"
@@ -130,25 +116,11 @@
             <ImageView
                 android:id="@+id/astrazeneca_image"
                 style="@style/CardImage"
+                android:src="@drawable/astrazeneca"
+                android:padding="10dp"
                 app:layout_constraintBottom_toBottomOf="@id/card2"
                 app:layout_constraintStart_toStartOf="@id/card2"
                 app:layout_constraintTop_toTopOf="@id/card2" />
-
-            <ImageView
-                style="@style/red_dot"
-                android:layout_marginStart="10dp"
-                app:layout_constraintBottom_toBottomOf="@id/astrazeneca_image"
-                app:layout_constraintStart_toStartOf="@id/astrazeneca_image"
-                app:layout_constraintTop_toTopOf="@id/astrazeneca_image"
-                app:layout_constraintVertical_bias="0.15" />
-
-            <ImageView
-                style="@style/red_dot"
-                android:layout_marginEnd="10dp"
-                app:layout_constraintBottom_toBottomOf="@id/astrazeneca_image"
-                app:layout_constraintEnd_toEndOf="@id/astrazeneca_image"
-                app:layout_constraintTop_toTopOf="@id/astrazeneca_image"
-                app:layout_constraintVertical_bias="0.85" />
 
             <ImageButton
                 android:id="@+id/show_astrazeneca_details_button"
@@ -190,25 +162,12 @@
             <ImageView
                 android:id="@+id/moderna_image"
                 style="@style/CardImage"
+                android:src="@drawable/moderna"
+                android:padding="10dp"
                 app:layout_constraintBottom_toBottomOf="@id/card3"
                 app:layout_constraintStart_toStartOf="@id/card3"
                 app:layout_constraintTop_toTopOf="@id/card3" />
 
-            <ImageView
-                style="@style/red_dot"
-                android:layout_marginStart="10dp"
-                app:layout_constraintBottom_toBottomOf="@id/moderna_image"
-                app:layout_constraintStart_toStartOf="@id/moderna_image"
-                app:layout_constraintTop_toTopOf="@id/moderna_image"
-                app:layout_constraintVertical_bias="0.15" />
-
-            <ImageView
-                style="@style/red_dot"
-                android:layout_marginEnd="10dp"
-                app:layout_constraintBottom_toBottomOf="@id/moderna_image"
-                app:layout_constraintEnd_toEndOf="@id/moderna_image"
-                app:layout_constraintTop_toTopOf="@id/moderna_image"
-                app:layout_constraintVertical_bias="0.85" />
 
             <ImageButton
                 android:id="@+id/show_moderna_details_button"
@@ -250,25 +209,12 @@
             <ImageView
                 android:id="@+id/j_and_j_image"
                 style="@style/CardImage"
+                android:src="@drawable/j_and_j"
+                android:padding="12dp"
                 app:layout_constraintBottom_toBottomOf="@id/card4"
                 app:layout_constraintStart_toStartOf="@id/card4"
                 app:layout_constraintTop_toTopOf="@id/card4" />
 
-            <ImageView
-                style="@style/red_dot"
-                android:layout_marginStart="10dp"
-                app:layout_constraintBottom_toBottomOf="@id/j_and_j_image"
-                app:layout_constraintStart_toStartOf="@id/j_and_j_image"
-                app:layout_constraintTop_toTopOf="@id/j_and_j_image"
-                app:layout_constraintVertical_bias="0.15" />
-
-            <ImageView
-                style="@style/red_dot"
-                android:layout_marginEnd="10dp"
-                app:layout_constraintBottom_toBottomOf="@id/j_and_j_image"
-                app:layout_constraintEnd_toEndOf="@id/j_and_j_image"
-                app:layout_constraintTop_toTopOf="@id/j_and_j_image"
-                app:layout_constraintVertical_bias="0.85" />
 
             <ImageButton
                 android:id="@+id/show_jandj_details_button"
@@ -311,25 +257,11 @@
             <ImageView
                 android:id="@+id/sinopharm_image"
                 style="@style/CardImage"
+                android:src="@drawable/sinopharm"
+                android:padding="12dp"
                 app:layout_constraintBottom_toBottomOf="@id/card5"
                 app:layout_constraintStart_toStartOf="@id/card5"
                 app:layout_constraintTop_toTopOf="@id/card5" />
-
-            <ImageView
-                style="@style/red_dot"
-                android:layout_marginStart="10dp"
-                app:layout_constraintBottom_toBottomOf="@id/sinopharm_image"
-                app:layout_constraintStart_toStartOf="@id/sinopharm_image"
-                app:layout_constraintTop_toTopOf="@id/sinopharm_image"
-                app:layout_constraintVertical_bias="0.15" />
-
-            <ImageView
-                style="@style/red_dot"
-                android:layout_marginEnd="10dp"
-                app:layout_constraintBottom_toBottomOf="@id/sinopharm_image"
-                app:layout_constraintEnd_toEndOf="@id/sinopharm_image"
-                app:layout_constraintTop_toTopOf="@id/sinopharm_image"
-                app:layout_constraintVertical_bias="0.85" />
 
             <ImageButton
                 android:id="@+id/show_sinopharm_details_button"
