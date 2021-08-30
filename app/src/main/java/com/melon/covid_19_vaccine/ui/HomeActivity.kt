@@ -10,6 +10,7 @@ import com.melon.covid_19_vaccine.util.CsvParser
 import com.melon.covid_19_vaccine.util.initData
 
 class HomeActivity : BaseActivity<ActivityHomeBinding>() {
+
     override fun setup() {
         callBack()
     }
@@ -19,7 +20,12 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>() {
         CsvParser.parseFileData(inputStream)
         initData()
         addNavigationListener()
+
+
     }
+
+
+
 
     override val theme = R.style.Theme_Covid19Vaccine
 

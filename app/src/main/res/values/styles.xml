@@ -103,7 +103,7 @@
     <style name="MyLayoutBackground">
         <item name="android:background">@drawable/my_fragment_statistics</item>
         <item name="android:color">@color/white</item>
-        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">0dp</item>
         <item name="android:layout_marginTop">150dp</item>
 

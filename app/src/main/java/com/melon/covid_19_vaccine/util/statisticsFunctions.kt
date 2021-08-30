@@ -71,21 +71,22 @@ fun initPieChart(binding: FragmentStatisticsBinding) {
 }
 
 
+
 fun initTopFiveBinding(binding: FragmentStatisticsBinding) {
     DataManager.vaccineList.sortByDescending { it.last().totalVaccinations }
     with(DataManager.getVaccinatedTop5) {
-        binding.apply {
-            countryNameOne.text = firstCountry().country
-            countryNameTwo.text = secondCountry().country
-            countryNameThird.text = thirdCountry().country
-            countryNameFourth.text = fourthCountry().country
-            countryNameFifth.text = lastCountry().country
-
-            totalCasesOne.text = firstCountry().totalVaccinations.toString()
-            totalCasesTwo.text = secondCountry().totalVaccinations.toString()
-            totalCasesThird.text = thirdCountry().totalVaccinations.toString()
-            totalCasesFourth.text = fourthCountry().totalVaccinations.toString()
-            totalCasesFifth.text = lastCountry().totalVaccinations.toString()
-        }
+//        binding.apply {
+//            countryNameOne.text = firstCountry().country
+//            countryNameTwo.text = secondCountry().country
+//            countryNameThird.text = thirdCountry().country
+//            countryNameFourth.text = fourthCountry().country
+//            countryNameFifth.text = lastCountry().country
+//
+//            totalCasesOne.text = firstCountry().totalVaccinations.toString()
+//            totalCasesTwo.text = secondCountry().totalVaccinations.toString()
+//            totalCasesThird.text = thirdCountry().totalVaccinations.toString()
+//            totalCasesFourth.text = fourthCountry().totalVaccinations.toString()
+//            totalCasesFifth.text = lastCountry().totalVaccinations.toString()
+//        }
     }
 }

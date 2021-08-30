@@ -27,164 +27,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            app:layout_constraintBottom_toTopOf="@id/my_scroll_view"
+
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/total_cases_text" />
 
-
-        <HorizontalScrollView
-            android:id="@+id/my_scroll_view"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_country"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:scrollbars="none"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:elevation="16dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent">
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pie_chart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:listitem="@layout/item_statistics"/>
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent">
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fires_card_view"
-                    style="@style/StatisticsCardStyle"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/country_name_one"
-                    tools:text="China"
-                    style="@style/StatisticsTextCountryNameStyle"
-                    app:layout_constraintLeft_toLeftOf="@id/fires_card_view"
-                    app:layout_constraintRight_toRightOf="@id/fires_card_view"
-                    app:layout_constraintTop_toTopOf="@id/fires_card_view" />
-
-                <TextView
-                    android:id="@+id/total_cases_one"
-                    style="@style/StatisticsTextStyleTotalCases"
-                    tools:text="175778000"
-                    app:layout_constraintLeft_toLeftOf="@id/fires_card_view"
-                    app:layout_constraintRight_toRightOf="@id/fires_card_view"
-                    app:layout_constraintTop_toBottomOf="@id/country_name_one" />
-
-<!--                <com.fdev.backgroundchart.GradientChart-->
-<!--                    android:id="@+id/gradientChart"-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:layout_height="0dp"-->
-<!--                    app:isBezier="true"-->
-<!--                    android:background=""-->
-<!--                    app:layout_constraintBottom_toBottomOf="@+id/fires_card_view"-->
-<!--                    app:layout_constraintEnd_toEndOf="@+id/fires_card_view"-->
-<!--                    app:layout_constraintStart_toStartOf="@+id/fires_card_view"-->
-<!--                    app:layout_constraintTop_toBottomOf="@id/total_cases_one"-->
-<!--                    app:minusColorEnd="#90CAF9"-->
-<!--                    app:minusColorStart="#90CAF9"-->
-<!--                    app:plusColorEnd="#90CAF9"-->
-<!--                    android:elevation="9dp"-->
-<!--                    app:plusColorStart="@color/brandColor"-->
-<!--                    app:zoom="10" />-->
-
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/second_card_view"
-                    style="@style/StatisticsCardStyleBackgroundColor"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintLeft_toRightOf="@id/fires_card_view"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
-                <TextView
-                    android:id="@+id/country_name_two"
-                    style="@style/StatisticsTextCountryNameStyle"
-                    tools:text="United State"
-                    app:layout_constraintLeft_toLeftOf="@id/second_card_view"
-                    app:layout_constraintRight_toRightOf="@id/second_card_view"
-                    app:layout_constraintTop_toTopOf="@id/second_card_view" />
-
-                <TextView
-                    android:id="@+id/total_cases_two"
-                    tools:text="175778000"
-                    style="@style/StatisticsTextStyleTotalCases"
-                    app:layout_constraintLeft_toLeftOf="@id/second_card_view"
-                    app:layout_constraintRight_toRightOf="@id/second_card_view"
-                    app:layout_constraintTop_toBottomOf="@id/country_name_two" />
-
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/third_card_view"
-                    style="@style/StatisticsCardStyle"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintLeft_toRightOf="@id/second_card_view"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
-                <TextView
-                    android:id="@+id/country_name_third"
-                    style="@style/StatisticsTextCountryNameStyle"
-                    app:layout_constraintLeft_toLeftOf="@id/third_card_view"
-                    app:layout_constraintRight_toRightOf="@id/third_card_view"
-                    app:layout_constraintTop_toTopOf="@id/third_card_view" />
-
-                <TextView
-                    android:id="@+id/total_cases_third"
-                    style="@style/StatisticsTextStyleTotalCases"
-                    app:layout_constraintLeft_toLeftOf="@id/third_card_view"
-                    app:layout_constraintRight_toRightOf="@id/third_card_view"
-                    app:layout_constraintTop_toBottomOf="@id/country_name_third" />
-
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fourth_card_view"
-                    style="@style/StatisticsCardStyleBackgroundColor"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintLeft_toRightOf="@id/third_card_view"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
-                <TextView
-                    android:id="@+id/country_name_fourth"
-                    style="@style/StatisticsTextCountryNameStyle"
-                    app:layout_constraintLeft_toLeftOf="@id/fourth_card_view"
-                    app:layout_constraintRight_toRightOf="@id/fourth_card_view"
-                    app:layout_constraintTop_toTopOf="@id/fourth_card_view" />
-
-                <TextView
-                    android:id="@+id/total_cases_fourth"
-                    style="@style/StatisticsTextStyleTotalCases"
-                    app:layout_constraintLeft_toLeftOf="@id/country_name_fourth"
-                    app:layout_constraintRight_toRightOf="@id/country_name_fourth"
-                    app:layout_constraintTop_toBottomOf="@id/country_name_fourth" />
-
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/Fifth_card_view"
-                    style="@style/StatisticsCardStyle"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintLeft_toRightOf="@id/fourth_card_view"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
-                <TextView
-                    android:id="@+id/countryNameFifth"
-                    style="@style/StatisticsTextCountryNameStyle"
-                    app:layout_constraintLeft_toLeftOf="@id/Fifth_card_view"
-                    app:layout_constraintRight_toRightOf="@id/Fifth_card_view"
-                    app:layout_constraintTop_toTopOf="@id/Fifth_card_view" />
-
-                <TextView
-                    android:id="@+id/total_cases_fifth"
-                    style="@style/StatisticsTextStyleTotalCases"
-                    app:layout_constraintLeft_toLeftOf="@id/countryNameFifth"
-                    app:layout_constraintRight_toRightOf="@id/countryNameFifth"
-                    app:layout_constraintTop_toBottomOf="@id/countryNameFifth" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </HorizontalScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

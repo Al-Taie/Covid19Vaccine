@@ -15,6 +15,7 @@ fun initData() {
     }
 }
 
+
 /** GET RANDOM COLOR **/
 val randomColor
     get() = Color.argb(

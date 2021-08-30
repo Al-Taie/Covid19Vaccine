@@ -5,8 +5,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
+import com.melon.covid_19_vaccine.data.DataManager
 import com.melon.covid_19_vaccine.databinding.FragmentSearchBinding
 import com.melon.covid_19_vaccine.ui.BaseFragment
+import com.melon.covid_19_vaccine.ui.StatisticsAdapter
 import com.melon.covid_19_vaccine.util.SearchAdapter
 import com.melon.covid_19_vaccine.util.SearchAdapter.initData
 import com.melon.covid_19_vaccine.util.capitalize
@@ -18,7 +20,7 @@ import com.melon.covid_19_vaccine.util.capitalize
  * create an instance of this fragment.
  */
 class SearchFragment : BaseFragment<FragmentSearchBinding>() {
-    override fun setup() {}
+    override fun setup() {    }
 
     override fun callBack() {
         binding.searchBar.apply {
