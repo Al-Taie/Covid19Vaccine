@@ -69,10 +69,10 @@
                 app:layout_constraintStart_toStartOf="@id/my_first_card"
                 app:layout_constraintTop_toTopOf="@id/my_first_card" />
 
-            <com.google.android.material.imageview.ShapeableImageView
+            <ImageView
                 android:id="@+id/shapeable_image_view_one"
                 style="@style/shapable_image_view_home_fragment"
-                android:src="@drawable/family1"
+                android:src="@drawable/immunity"
                 app:layout_constraintEnd_toEndOf="@id/my_first_card"
                 app:layout_constraintTop_toBottomOf="@+id/text_view_header_inside_first_card" />
 
@@ -112,10 +112,10 @@
                 app:layout_constraintStart_toStartOf="@id/my_second_card"
                 app:layout_constraintTop_toTopOf="@id/my_second_card" />
 
-            <com.google.android.material.imageview.ShapeableImageView
+            <ImageView
                 android:id="@+id/shapeable_image_view_two"
                 style="@style/shapable_image_view_home_fragment"
-                android:src="@drawable/company_vaccine"
+                android:src="@drawable/vaccine_icon"
                 app:layout_constraintBottom_toBottomOf="@id/my_second_card"
                 app:layout_constraintEnd_toEndOf="@id/my_second_card"
                 app:layout_constraintTop_toBottomOf="@+id/text_view_header_inside_second_card" />
@@ -164,10 +164,10 @@
                 app:layout_constraintStart_toStartOf="@id/my_third_card"
                 app:layout_constraintTop_toTopOf="@id/my_third_card" />
 
-            <com.google.android.material.imageview.ShapeableImageView
+            <ImageView
                 android:id="@+id/shapeable_image_view_three"
                 style="@style/shapable_image_view_home_fragment"
-                android:src="@drawable/true_sign"
+                android:src="@drawable/checked"
                 app:layout_constraintEnd_toEndOf="@id/my_third_card"
                 app:layout_constraintTop_toBottomOf="@+id/text_view_header_inside_third_card" />
 
@@ -207,10 +207,10 @@
                 app:layout_constraintStart_toStartOf="@id/my_fourth_card"
                 app:layout_constraintTop_toTopOf="@id/my_fourth_card" />
 
-            <com.google.android.material.imageview.ShapeableImageView
+            <ImageView
                 android:id="@+id/shapeable_image_view_four"
                 style="@style/shapable_image_view_home_fragment"
-                android:src="@drawable/side_effects"
+                android:src="@drawable/patient"
                 app:layout_constraintBottom_toBottomOf="@id/my_fourth_card"
                 app:layout_constraintEnd_toEndOf="@id/my_fourth_card"
                 app:layout_constraintTop_toBottomOf="@+id/text_view_header_inside_fourth_card" />
@@ -260,10 +260,10 @@
                 app:layout_constraintStart_toStartOf="@id/my_fifth_card"
                 app:layout_constraintTop_toTopOf="@id/my_fifth_card" />
 
-            <com.google.android.material.imageview.ShapeableImageView
+            <ImageView
                 android:id="@+id/shapeable_image_view_fifth"
                 style="@style/shapable_image_view_home_fragment"
-                android:src="@drawable/first_aid"
+                android:src="@drawable/prescription"
                 app:layout_constraintEnd_toEndOf="@id/my_fifth_card"
                 app:layout_constraintTop_toBottomOf="@+id/text_view_header_inside_fifth_card" />
 
