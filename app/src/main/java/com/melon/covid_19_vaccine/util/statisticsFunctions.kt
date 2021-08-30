@@ -9,7 +9,7 @@ import com.razerdp.widget.animatedpieview.data.SimplePieInfo
 
 fun initPieChart(binding: FragmentStatisticsBinding) {
     val config = AnimatedPieViewConfig()
-    with(DataManager.vaccinatedTop5) {
+    with(DataManager.getVaccinatedTop5) {
         config.apply {
             startAngle(-40f)
             duration(1800)
@@ -72,8 +72,8 @@ fun initPieChart(binding: FragmentStatisticsBinding) {
 
 
 fun initTopFiveBinding(binding: FragmentStatisticsBinding) {
-    DataManager.vaccinatedListSorted.sortByDescending { it.last().totalVaccinations }
-    with(DataManager.vaccinatedTop5) {
+    DataManager.vaccineList.sortByDescending { it.last().totalVaccinations }
+    with(DataManager.getVaccinatedTop5) {
         binding.apply {
             countryNameOne.text = firstCountry().country
             countryNameTwo.text = secondCountry().country

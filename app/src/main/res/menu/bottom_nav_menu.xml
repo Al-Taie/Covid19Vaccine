@@ -8,7 +8,7 @@
     <item
         android:id="@+id/vaccines"
         android:enabled="true"
-        android:icon="@drawable/ic_vaccine"
+        android:icon="@drawable/vaccine_icon"
         android:title="@string/vaccines"/>
 
     <item

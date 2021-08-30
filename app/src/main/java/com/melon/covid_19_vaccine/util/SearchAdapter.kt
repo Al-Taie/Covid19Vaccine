@@ -6,11 +6,11 @@ import com.melon.covid_19_vaccine.databinding.FragmentSearchBinding
 
 object SearchAdapter {
     fun isFounded(query: String): Boolean {
-        return DataManager.vaccinatedMap.containsKey(query)
+        return DataManager.checkVaccinatedMap(query)
     }
 
     fun initData(query: String, view: View) {
-        val data = DataManager.vaccinatedMap[query]
+        val data = DataManager.vaccineMap[query]
         initPieChart(view = view, data = data)
     }
 }

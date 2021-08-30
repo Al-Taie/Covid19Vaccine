@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:drawable="@color/brandColor"/>
+    <item android:drawable="@color/secondaryBrandColor"/>
 
-    <item android:drawable="@drawable/ic_application_logo" android:gravity="center"/>
+    <item android:drawable="@drawable/ic_application_logo"
+        android:height="120dp"
+        android:width="160dp"
+        android:gravity="center"/>
 
 </layer-list>
