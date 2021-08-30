@@ -59,11 +59,20 @@
             <TextView
                 android:id="@+id/textView8"
                 style="@style/CardDetails"
-                android:text="@string/recommended_for_12"
+                android:text="@string/eligibility_12"
                 app:layout_constraintBottom_toBottomOf="@id/firstCard"
                 app:layout_constraintStart_toEndOf="@+id/vaccines_guideline"
                 app:layout_constraintTop_toBottomOf="@+id/pfizer_vaccine_text"
                 app:layout_constraintVertical_bias="0.1" />
+
+            <TextView
+                android:id="@+id/type_1"
+                style="@style/CardDetails"
+                android:text="@string/mrna"
+                app:layout_constraintBottom_toBottomOf="@id/firstCard"
+                app:layout_constraintStart_toEndOf="@+id/vaccines_guideline"
+                app:layout_constraintTop_toBottomOf="@+id/pfizer_vaccine_text"
+                app:layout_constraintVertical_bias="0.5" />
 
             <ImageView
                 android:id="@+id/pfizer_image"
@@ -107,11 +116,20 @@
             <TextView
                 android:id="@+id/textView2"
                 style="@style/CardDetails"
-                android:text="@string/recommended_for_18"
+                android:text="@string/eligibility_18"
                 app:layout_constraintBottom_toBottomOf="@id/card2"
                 app:layout_constraintStart_toEndOf="@+id/vaccines_guideline"
                 app:layout_constraintTop_toBottomOf="@id/astrazeneca_vaccine"
                 app:layout_constraintVertical_bias="0.1" />
+
+            <TextView
+                android:id="@+id/type_2"
+                style="@style/CardDetails"
+                android:text="@string/non_replicating_viral_vector"
+                app:layout_constraintBottom_toBottomOf="@id/card2"
+                app:layout_constraintStart_toEndOf="@+id/vaccines_guideline"
+                app:layout_constraintTop_toBottomOf="@+id/astrazeneca_vaccine"
+                app:layout_constraintVertical_bias="0.5" />
 
             <ImageView
                 android:id="@+id/astrazeneca_image"
@@ -153,11 +171,19 @@
 
             <TextView
                 style="@style/CardDetails"
-                android:text="@string/recommended_for_18"
+                android:text="@string/eligibility_18"
                 app:layout_constraintBottom_toBottomOf="@id/card3"
                 app:layout_constraintStart_toEndOf="@+id/vaccines_guideline"
                 app:layout_constraintTop_toBottomOf="@id/moderna_vaccine"
                 app:layout_constraintVertical_bias="0.1" />
+            <TextView
+                android:id="@+id/type_3"
+                style="@style/CardDetails"
+                android:text="@string/mrna"
+                app:layout_constraintBottom_toBottomOf="@id/card3"
+                app:layout_constraintStart_toEndOf="@+id/vaccines_guideline"
+                app:layout_constraintTop_toBottomOf="@+id/moderna_vaccine"
+                app:layout_constraintVertical_bias="0.5" />
 
             <ImageView
                 android:id="@+id/moderna_image"
@@ -200,11 +226,20 @@
 
             <TextView
                 style="@style/CardDetails"
-                android:text="@string/recommended_for_18"
+                android:text="@string/eligibility_18"
                 app:layout_constraintBottom_toBottomOf="@id/card4"
                 app:layout_constraintStart_toEndOf="@+id/vaccines_guideline"
                 app:layout_constraintTop_toBottomOf="@id/j_and_j_vaccine"
                 app:layout_constraintVertical_bias="0.1" />
+
+            <TextView
+                android:id="@+id/type_4"
+                style="@style/CardDetails"
+                android:text="@string/non_replicating_viral_vector"
+                app:layout_constraintBottom_toBottomOf="@id/card4"
+                app:layout_constraintStart_toEndOf="@+id/vaccines_guideline"
+                app:layout_constraintTop_toBottomOf="@+id/j_and_j_vaccine"
+                app:layout_constraintVertical_bias="0.5" />
 
             <ImageView
                 android:id="@+id/j_and_j_image"
@@ -248,11 +283,20 @@
 
             <TextView
                 style="@style/CardDetails"
-                android:text="@string/recommended_for_18"
+                android:text="@string/eligibility_18"
                 app:layout_constraintBottom_toBottomOf="@id/card5"
                 app:layout_constraintStart_toEndOf="@+id/vaccines_guideline"
                 app:layout_constraintTop_toBottomOf="@id/sinopharm_vaccine"
                 app:layout_constraintVertical_bias="0.1" />
+
+            <TextView
+                android:id="@+id/type_5"
+                style="@style/CardDetails"
+                android:text="@string/inactivated_virus"
+                app:layout_constraintBottom_toBottomOf="@id/card5"
+                app:layout_constraintStart_toEndOf="@+id/vaccines_guideline"
+                app:layout_constraintTop_toBottomOf="@+id/sinopharm_vaccine"
+                app:layout_constraintVertical_bias="0.5" />
 
             <ImageView
                 android:id="@+id/sinopharm_image"

@@ -23,12 +23,13 @@
         <item name="android:textSize">23sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:elevation">8.5dp</item>
-        <item name="android:textColor">@color/white</item>
+        <item name="android:textColor">#DA5D53</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
 
     <style name="CardDetails" parent="CardTitle">
+        <item name="android:textColor">@color/white</item>
         <item name="android:textSize">14sp</item>
         <item name="android:textStyle">normal</item>
     </style>
@@ -39,7 +40,6 @@
         <item name="android:layout_marginStart">22dp</item>
         <item name="android:elevation">8.5dp</item>
         <item name="android:padding">25dp</item>
-        <item name="android:src">@drawable/syringe</item>
         <item name="android:scaleType">centerCrop</item>
         <item name="android:layout_marginEnd">12dp</item>
         <item name="android:background">@drawable/syringe_background</item>
