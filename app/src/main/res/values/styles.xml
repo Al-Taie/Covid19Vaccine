@@ -130,11 +130,11 @@
 
     <style name="Card_View_Home_Fragment">
         <item name="cardBackgroundColor">@color/white</item>
-        <item name="cardCornerRadius">30dp</item>
+        <item name="cardCornerRadius">15dp</item>
         <item name="cardElevation">8dp</item>
         <item name="android:layout_margin">16dp</item>
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">130dp</item>
+        <item name="android:layout_height">150dp</item>
 
     </style>
 
@@ -144,8 +144,9 @@
         <item name="android:layout_height">28dp</item>
         <item name="android:elevation">8.5dp</item>
         <item name="android:gravity">center</item>
-        <item name="android:textSize">13sp</item>
+        <item name="android:textSize">15sp</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#fff</item>
     </style>
 
     <style name="Text_Details_Home_Fragment.SecondaryBrandColor">
@@ -165,16 +166,16 @@
 
     <style name="Text_Describe_Home_Fragment">
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">20dp</item>
-        <item name="android:minWidth">250dp</item>
-        <item name="android:maxHeight">50dp</item>
-        <item name="android:layout_marginLeft">8dp</item>
-        <item name="android:textSize">11.5sp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:textSize">14sp</item>
         <item name="android:elevation">8.5dp</item>
+        <item name="android:textColor">#000</item>
     </style>
 
     <style name="Text_Describe_Home_Fragment.MarginTop">
-        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginTop">14dp</item>
     </style>
 
     <style name="MainCardInHomeFragment">
@@ -192,10 +193,8 @@
         <item name="android:layout_width">280dp</item>
         <item name="android:layout_height">150dp</item>
         <item name="android:layout_marginTop">28dp</item>
-        <item name="android:visibility">visible</item>
         <item name="lottie_autoPlay">true</item>
-        <item name="lottie_loop">true</item>
-        <item name="lottie_rawRes">@raw/lets_vaccine</item>
+        <item name="lottie_rawRes">@raw/getting_vaccinated</item>
     </style>
 
     <style name="TextViewTitle">
@@ -204,8 +203,8 @@
         <item name="android:layout_marginTop">8dp</item>
         <item name="android:elevation">10dp</item>
         <item name="android:gravity">center</item>
-        <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">#DA5D53</item>
+        <item name="android:textSize">28sp</item>
         <item name="android:textStyle">bold</item>
 
     </style>
