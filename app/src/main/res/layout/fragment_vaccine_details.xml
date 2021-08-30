@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/ParentCard.maxHeight"
+    tools:background="@color/white"
     tools:context=".ui.fragments.VaccineDetailsFragment">
 
     <androidx.constraintlayout.widget.Guideline
