@@ -6,39 +6,42 @@
     <string name="about">About</string>
     <string name="search">Search</string>
     <string name="statistics">Stats</string>
-    <string name="builds_your_immune_system"><li>Builds your immune system </li></string>
-    <string name="protect_you_from_severe_sickness_and_complications"><li>Protect you from severe sickness and complications</li></string>
-    <string name="reduces_your_risk_of_hospitalization"><li>Reduces your risk of hospitalization</li></string>
-    <string name="benefits_of_covid_19_vaccine">Benefits Of COVID-19 Vaccine</string>
-    <string name="some_of_covid_19_companies">Some of COVID-19 companies</string>
+    <string name="builds_your_immune_system"><li>Builds your immune system. </li></string>
+    <string name="protect_you_from_severe_sickness_and_complications"><li>Protect you from severe symptoms.</li></string>
+    <string name="reduces_your_risk_of_hospitalization"><li>Reduces your risk of hospitalization.</li></string>
+    <string name="benefits_of_covid_19_vaccine">Benefits Of COVID-19 Vaccine :</string>
+    <string name="some_of_covid_19_companies">Some of COVID-19 companies :</string>
     <string name="pfizer_biontech"><li>Pfizer-BioNTech</li></string>
     <string name="oxford_uni_astrazeneca"><li>Oxford Uni-AstraZeneca</li></string>
-    <string name="gamaleye_sputnik_v"><li>Gamaleye(Sputnik V)</li></string>
-    <string name="the_facts_of_vaccines">The Facts of Vaccines</string>
-    <string name="safe_for_pregnant_and_breastfeeding_women"><li>Free and Safe for pregnant and breastfeeding women</li></string>
-    <string name="previous_infection_doesnt_qualify_as_protection"><li>Previous infection doesn\'t qualify as protection</li></string>
-    <string name="reduces_symptoms_if_you_get_covid"><li>Reduces symptoms if you get COVID</li></string>
-    <string name="covid_19_vaccine_side_effects">COVID-19 Vaccine side effects</string>
+    <string name="moderna_company"><li>Moderna, Inc.</li></string>
+    <string name="the_facts_of_vaccines">Facts About COVID-19 Vaccines :</string>
+    <string name="safe_for_pregnant_and_breastfeeding_women"><li>Free and Safe for pregnant women.</li></string>
+    <string name="previous_infection_doesnt_qualify_as_protection"><li>First infection doesn\'t mean protection.</li></string>
+    <string name="reduces_symptoms_if_you_get_covid"><li>Reduces symptoms if you get COVID.</li></string>
+    <string name="covid_19_vaccine_side_effects">COVID-19 Vaccine side effects :</string>
     <string name="headache"><li>Headache</li></string>
     <string name="sore_arm"><li>Sore arm</li></string>
     <string name="fever_or_chills"><li>Fever or chills</li></string>
     <string name="muscle_aches_or_soreness"><li>Muscle aches or soreness</li></string>
     <string name="tiredness"><li>Tiredness</li></string>
-    <string name="what_to_do_about_side_effects">What to do about side effects</string>
-    <string name="move_your_arm_apply_an_ice_pack"><li>Move your arm, apply an ice pack</li></string>
-    <string name="rest_when_needed"><li>Rest when needed</li></string>
+    <string name="what_to_do_about_side_effects">What To Do About Side Effects? </string>
+    <string name="move_your_arm_apply_an_ice_pack"><li>Move your arm and apply an ice pack</li></string>
+    <string name="rest_when_needed"><li>Rest when you need</li></string>
     <string name="take_it_easy_take_pain_reliever"><li>Take it easy , take pain reliever</li></string>
-    <string name="if_fever_is_so_high_call_doctor_for_advice"><li>if fever is so high call doctor for advice</li></string>
-    <string name="let_s_get_vaccinated">Let\'s get Vaccinated !</string>
+    <string name="if_fever_is_so_high_call_doctor_for_advice"><li>If fever is so high call the doctor for advice.</li></string>
+    <string name="let_s_get_vaccinated">Let\'s get Vaccinated!</string>
     <string name="free_safe_protected">FREE, SAFE, PROTECTED</string>
-    <string name="recommended_for_nadults_18_and_older">Recommended for:\nAdults 18 and older</string>
     <string name="sinopharm">SINOPHARM</string>
     <string name="pfizer">PFIZER</string>
-    <string name="recommended_for_12">Recommended for:\nAnyone 12 or older.</string>
+    <string name="eligibility_12"><li>Eligibility: Ages 12 and up.</li></string>
     <string name="astrazeneca">ASTRAZENECA</string>
-    <string name="recommended_for_18">Recommended for:\nAdults 18 and older.</string>
-    <string name="moderna"><li>MODERNA</li></string>
+    <string name="eligibility_18"><li>Eligibility: Ages 18 and up</li>.</string>
+    <string name="moderna">MODERNA</string>
     <string name="j_and_j"><![CDATA[J&J]]></string>
+    <string name="mrna"><li>Vaccine Type: \nmessenger RNA</li></string>
+    <string name="adenovirus_vector_vaccine"><li>Vaccine Type: \nAdenovirus vector</li></string>
+    <string name="non_replicating_viral_vector"><li>Vaccine Type: \nNon-replicating viral vector</li></string>
+    <string name="inactivated_virus"><li>Vaccine Type:\nInactivated virus</li></string>
     <string name="total_cases">TOTAL CASES</string>
     <string name="vaccine_name">Vaccine Name</string>
     <string name="_50">50%</string>
@@ -53,15 +56,16 @@
     <string name="the_vaccine_is_start_active_in_june_2021">The vaccine is start active in June, 2021.</string>
 
 
-    <string name="about_upper_card_text">Developers Behind This Project </string>
+
     <string name="ahmed_mones">Ahmed Mones</string>
-    <string name="team_leader">(Team Leader)</string>
+    <string name="team_leader">( Team Leader )</string>
     <string name="ammar_thaaer">Ammar Thaaer</string>
-    <string name="team_member">(Team Member)</string>
+    <string name="team_member"> ( Team Members )</string>
     <string name="zahraa_zahir">Zahraa Zahir</string>
     <string name="zainab_mahmood">Zainab Mahmood</string>
     <string name="karrar_mohammed">Karrar Mohammed</string>
-    <string name="instructor">(Instructor)</string>
-    <string name="bareq_al_taamah">Bareq AL-Taamah</string>
+    <string name="about_headline_text">Who Are We?</string>
+    <string name="team_description_text">Watermelon Team is a team of developers who are currently learning Android Development under the supervision of the brilliant Bareq AL-Taamah. ( Please note that this project is for learning purpose only. )</string>
+
 
 </resources>

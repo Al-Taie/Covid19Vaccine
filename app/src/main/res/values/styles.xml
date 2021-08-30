@@ -23,12 +23,13 @@
         <item name="android:textSize">23sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:elevation">8.5dp</item>
-        <item name="android:textColor">@color/white</item>
+        <item name="android:textColor">#DA5D53</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
 
     <style name="CardDetails" parent="CardTitle">
+        <item name="android:textColor">@color/white</item>
         <item name="android:textSize">14sp</item>
         <item name="android:textStyle">normal</item>
     </style>
@@ -39,7 +40,6 @@
         <item name="android:layout_marginStart">22dp</item>
         <item name="android:elevation">8.5dp</item>
         <item name="android:padding">25dp</item>
-        <item name="android:src">@drawable/syringe</item>
         <item name="android:scaleType">centerCrop</item>
         <item name="android:layout_marginEnd">12dp</item>
         <item name="android:background">@drawable/syringe_background</item>
@@ -130,11 +130,11 @@
 
     <style name="Card_View_Home_Fragment">
         <item name="cardBackgroundColor">@color/white</item>
-        <item name="cardCornerRadius">30dp</item>
+        <item name="cardCornerRadius">15dp</item>
         <item name="cardElevation">8dp</item>
         <item name="android:layout_margin">16dp</item>
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">130dp</item>
+        <item name="android:layout_height">150dp</item>
 
     </style>
 
@@ -144,8 +144,9 @@
         <item name="android:layout_height">28dp</item>
         <item name="android:elevation">8.5dp</item>
         <item name="android:gravity">center</item>
-        <item name="android:textSize">13sp</item>
+        <item name="android:textSize">15sp</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#fff</item>
     </style>
 
     <style name="Text_Details_Home_Fragment.SecondaryBrandColor">
@@ -157,7 +158,7 @@
         <item name="android:layout_width">55dp</item>
         <item name="android:layout_height">55dp</item>
         <item name="android:elevation">8.5dp</item>
-        <item name="android:layout_margin">8dp</item>
+        <item name="android:layout_margin">16dp</item>
         <item name="android:scaleType">centerCrop</item>
         <item name="shapeAppearanceOverlay">@style/circle</item>
     </style>
@@ -165,16 +166,16 @@
 
     <style name="Text_Describe_Home_Fragment">
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">20dp</item>
-        <item name="android:minWidth">250dp</item>
-        <item name="android:maxHeight">50dp</item>
-        <item name="android:layout_marginLeft">8dp</item>
-        <item name="android:textSize">11.5sp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:textSize">14sp</item>
         <item name="android:elevation">8.5dp</item>
+        <item name="android:textColor">#000</item>
     </style>
 
     <style name="Text_Describe_Home_Fragment.MarginTop">
-        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginTop">14dp</item>
     </style>
 
     <style name="MainCardInHomeFragment">
@@ -192,10 +193,8 @@
         <item name="android:layout_width">280dp</item>
         <item name="android:layout_height">150dp</item>
         <item name="android:layout_marginTop">28dp</item>
-        <item name="android:visibility">visible</item>
         <item name="lottie_autoPlay">true</item>
-        <item name="lottie_loop">true</item>
-        <item name="lottie_rawRes">@raw/lets_vaccine</item>
+        <item name="lottie_rawRes">@raw/getting_vaccinated</item>
     </style>
 
     <style name="TextViewTitle">
@@ -204,8 +203,8 @@
         <item name="android:layout_marginTop">8dp</item>
         <item name="android:elevation">10dp</item>
         <item name="android:gravity">center</item>
-        <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">#DA5D53</item>
+        <item name="android:textSize">28sp</item>
         <item name="android:textStyle">bold</item>
 
     </style>
@@ -240,10 +239,6 @@
         <item name="android:layout_width">128dp</item>
         <item name="android:layout_height">128dp</item>
         <item name="android:layout_marginTop">24dp</item>
-        <item name="android:elevation">8dp</item>
-        <item name="android:padding">24dp</item>
-        <item name="android:src">@drawable/syringe</item>
-        <item name="android:scaleType">centerCrop</item>
         <item name="android:background">@drawable/main_card_image_background</item>
     </style>
 
@@ -283,60 +278,30 @@
         <item name="android:layout_margin">20dp</item>
     </style>
 
-
-    <style name="circularAvatar">
-        <item name="cornerSize">50%</item>
-    </style>
-
-    <style name="developerImage">
-        <item name="android:layout_width">65dp</item>
-        <item name="android:layout_height">65dp</item>
-        <item name="android:elevation">8dp</item>
-        <item name="android:scaleType">centerCrop</item>
-        <item name="layout_constraintVertical_bias">0.25</item>
-        <item name="layout_constraintHorizontal_bias">0.5</item>
-    </style>
-
-    <style name="developerInfo">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:elevation">4dp</item>
-        <item name="android:textStyle">bold</item>
-    </style>
-
-    <style name="developerInfo.name">
-        <item name="android:layout_marginBottom">16dp</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="android:textSize">13sp</item>
-    </style>
-
-    <style name="developerInfo.role">
-        <item name="android:layout_marginBottom">16dp</item>
-        <item name="android:textColor">@color/red</item>
-        <item name="android:textSize">11.5sp</item>
-        <item name="android:textStyle">normal</item>
-    </style>
-
-    <style name="developerCard">
-        <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">140dp</item>
-        <item name="android:layout_marginTop">16dp</item>
-        <item name="cardCornerRadius">16dp</item>
-        <item name="cardElevation">4dp</item>
-        <item name="android:backgroundTint">@color/developerCardColor</item>
-    </style>
-
-    <style name="developerCard.magrinStart">
-        <item name="android:layout_marginStart">16dp</item>
-    </style>
-
-    <style name="developerCard.marginEnd">
-        <item name="android:layout_marginEnd">16dp</item>
-    </style>
     <!-- Round picture -->
     <style name="circleImageStyle">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
+    </style>
+
+    <!-- About Fragment Styles -->
+
+    <style name="aboutHeadlineText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="aboutNamesText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:elevation">8.5dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginTop">12dp</item>
     </style>
 
 </resources>

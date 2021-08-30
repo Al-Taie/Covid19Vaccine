@@ -14,5 +14,6 @@
     <color name="lightBlue">#66cccc</color>
     <color name="lightGreen">#D23F34</color>
     <color name="red">#E46C62</color>
-    <color name="developerCardColor">#BAC7D8</color>
+    <color name="namesCardColor">#BAC7D8</color>
+    <color name="aboutDescriptionText">#393939</color>
 </resources>
