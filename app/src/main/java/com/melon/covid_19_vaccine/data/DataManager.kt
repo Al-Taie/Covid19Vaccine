@@ -7,20 +7,21 @@ object DataManager {
     private val vaccinatedList = mutableListOf<Vaccinated>()
     private val vaccinatedListSorted = mutableListOf<List<Vaccinated>>()
     private val vaccinatedMap = mutableMapOf<String, List<Vaccinated>>()
-    private lateinit var vaccinatedTop5: List<List<Vaccinated>>
+    private lateinit var vaccinatedTop10: List<List<Vaccinated>>
 
     val vaccineMap : MutableMap<String,List<Vaccinated>>
         get() = vaccinatedMap
 
     val vaccineList : MutableList<List<Vaccinated>>
         get() = vaccinatedListSorted
-    val getVaccinatedTop5 : List<List<Vaccinated>>
-        get() = vaccinatedTop5
 
-    fun initTopFive() {
+    val getVaccinatedTop10 : List<List<Vaccinated>>
+        get() = vaccinatedTop10
+
+    fun initTop10() {
         with(vaccinatedListSorted) {
             sortByDescending { it.last().totalVaccinations }
-            vaccinatedTop5 = slice(0..4)
+            vaccinatedTop10 = slice(0..9)
         }
     }
 

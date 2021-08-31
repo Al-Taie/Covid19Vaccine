@@ -20,7 +20,7 @@ class StatisticsFragment : BaseFragment<FragmentStatisticsBinding>() {
         get() = FragmentStatisticsBinding::inflate
 
     override fun setup() {
-        DataManager.initTopFive()
+        DataManager.initTop10()
         initTopFiveBinding(binding = binding)
         initPieChart(binding = binding)
     }
