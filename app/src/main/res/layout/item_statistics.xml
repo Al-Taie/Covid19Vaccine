@@ -13,19 +13,21 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/secondaryBrandColor">
+
         <TextView
-            android:id="@+id/country_name_one"
+            android:id="@+id/country_name"
             tools:text="China"
             style="@style/StatisticsTextCountryNameStyle"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
-            android:id="@+id/total_cases_one"
+            android:id="@+id/total_cases"
             style="@style/StatisticsTextStyleTotalCases"
             tools:text="175778000"
-            app:layout_constraintLeft_toLeftOf="@+id/country_name_one"
-            app:layout_constraintRight_toRightOf="@+id/country_name_one"
-            app:layout_constraintTop_toBottomOf="@id/country_name_one" />
+            app:layout_constraintLeft_toLeftOf="@+id/country_name"
+            app:layout_constraintRight_toRightOf="@+id/country_name"
+            app:layout_constraintTop_toBottomOf="@id/country_name" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
