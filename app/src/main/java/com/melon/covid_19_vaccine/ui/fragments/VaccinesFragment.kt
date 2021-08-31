@@ -45,11 +45,11 @@ class VaccinesFragment : BaseFragment<FragmentVaccinesBinding>() {
 
     private fun doAction(data: Details) {
         val detailsFragment = VaccineDetailsFragment.newInstance(data)
-        replaceFragment(detailsFragment)
+        addFragment(detailsFragment)
         binding.mainCon.visibility = View.INVISIBLE
     }
 
-    private fun replaceFragment(fragment: Fragment) {
+    private fun addFragment(fragment: Fragment) {
         childFragmentManager.beginTransaction().apply {
             add(R.id.fragment_container_two, fragment)
             commit()

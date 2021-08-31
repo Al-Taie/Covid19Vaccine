@@ -2,8 +2,11 @@ package com.melon.covid_19_vaccine.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isInvisible
 import androidx.fragment.app.Fragment
+import com.melon.covid_19_vaccine.R
 import com.melon.covid_19_vaccine.data.domain.Details
 import com.melon.covid_19_vaccine.databinding.FragmentVaccineDetailsBinding
 import com.melon.covid_19_vaccine.ui.BaseFragment
@@ -17,7 +20,13 @@ import com.melon.covid_19_vaccine.util.Constant
 class VaccineDetailsFragment : BaseFragment<FragmentVaccineDetailsBinding>() {
     override fun setup() {}
 
-    override fun callBack() {}
+    override fun callBack() {
+
+        binding.goBackButton.setOnClickListener {
+            view?.findViewById<View>(R.id.fragment_container_two)?.visibility = View.INVISIBLE
+            view?.findViewById<View>(R.id.scroll_view)?.visibility = View.VISIBLE
+        }
+    }
 
     override val inflate: (LayoutInflater, ViewGroup?, attachToRoot: Boolean) -> FragmentVaccineDetailsBinding
         get() = FragmentVaccineDetailsBinding::inflate
