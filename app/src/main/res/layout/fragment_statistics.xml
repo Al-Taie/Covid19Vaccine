@@ -9,16 +9,18 @@
     tools:context=".ui.fragments.StatisticsFragment">
 
     <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/statistics_animation"
+        android:id="@+id/swipe_animation"
         android:layout_width="200dp"
         android:layout_height="100dp"
-        android:layout_marginBottom="150dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_rawRes="@raw/swipe_up"/>
+        app:lottie_colorFilter="@color/white"
+        app:lottie_rawRes="@raw/swipe_up" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/my_main_constraint"
         style="@style/MyLayoutBackground"
@@ -39,7 +41,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/total_cases_text" />
