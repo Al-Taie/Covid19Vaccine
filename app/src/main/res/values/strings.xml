@@ -42,7 +42,7 @@
     <string name="adenovirus_vector_vaccine"><li>Vaccine Type: \nAdenovirus vector</li></string>
     <string name="non_replicating_viral_vector"><li>Vaccine Type: \nNon-replicating viral vector</li></string>
     <string name="inactivated_virus"><li>Vaccine Type:\nInactivated virus</li></string>
-    <string name="total_cases">TOTAL CASES</string>
+    <string name="total_cases">MOST VACCINATED COUNTRIES </string>
     <string name="vaccine_name">Vaccine Name</string>
     <string name="_50">50%</string>
     <string name="doses_taken">Doses Taken</string>
