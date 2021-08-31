@@ -58,9 +58,9 @@
 
 
     <string name="ahmed_mones">Ahmed Mones</string>
-    <string name="team_leader">( Team Leader )</string>
+    <string name="team_leader">-Team Leader-</string>
     <string name="ammar_thaaer">Ammar Thaaer</string>
-    <string name="team_member"> ( Team Members )</string>
+    <string name="team_member">-Team Members-</string>
     <string name="zahraa_zahir">Zahraa Zahir</string>
     <string name="zainab_mahmood">Zainab Mahmood</string>
     <string name="karrar_mohammed">Karrar Mohammed</string>
