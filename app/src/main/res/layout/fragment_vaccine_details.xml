@@ -38,6 +38,7 @@
         android:id="@+id/vaccineImage"
         style="@style/MainCardImage"
         android:padding="35dp"
+        android:elevation="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -103,7 +104,7 @@
         style="@style/texts.cardDet"
         android:layout_margin="8dp"
         android:gravity="center_horizontal"
-        android:text="@string/doses_taken"
+        android:text="@string/shots"
         app:layout_constraintBottom_toBottomOf="@+id/doses_card"
         app:layout_constraintEnd_toEndOf="@+id/doses_card"
         app:layout_constraintStart_toStartOf="@+id/doses_card"

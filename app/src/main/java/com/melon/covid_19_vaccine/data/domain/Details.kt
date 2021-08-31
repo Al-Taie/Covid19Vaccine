@@ -5,4 +5,4 @@ import android.os.Parcelable
 import java.io.Serializable
 import java.util.ArrayList
 
-data class Details(val data: List<String>) : Serializable
+data class Details(val data: List<Any>) : Serializable
