@@ -48,12 +48,12 @@
     <string name="doses_taken">Doses Taken</string>
     <string name="_70">70%</string>
     <string name="effectiveness">Effectiveness</string>
-    <string name="description">Description</string>
-    <string name="description_of_the_vaccine_type_the_vaccine_made_country_and_more">Description of the vaccine type, the vaccine made country and more</string>
-    <string name="production">Production</string>
-    <string name="iraq_salahuddin_samarra_company">Iraq, Salahuddin  Samarra Company</string>
-    <string name="date_of_production">Date of Production</string>
-    <string name="the_vaccine_is_start_active_in_june_2021">The vaccine is start active in June, 2021.</string>
+    <string name="description">General Information</string>
+    <string name="name">Name</string>
+    <string name="Manufacturer">Manufacturer</string>
+    <string name="type_of_vaccine">Type of vaccine</string>
+    <string name="number_of_shots">Number of shots</string>
+    <string name="how_given">How Given</string>
 
 
 

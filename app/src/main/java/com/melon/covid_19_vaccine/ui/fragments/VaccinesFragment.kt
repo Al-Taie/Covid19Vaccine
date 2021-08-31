@@ -6,8 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.melon.covid_19_vaccine.R
+import com.melon.covid_19_vaccine.data.domain.Details
 import com.melon.covid_19_vaccine.databinding.FragmentVaccinesBinding
 import com.melon.covid_19_vaccine.ui.BaseFragment
+import com.melon.covid_19_vaccine.util.Constant
 
 
 /**
@@ -18,11 +20,21 @@ import com.melon.covid_19_vaccine.ui.BaseFragment
 class VaccinesFragment : BaseFragment<FragmentVaccinesBinding>() {
     override fun setup() {
         binding.apply {
-            showPfizerDetailsButton.setOnClickListener { doAction() }
-            showAstrazenecaDetailsButton.setOnClickListener { doAction() }
-            showModernaDetailsButton.setOnClickListener { doAction() }
-            showJandjDetailsButton.setOnClickListener { doAction() }
-            showSinopharmDetailsButton.setOnClickListener { doAction() }
+            showPfizerDetailsButton.setOnClickListener {
+                val data = Details(Constant.VaccineName.PFIZER)
+                doAction(data) }
+            showAstrazenecaDetailsButton.setOnClickListener {
+                val data = Details(Constant.VaccineName.ASTRAZENECA)
+                doAction(data) }
+            showModernaDetailsButton.setOnClickListener {
+                val data = Details(Constant.VaccineName.MODERNA)
+                doAction(data) }
+            showJandjDetailsButton.setOnClickListener {
+                val data = Details(Constant.VaccineName.JOHNSEN_AND_JOHNSEN)
+                doAction(data) }
+            showSinopharmDetailsButton.setOnClickListener {
+                val data = Details(Constant.VaccineName.SINOPHARM)
+                doAction(data) }
         }
     }
 
@@ -31,8 +43,9 @@ class VaccinesFragment : BaseFragment<FragmentVaccinesBinding>() {
     override val inflate: (LayoutInflater, ViewGroup?, attachToRoot: Boolean) -> FragmentVaccinesBinding
         get() = FragmentVaccinesBinding::inflate
 
-    private fun doAction() {
-        replaceFragment(VaccineDetailsFragment())
+    private fun doAction(data: Details) {
+        val detailsFragment = VaccineDetailsFragment.newInstance(data)
+        replaceFragment(detailsFragment)
         binding.mainCon.visibility = View.INVISIBLE
     }
 
