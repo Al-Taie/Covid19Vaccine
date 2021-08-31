@@ -23,7 +23,7 @@ class StatisticsFragment : BaseFragment<FragmentStatisticsBinding>() {
 
 
     override fun setup() {
-        DataManager.initTopFive()
+        DataManager.initTop10()
         initTopFiveBinding(binding = binding)
         initPieChart(binding = binding)
 

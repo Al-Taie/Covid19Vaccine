@@ -9,7 +9,7 @@ import com.razerdp.widget.animatedpieview.data.SimplePieInfo
 
 fun initPieChart(binding: FragmentStatisticsBinding) {
     val config = AnimatedPieViewConfig()
-    with(DataManager.getVaccinatedTop5) {
+    with(DataManager.getVaccinatedTop10) {
         config.apply {
             startAngle(-40f)
             duration(1800)
@@ -71,22 +71,21 @@ fun initPieChart(binding: FragmentStatisticsBinding) {
 }
 
 
-
 fun initTopFiveBinding(binding: FragmentStatisticsBinding) {
     DataManager.vaccineList.sortByDescending { it.last().totalVaccinations }
-    with(DataManager.getVaccinatedTop5) {
-//        binding.apply {
-//            countryNameOne.text = firstCountry().country
-//            countryNameTwo.text = secondCountry().country
-//            countryNameThird.text = thirdCountry().country
-//            countryNameFourth.text = fourthCountry().country
-//            countryNameFifth.text = lastCountry().country
-//
-//            totalCasesOne.text = firstCountry().totalVaccinations.toString()
-//            totalCasesTwo.text = secondCountry().totalVaccinations.toString()
-//            totalCasesThird.text = thirdCountry().totalVaccinations.toString()
-//            totalCasesFourth.text = fourthCountry().totalVaccinations.toString()
-//            totalCasesFifth.text = lastCountry().totalVaccinations.toString()
-//        }
+    with(DataManager.getVaccinatedTop10) {
+        binding.apply {
+            countryNameOne.text = firstCountry().country
+            countryNameTwo.text = secondCountry().country
+            countryNameThird.text = thirdCountry().country
+            countryNameFourth.text = fourthCountry().country
+            countryNameFifth.text = lastCountry().country
+
+            totalCasesOne.text = firstCountry().totalVaccinations.toString()
+            totalCasesTwo.text = secondCountry().totalVaccinations.toString()
+            totalCasesThird.text = thirdCountry().totalVaccinations.toString()
+            totalCasesFourth.text = fourthCountry().totalVaccinations.toString()
+            totalCasesFifth.text = lastCountry().totalVaccinations.toString()
+        }
     }
 }
