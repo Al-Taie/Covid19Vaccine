@@ -73,11 +73,7 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(), VaccinatedInteract
         }
     }
 
-    override fun onClickItem(vaccinated: Vaccinated) {
-        TODO("Not yet implemented")
-    }
+    override fun onClickItem(vaccinated: Vaccinated) {}
 
-    override fun onClickName(name: String) {
-        TODO("Not yet implemented")
-    }
+    override fun onClickName(name: String) {}
 }
