@@ -55,11 +55,20 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(), VaccinatedInteract
                     newList.add(it)
                 }
                 adapter.setData(newList)
-
+                search404.visibility = View.INVISIBLE
+                recyclerVaccinated.visibility = View.VISIBLE
                 return true
             }
-            pieChart.visibility = View.GONE
-            searchAnimation.visibility = View.VISIBLE
+
+            search404.visibility = View.VISIBLE
+            recyclerVaccinated.visibility = View.INVISIBLE
+
+            if(query.isEmpty()) {
+                search404.visibility = View.INVISIBLE
+                recyclerVaccinated.visibility = View.VISIBLE
+                adapter.setData(DataManager.vaccineListSorted)
+            }
+
             return false
         }
     }

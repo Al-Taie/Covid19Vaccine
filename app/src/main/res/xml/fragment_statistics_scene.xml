@@ -4,8 +4,13 @@
 
     <ConstraintSet android:id="@+id/start">
         <Constraint
-            android:id="@+id/search_404"
+            android:id="@+id/data_v"
             android:alpha="1"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintVertical_bias="0.5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_visual_data"/>
@@ -28,8 +33,13 @@
 
     <ConstraintSet android:id="@+id/end">
         <Constraint
-            android:id="@+id/search_404"
+            android:id="@+id/data_v"
             android:alpha="0"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintVertical_bias="0.5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_visual_data"/>
