@@ -6,11 +6,13 @@ import android.view.ViewGroup
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import com.melon.covid_19_vaccine.data.DataManager
+import com.melon.covid_19_vaccine.data.domain.Vaccinated
+import com.melon.covid_19_vaccine.data.interfaces.VaccinatedInteractionListener
 import com.melon.covid_19_vaccine.databinding.FragmentSearchBinding
 import com.melon.covid_19_vaccine.ui.BaseFragment
-import com.melon.covid_19_vaccine.ui.StatisticsAdapter
 import com.melon.covid_19_vaccine.util.SearchAdapter
 import com.melon.covid_19_vaccine.util.SearchAdapter.initData
+import com.melon.covid_19_vaccine.util.VaccinatedAdapter
 import com.melon.covid_19_vaccine.util.capitalize
 
 
@@ -19,8 +21,10 @@ import com.melon.covid_19_vaccine.util.capitalize
  * Use the [SearchFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class SearchFragment : BaseFragment<FragmentSearchBinding>() {
-    override fun setup() {    }
+class SearchFragment : BaseFragment<FragmentSearchBinding>(), VaccinatedInteractionListener {
+    override fun setup() {
+        binding.recyclerVaccinated.adapter = VaccinatedAdapter(DataManager.vaccineListSorted, this)
+    }
 
     override fun callBack() {
         binding.searchBar.apply {
@@ -53,5 +57,13 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>() {
             searchAnimation.visibility = View.VISIBLE
             return false
         }
+    }
+
+    override fun onClickItem(vaccinated: Vaccinated) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onClickName(name: String) {
+        TODO("Not yet implemented")
     }
 }

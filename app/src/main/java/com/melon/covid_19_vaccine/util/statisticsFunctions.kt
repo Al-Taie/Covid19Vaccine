@@ -7,7 +7,7 @@ import com.razerdp.widget.animatedpieview.AnimatedPieViewConfig
 import com.razerdp.widget.animatedpieview.data.SimplePieInfo
 
 
-//fun initPieChart(binding: FragmentStatisticsBinding) {
+fun initPieChart(binding: FragmentStatisticsBinding) {
 //    val config = AnimatedPieViewConfig()
 //    with(DataManager.getVaccinatedTop10) {
 //        config.apply {
@@ -68,4 +68,4 @@ import com.razerdp.widget.animatedpieview.data.SimplePieInfo
 //    }
 //    binding.pieChart.applyConfig(config)
 //    binding.pieChart.start()
-//}
+}
