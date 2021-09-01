@@ -1,4 +1,4 @@
-package com.melon.covid_19_vaccine.util
+package com.melon.covid_19_vaccine.ui.search
 
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +11,7 @@ import com.melon.covid_19_vaccine.data.DataManager
 import com.melon.covid_19_vaccine.data.domain.Vaccinated
 import com.melon.covid_19_vaccine.data.interfaces.VaccinatedInteractionListener
 import com.melon.covid_19_vaccine.databinding.ItemVaccinatedBinding
+import com.melon.covid_19_vaccine.util.getVaccinated
 import com.razerdp.widget.animatedpieview.AnimatedPieView
 import com.razerdp.widget.animatedpieview.AnimatedPieViewConfig
 import com.razerdp.widget.animatedpieview.data.SimplePieInfo
@@ -25,13 +26,13 @@ class VaccinatedAdapter(
         val binding = ItemVaccinatedBinding.bind(viewItem)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VaccinatedAdapter.VaccinatedViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VaccinatedViewHolder {
         val view =
             LayoutInflater.from(parent.context).inflate(R.layout.item_vaccinated, parent, false)
-        return VaccinatedAdapter.VaccinatedViewHolder(view)
+        return VaccinatedViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: VaccinatedAdapter.VaccinatedViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: VaccinatedViewHolder, position: Int) {
         val chart = holder.binding.searchCardPieChart
         initPieChart(chart = chart, position = position)
 //        holder.binding.expandableLayout.visibility = View.GONE
@@ -43,7 +44,7 @@ class VaccinatedAdapter(
                 textFirstDoseVaccinated.text = peopleVaccinated.toString()
                 textFullyVaccinated.text = peopleFullyVaccinated.toString()
                 expandableLayout.visibility = if (expanded) View.VISIBLE else View.GONE
-                when (expanded){
+                when (expanded) {
                     true -> {
                         expandableLayout.visibility = View.VISIBLE
                         textCountryName.setCompoundDrawablesRelativeWithIntrinsicBounds(
@@ -117,13 +118,13 @@ class VaccinatedAdapter(
                 addData(
                     SimplePieInfo(
                         peopleFullyVaccinated.toDouble(),
-                        randomColor, "Fully"
+                        com.melon.covid_19_vaccine.util.randomColor, "Fully"
                     )
                 )
                 addData(
                     SimplePieInfo(
                         peopleVaccinated.toDouble(),
-                        randomColor, "First Dose"
+                        com.melon.covid_19_vaccine.util.randomColor, "First Dose"
                     )
                 )
             }

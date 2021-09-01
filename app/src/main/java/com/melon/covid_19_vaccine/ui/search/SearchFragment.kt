@@ -11,7 +11,6 @@ import com.melon.covid_19_vaccine.data.interfaces.VaccinatedInteractionListener
 import com.melon.covid_19_vaccine.databinding.FragmentSearchBinding
 import com.melon.covid_19_vaccine.ui.base.BaseFragment
 import com.melon.covid_19_vaccine.ui.search.SearchAdapter.initData
-import com.melon.covid_19_vaccine.util.VaccinatedAdapter
 import com.melon.covid_19_vaccine.util.capitalize
 
 
@@ -49,11 +48,11 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(), VaccinatedInteract
             if (SearchAdapter.isFounded(query)) {
                 initData(view = pieChart, query = query)
                 pieChart.visibility = View.VISIBLE
-                searchAnimation.visibility = View.GONE
+
                 return true
             }
             pieChart.visibility = View.GONE
-            searchAnimation.visibility = View.VISIBLE
+
             return false
         }
     }

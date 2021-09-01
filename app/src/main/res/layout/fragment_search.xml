@@ -23,19 +23,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/search_animation"
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/search_404"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="85dp"
+        android:src="@drawable/ic_not_found"
         app:layout_constraintTop_toBottomOf="@id/search_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.5"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/search_anim"/>
+        app:layout_constraintVertical_bias="0.5" />
 
     <com.razerdp.widget.animatedpieview.AnimatedPieView
         android:id="@+id/pie_chart"
@@ -51,7 +48,7 @@
         android:id="@+id/recycler_vaccinated"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:visibility="visible"
+        android:visibility="invisible"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@id/search_bar"
