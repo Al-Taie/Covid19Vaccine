@@ -14,12 +14,6 @@ import com.melon.covid_19_vaccine.databinding.FragmentStatisticsBinding
 import com.melon.covid_19_vaccine.ui.base.BaseFragment
 import com.melon.covid_19_vaccine.util.monthName
 import com.github.mikephil.charting.utils.ColorTemplate as Colors
-import com.github.mikephil.charting.components.YAxis
-
-import com.github.mikephil.charting.components.XAxis
-
-
-
 
 
 /**
@@ -33,7 +27,6 @@ class StatisticsFragment : BaseFragment<FragmentStatisticsBinding>() {
 
     override fun setup() {
         DataManager.initTop10()
-        configureChartAppearance()
         showStatsBy(ChipType.TOTAL)
 
         binding.recyclerCountry.adapter = StatisticsAdapter(DataManager.getVaccinatedTop10)
@@ -68,7 +61,7 @@ class StatisticsFragment : BaseFragment<FragmentStatisticsBinding>() {
             entries.add(entry)
             stackLabels.addAll(list.map { it.date.monthName() })
         }
-
+        configureChartAppearance()
         initTop10(entries = entries, stackLabels = stackLabels)
     }
 
@@ -76,14 +69,14 @@ class StatisticsFragment : BaseFragment<FragmentStatisticsBinding>() {
         binding.barChart.apply {
             setDrawGridBackground(false)
             setDrawBarShadow(false)
-            setDrawValueAboveBar(false)
+            setDrawValueAboveBar(true)
             description.isEnabled = false
             xAxis.granularity = 1f
             axisLeft.setDrawGridLines(false)
             axisRight.setDrawGridLines(false)
-            setMaxVisibleValueCount(40)
+            setMaxVisibleValueCount(5)
             setPinchZoom(false)
-            isHighlightFullBarEnabled = true
+            isHighlightFullBarEnabled = false
             animateY(2000)
         }
     }

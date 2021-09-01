@@ -29,9 +29,6 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>() {
 
     }
 
-
-
-
     override val theme = R.style.Theme_Covid19Vaccine
 
     override val inflate: (LayoutInflater) -> ActivityHomeBinding
