@@ -18,3 +18,5 @@ fun String.capitalize() = this.lowercase().replaceFirstChar { it.titlecase() }
 fun LocalDate.monthName(): String = this.month.getDisplayName(TextStyle.SHORT, Locale.ENGLISH)
 
 fun List<List<Vaccinated>>.getVaccinated(position: Int) = this[position].last()
+
+fun List<List<Vaccinated>>.getVaccinatedFully(position: Int) = this[position].sortedBy { it.peopleFullyVaccinated }.last()
