@@ -30,32 +30,83 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/total_cases_text"
+            android:id="@+id/stats_title"
             style="@style/totalCasesText"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <com.razerdp.widget.animatedpieview.AnimatedPieView
-            android:id="@+id/pie_chart"
+        <com.google.android.material.chip.ChipGroup
+            android:layout_marginTop="16dp"
+            android:id="@+id/chip_group"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/total_cases_text" />
+            app:singleSelection="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/stats_title"
+            app:layout_constraintBottom_toTopOf="@id/bar_chart">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_total"
+                android:text="Total"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_fully"
+                android:text="Fully"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_daily"
+                android:text="Daily"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_vaccinated"
+                android:text="Vaccinated"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/bar_chart"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/chip_group" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.625" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_country"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:elevation="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_height="0dp"
             android:orientation="horizontal"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/pie_chart"
+            app:layout_constraintTop_toBottomOf="@id/bar_chart"
             tools:listitem="@layout/item_statistics" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
