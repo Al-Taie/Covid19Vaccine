@@ -1,4 +1,4 @@
-package com.melon.covid_19_vaccine.ui
+package com.melon.covid_19_vaccine.ui.base
 
 import android.os.Bundle
 import android.view.LayoutInflater

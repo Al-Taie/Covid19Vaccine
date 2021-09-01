@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/ParentCard.maxHeight"
     tools:background="@color/white"
-    tools:context=".ui.fragments.VaccineDetailsFragment">
+    tools:context=".ui.vaccines.VaccineDetailsFragment">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/about_guideline"

@@ -1,4 +1,4 @@
-package com.melon.covid_19_vaccine.ui.fragments
+package com.melon.covid_19_vaccine.ui.vaccines
 
 
 import android.view.LayoutInflater
@@ -7,9 +7,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.melon.covid_19_vaccine.R
 import com.melon.covid_19_vaccine.data.domain.Details
+import com.melon.covid_19_vaccine.data.domain.VaccineInfo
 import com.melon.covid_19_vaccine.databinding.FragmentVaccinesBinding
-import com.melon.covid_19_vaccine.ui.BaseFragment
-import com.melon.covid_19_vaccine.util.Constant
+import com.melon.covid_19_vaccine.ui.base.BaseFragment
+import com.melon.covid_19_vaccine.ui.fragments.VaccineDetailsFragment
 
 
 /**
@@ -18,27 +19,17 @@ import com.melon.covid_19_vaccine.util.Constant
  * create an instance of this fragment.
  */
 class VaccinesFragment : BaseFragment<FragmentVaccinesBinding>() {
-    override fun setup() {
+    override fun setup() { }
+
+    override fun callBack() {
         binding.apply {
-            showPfizerDetailsButton.setOnClickListener {
-                val data = Details(Constant.VaccineName.PFIZER)
-                doAction(data) }
-            showAstrazenecaDetailsButton.setOnClickListener {
-                val data = Details(Constant.VaccineName.ASTRAZENECA)
-                doAction(data) }
-            showModernaDetailsButton.setOnClickListener {
-                val data = Details(Constant.VaccineName.MODERNA)
-                doAction(data) }
-            showJandjDetailsButton.setOnClickListener {
-                val data = Details(Constant.VaccineName.JOHNSEN_AND_JOHNSEN)
-                doAction(data) }
-            showSinopharmDetailsButton.setOnClickListener {
-                val data = Details(Constant.VaccineName.SINOPHARM)
-                doAction(data) }
+            showPfizerDetailsButton.setOnClickListener { doAction(Details(VaccineInfo.PFIZER)) }
+            showAstrazenecaDetailsButton.setOnClickListener { doAction(Details(VaccineInfo.ASTRAZENECA)) }
+            showModernaDetailsButton.setOnClickListener { doAction(Details(VaccineInfo.MODERNA)) }
+            showJandjDetailsButton.setOnClickListener { doAction(Details(VaccineInfo.JOHNSEN_AND_JOHNSEN)) }
+            showSinopharmDetailsButton.setOnClickListener { doAction(Details(VaccineInfo.SINOPHARM)) }
         }
     }
-
-    override fun callBack() {}
 
     override val inflate: (LayoutInflater, ViewGroup?, attachToRoot: Boolean) -> FragmentVaccinesBinding
         get() = FragmentVaccinesBinding::inflate

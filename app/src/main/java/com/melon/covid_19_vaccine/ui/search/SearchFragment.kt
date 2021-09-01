@@ -1,16 +1,13 @@
-package com.melon.covid_19_vaccine.ui.fragments
+package com.melon.covid_19_vaccine.ui.search
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
-import com.melon.covid_19_vaccine.data.DataManager
 import com.melon.covid_19_vaccine.databinding.FragmentSearchBinding
-import com.melon.covid_19_vaccine.ui.BaseFragment
-import com.melon.covid_19_vaccine.ui.StatisticsAdapter
-import com.melon.covid_19_vaccine.util.SearchAdapter
-import com.melon.covid_19_vaccine.util.SearchAdapter.initData
+import com.melon.covid_19_vaccine.ui.base.BaseFragment
+import com.melon.covid_19_vaccine.ui.search.SearchAdapter.initData
 import com.melon.covid_19_vaccine.util.capitalize
 
 

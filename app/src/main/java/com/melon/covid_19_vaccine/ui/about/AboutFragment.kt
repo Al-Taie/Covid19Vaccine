@@ -1,10 +1,10 @@
-package com.melon.covid_19_vaccine.ui.fragments
+package com.melon.covid_19_vaccine.ui.about
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.melon.covid_19_vaccine.databinding.FragmentAboutBinding
-import com.melon.covid_19_vaccine.ui.BaseFragment
+import com.melon.covid_19_vaccine.ui.base.BaseFragment
 
 
 /**

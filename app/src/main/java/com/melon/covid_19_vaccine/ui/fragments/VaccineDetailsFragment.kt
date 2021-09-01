@@ -4,12 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.isInvisible
 import androidx.fragment.app.Fragment
 import com.melon.covid_19_vaccine.R
 import com.melon.covid_19_vaccine.data.domain.Details
+import com.melon.covid_19_vaccine.data.domain.VaccineInfo
 import com.melon.covid_19_vaccine.databinding.FragmentVaccineDetailsBinding
-import com.melon.covid_19_vaccine.ui.BaseFragment
+import com.melon.covid_19_vaccine.ui.base.BaseFragment
 import com.melon.covid_19_vaccine.util.Constant
 
 /**
@@ -34,7 +34,7 @@ class VaccineDetailsFragment : BaseFragment<FragmentVaccineDetailsBinding>() {
     override fun onStart() {
         super.onStart()
         arguments?.let {
-            val data = it.getSerializable(Constant.VaccineName.VACCINE_DETAILS) as Details
+            val data = it.getSerializable(VaccineInfo.VACCINE_DETAILS) as Details
             bindData(data)
         }
     }
@@ -59,7 +59,7 @@ class VaccineDetailsFragment : BaseFragment<FragmentVaccineDetailsBinding>() {
 
         fun newInstance(data: Details) = VaccineDetailsFragment().apply {
             arguments = Bundle().apply {
-                putSerializable(Constant.VaccineName.VACCINE_DETAILS, data)
+                putSerializable(VaccineInfo.VACCINE_DETAILS, data)
             }
         }
     }
