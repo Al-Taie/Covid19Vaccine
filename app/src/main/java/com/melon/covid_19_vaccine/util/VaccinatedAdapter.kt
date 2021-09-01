@@ -46,21 +46,11 @@ class VaccinatedAdapter(
                 when (expanded){
                     true -> {
                         expandableLayout.visibility = View.VISIBLE
-                        textCountryName.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                            0,
-                            0,
-                            0,
-                            R.drawable.ic_baseline_expand_less_24
-                        )
+                        imageExpandCollapse.setImageResource(R.drawable.ic_baseline_expand_less_24)
                     }
                     else -> {
                         expandableLayout.visibility = View.GONE
-                        textCountryName.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                            0,
-                            0,
-                            0,
-                            R.drawable.ic_baseline_expand_more_24
-                        )
+                        imageExpandCollapse.setImageResource(R.drawable.ic_baseline_expand_more_24)
                     }
                 }
                 textCountryName.setOnClickListener {
@@ -68,22 +58,12 @@ class VaccinatedAdapter(
                         false -> {
                             expanded = true
                             expandableLayout.visibility = View.VISIBLE
-                            textCountryName.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                                0,
-                                0,
-                                0,
-                                R.drawable.ic_baseline_expand_less_24
-                            )
+                            imageExpandCollapse.setImageResource(R.drawable.ic_baseline_expand_less_24)
                         }
                         else -> {
                             expanded = false
                             expandableLayout.visibility = View.GONE
-                            textCountryName.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                                0,
-                                0,
-                                0,
-                                R.drawable.ic_baseline_expand_more_24
-                            )
+                            imageExpandCollapse.setImageResource(R.drawable.ic_baseline_expand_more_24)
                         }
                     }
                     notifyItemChanged(position)
