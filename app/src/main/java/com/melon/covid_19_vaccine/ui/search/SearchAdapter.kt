@@ -1,8 +1,8 @@
-package com.melon.covid_19_vaccine.util
+package com.melon.covid_19_vaccine.ui.search
 
 import android.view.View
 import com.melon.covid_19_vaccine.data.DataManager
-import com.melon.covid_19_vaccine.databinding.FragmentSearchBinding
+import com.melon.covid_19_vaccine.util.initPieChart
 
 object SearchAdapter {
     fun isFounded(query: String): Boolean {

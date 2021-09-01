@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/secondaryBrandColor"
     app:layoutDescription="@xml/fragment_statistics_scene"
-    tools:context=".ui.fragments.StatisticsFragment">
+    tools:context=".ui.statstics.StatisticsFragment">
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/swipe_animation"

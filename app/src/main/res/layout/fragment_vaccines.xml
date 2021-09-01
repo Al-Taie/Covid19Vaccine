@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:background="@color/white"
-    tools:context=".ui.fragments.VaccinesFragment">
+    tools:context=".ui.vaccines.VaccinesFragment">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_container_two"
