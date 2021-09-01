@@ -21,8 +21,10 @@ import com.melon.covid_19_vaccine.util.capitalize
  * create an instance of this fragment.
  */
 class SearchFragment : BaseFragment<FragmentSearchBinding>(), VaccinatedInteractionListener {
+    lateinit var adapter : VaccinatedAdapter
     override fun setup() {
-        binding.recyclerVaccinated.adapter = VaccinatedAdapter(DataManager.vaccineListSorted, this)
+        adapter = VaccinatedAdapter(DataManager.vaccineListSorted, this)
+        binding.recyclerVaccinated.adapter = adapter
     }
 
     override fun callBack() {
@@ -47,9 +49,13 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(), VaccinatedInteract
     private fun startSearch(query: String): Boolean {
         binding.apply {
             if (SearchAdapter.isFounded(query)) {
-                initData(view = pieChart, query = query)
-                pieChart.visibility = View.VISIBLE
-                searchAnimation.visibility = View.GONE
+                val list = DataManager.vaccineMap[query]
+                val newList = mutableListOf<List<Vaccinated>>()
+                list?.let {
+                    newList.add(it)
+                }
+                adapter.setData(newList)
+
                 return true
             }
             pieChart.visibility = View.GONE

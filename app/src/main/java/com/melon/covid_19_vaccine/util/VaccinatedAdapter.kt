@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.DecelerateInterpolator
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.blongho.country_data.World
 import com.melon.covid_19_vaccine.R
@@ -11,13 +12,14 @@ import com.melon.covid_19_vaccine.data.DataManager
 import com.melon.covid_19_vaccine.data.domain.Vaccinated
 import com.melon.covid_19_vaccine.data.interfaces.VaccinatedInteractionListener
 import com.melon.covid_19_vaccine.databinding.ItemVaccinatedBinding
+import com.melon.covid_19_vaccine.ui.search.VaccinatedDiffUtil
 import com.razerdp.widget.animatedpieview.AnimatedPieView
 import com.razerdp.widget.animatedpieview.AnimatedPieViewConfig
 import com.razerdp.widget.animatedpieview.data.SimplePieInfo
 
 
 class VaccinatedAdapter(
-    private val list: List<List<Vaccinated>>,
+    private var list: List<List<Vaccinated>>,
     private val listener: VaccinatedInteractionListener
 ) : RecyclerView.Adapter<VaccinatedAdapter.VaccinatedViewHolder>() {
 
@@ -70,6 +72,12 @@ class VaccinatedAdapter(
                 }
             }
         }
+    }
+
+    fun setData(newList: List<List<Vaccinated>>){
+        val diffResult = DiffUtil.calculateDiff(VaccinatedDiffUtil(list,newList))
+        list = newList
+        diffResult.dispatchUpdatesTo(this)
     }
 
     override fun getItemCount() = list.size
