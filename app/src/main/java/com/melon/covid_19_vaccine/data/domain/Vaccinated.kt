@@ -14,5 +14,6 @@ data class Vaccinated(
     val totalVaccinationsPerHundred: Double,
     val peopleVaccinatedPerHundred: Double,
     val peopleFullyVaccinatedPerHundred: Double,
-    val dailyVaccinationsPerMillion: Double
+    val dailyVaccinationsPerMillion: Double,
+    var expanded: Boolean = false
 )

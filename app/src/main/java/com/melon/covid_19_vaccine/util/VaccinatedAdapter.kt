@@ -24,16 +24,16 @@ class VaccinatedAdapter(
         val binding = ItemVaccinatedBinding.bind(viewItem)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VaccinatedViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VaccinatedAdapter.VaccinatedViewHolder {
         val view =
             LayoutInflater.from(parent.context).inflate(R.layout.item_vaccinated, parent, false)
-        return VaccinatedViewHolder(view)
+        return VaccinatedAdapter.VaccinatedViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: VaccinatedViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: VaccinatedAdapter.VaccinatedViewHolder, position: Int) {
         val chart = holder.binding.searchCardPieChart
         initPieChart(chart = chart, position = position)
-        holder.binding.expandableLayout.visibility = View.GONE
+//        holder.binding.expandableLayout.visibility = View.GONE
         with(list.getVaccinated(position = position)) {
             holder.binding.apply {
                 imageCountryFlag.setImageResource(R.drawable.circle)
@@ -41,9 +41,31 @@ class VaccinatedAdapter(
                 textTotalVaccination.text = totalVaccinations.toString()
                 textFirstDoseVaccinated.text = peopleVaccinated.toString()
                 textFullyVaccinated.text = peopleFullyVaccinated.toString()
+                expandableLayout.visibility = if (expanded) View.VISIBLE else View.GONE
+                when (expanded){
+                    true -> {
+                        expandableLayout.visibility = View.VISIBLE
+                        textCountryName.setCompoundDrawablesRelativeWithIntrinsicBounds(
+                            0,
+                            0,
+                            0,
+                            R.drawable.ic_baseline_expand_less_24
+                        )
+                    }
+                    else -> {
+                        expandableLayout.visibility = View.GONE
+                        textCountryName.setCompoundDrawablesRelativeWithIntrinsicBounds(
+                            0,
+                            0,
+                            0,
+                            R.drawable.ic_baseline_expand_more_24
+                        )
+                    }
+                }
                 textCountryName.setOnClickListener {
-                    when (expandableLayout.visibility) {
-                        View.GONE -> {
+                    when (expanded) {
+                        false -> {
+                            expanded = true
                             expandableLayout.visibility = View.VISIBLE
                             textCountryName.setCompoundDrawablesRelativeWithIntrinsicBounds(
                                 0,
@@ -53,6 +75,7 @@ class VaccinatedAdapter(
                             )
                         }
                         else -> {
+                            expanded = false
                             expandableLayout.visibility = View.GONE
                             textCountryName.setCompoundDrawablesRelativeWithIntrinsicBounds(
                                 0,
@@ -62,6 +85,7 @@ class VaccinatedAdapter(
                             )
                         }
                     }
+                    notifyItemChanged(position)
                 }
             }
         }
