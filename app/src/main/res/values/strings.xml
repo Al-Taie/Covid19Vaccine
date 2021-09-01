@@ -38,9 +38,9 @@
     <string name="eligibility_18"><li>Eligibility: Ages 18 and up</li>.</string>
     <string name="moderna">MODERNA</string>
     <string name="j_and_j"><![CDATA[J&J]]></string>
-    <string name="mrna"><li>Vaccine Type: \nmessenger RNA</li></string>
+    <string name="mrna"><li>Vaccine Type: \nmRNA</li></string>
     <string name="adenovirus_vector_vaccine"><li>Vaccine Type: \nAdenovirus vector</li></string>
-    <string name="non_replicating_viral_vector"><li>Vaccine Type: \nNon-replicating viral vector</li></string>
+    <string name="non_replicating_viral_vector"><li>Vaccine Type: \nNon-replicating viral</li></string>
     <string name="inactivated_virus"><li>Vaccine Type:\nInactivated virus</li></string>
     <string name="total_cases">MOST VACCINATED COUNTRIES </string>
     <string name="vaccine_name">Vaccine Name</string>
