@@ -12,7 +12,7 @@ object DataManager {
     val vaccineMap : MutableMap<String,List<Vaccinated>>
         get() = vaccinatedMap
 
-    val vaccineList : MutableList<List<Vaccinated>>
+    val vaccineListSorted : MutableList<List<Vaccinated>>
         get() = vaccinatedListSorted
 
     val getVaccinatedTop10 : List<List<Vaccinated>>

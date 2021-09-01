@@ -30,9 +30,7 @@
             android:id="@+id/text_country_name"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:drawableBottom="@drawable/ic_baseline_expand_more_24"
             android:drawablePadding="-25dp"
-            android:drawableTint="@color/black"
             android:lines="1"
             android:ellipsize="end"
             android:gravity="center_vertical"
@@ -42,11 +40,12 @@
             app:layout_constraintBottom_toBottomOf="@id/image_country_flag"
             app:layout_constraintStart_toEndOf="@id/image_country_flag"
             app:layout_constraintEnd_toEndOf="parent"
-            tools:text="Saint Vincent and the Grenadines"/>
+            tools:text="Saint Vincent and the Grenadines"
+            app:drawableBottomCompat="@drawable/ic_baseline_expand_more_24" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/expandable_layout"
-            android:visibility="visible"
+            android:visibility="gone"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="#FAFAFA"
@@ -129,6 +128,15 @@
                 app:layout_constraintTop_toBottomOf="@id/text_total_vaccination"
                 app:layout_constraintStart_toStartOf="@id/guideline_expandable"
                 app:layout_constraintEnd_toEndOf="parent"/>
+
+            <com.razerdp.widget.animatedpieview.AnimatedPieView
+                android:id="@+id/search_card_pie_chart"
+                android:layout_width="290dp"
+                android:layout_height="170dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_fully_vaccinated" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
