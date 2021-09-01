@@ -34,7 +34,7 @@ class VaccinatedAdapter(
         val chart = holder.binding.searchCardPieChart
         initPieChart(chart = chart, position = position)
         holder.binding.expandableLayout.visibility = View.GONE
-        with(list.getVaccinatedFully(position = position)) {
+        with(list.getVaccinated(position = position)) {
             holder.binding.apply {
                 imageCountryFlag.setImageResource(R.drawable.circle)
                 textCountryName.text = country
@@ -71,7 +71,7 @@ class VaccinatedAdapter(
 
     private fun initPieChart(chart: AnimatedPieView, position: Int) {
         val config = AnimatedPieViewConfig()
-        with(DataManager.vaccineListSorted.getVaccinatedFully(position = position)) {
+        with(DataManager.vaccineListSorted.getVaccinated(position = position)) {
             config.apply {
                 startAngle(-40f)
                 duration(1800)
