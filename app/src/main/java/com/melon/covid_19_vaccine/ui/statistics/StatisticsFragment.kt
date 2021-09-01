@@ -14,6 +14,12 @@ import com.melon.covid_19_vaccine.databinding.FragmentStatisticsBinding
 import com.melon.covid_19_vaccine.ui.base.BaseFragment
 import com.melon.covid_19_vaccine.util.monthName
 import com.github.mikephil.charting.utils.ColorTemplate as Colors
+import com.github.mikephil.charting.components.YAxis
+
+import com.github.mikephil.charting.components.XAxis
+
+
+
 
 
 /**
