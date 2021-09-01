@@ -1,6 +1,7 @@
 package com.melon.covid_19_vaccine.ui.vaccines
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -21,11 +22,6 @@ class VaccineDetailsFragment : BaseFragment<FragmentVaccineDetailsBinding>() {
     override fun setup() {}
 
     override fun callBack() {
-
-        binding.goBackButton.setOnClickListener {
-            view?.findViewById<View>(R.id.fragment_container_two)?.visibility = View.INVISIBLE
-            view?.findViewById<View>(R.id.scroll_view)?.visibility = View.VISIBLE
-        }
     }
 
     override val inflate: (LayoutInflater, ViewGroup?, attachToRoot: Boolean) -> FragmentVaccineDetailsBinding
@@ -63,4 +59,5 @@ class VaccineDetailsFragment : BaseFragment<FragmentVaccineDetailsBinding>() {
             }
         }
     }
+
 }

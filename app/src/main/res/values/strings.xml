@@ -66,6 +66,10 @@
     <string name="karrar_mohammed">Karrar Mohammed</string>
     <string name="about_headline_text">Who Are We?</string>
     <string name="team_description_text">Watermelon Team is a team of developers who are currently learning Android Development under the supervision of the brilliant Bareq AL-Taamah. ( Please note that this project is for learning purpose only. )</string>
+    <string name="total">Total</string>
+    <string name="fully">Fully</string>
+    <string name="daily">Daily</string>
+    <string name="vaccinated">Vaccinated</string>
 
 
 </resources>
