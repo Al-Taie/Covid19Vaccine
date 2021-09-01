@@ -1,4 +1,4 @@
-package com.melon.covid_19_vaccine.util
+package com.melon.covid_19_vaccine.ui.search
 
 import android.view.LayoutInflater
 import android.view.View
@@ -12,7 +12,8 @@ import com.melon.covid_19_vaccine.data.DataManager
 import com.melon.covid_19_vaccine.data.domain.Vaccinated
 import com.melon.covid_19_vaccine.data.interfaces.VaccinatedInteractionListener
 import com.melon.covid_19_vaccine.databinding.ItemVaccinatedBinding
-import com.melon.covid_19_vaccine.ui.search.VaccinatedDiffUtil
+import com.melon.covid_19_vaccine.util.getVaccinated
+import com.melon.covid_19_vaccine.util.randomColor
 import com.razerdp.widget.animatedpieview.AnimatedPieView
 import com.razerdp.widget.animatedpieview.AnimatedPieViewConfig
 import com.razerdp.widget.animatedpieview.data.SimplePieInfo
@@ -27,16 +28,16 @@ class VaccinatedAdapter(
         val binding = ItemVaccinatedBinding.bind(viewItem)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VaccinatedAdapter.VaccinatedViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VaccinatedViewHolder {
         val view =
             LayoutInflater.from(parent.context).inflate(R.layout.item_vaccinated, parent, false)
-        return VaccinatedAdapter.VaccinatedViewHolder(view)
+        return VaccinatedViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: VaccinatedAdapter.VaccinatedViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: VaccinatedViewHolder, position: Int) {
         val chart = holder.binding.searchCardPieChart
         initPieChart(chart = chart, position = position)
-//        holder.binding.expandableLayout.visibility = View.GONE
+
         with(list.getVaccinated(position = position)) {
             holder.binding.apply {
                 imageCountryFlag.setImageResource(World.getFlagOf(isoCode))

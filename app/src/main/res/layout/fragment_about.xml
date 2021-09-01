@@ -18,7 +18,7 @@
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/about_image"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="240dp"
         android:scaleType="centerCrop"
         android:src="@drawable/team"
         android:layout_margin="16dp"
@@ -69,6 +69,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/ahmed_card"
         style="@style/teamMembersCard"
+        android:layout_marginTop="8dp"
         app:cardBackgroundColor="@color/red"
         app:layout_constraintVertical_bias="0.25"
         app:layout_constraintBottom_toBottomOf="@+id/about_card"
@@ -81,17 +82,20 @@
         android:id="@+id/team_leader"
         android:elevation="8.5dp"
         android:text="@string/watermelon_team_members"
-        android:textSize="20sp"
-        app:layout_constraintVertical_bias="0.05"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/about_card"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintBottom_toTopOf="@id/ahmed_card"/>
 
     <TextView
         android:id="@+id/ahmed_name"
         style="@style/aboutNamesText"
         android:text="@string/ahmed_mones"
+        android:textSize="14.5sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         app:layout_constraintTop_toTopOf="@id/ahmed_card"
         app:layout_constraintStart_toStartOf="@id/ahmed_card"
         app:layout_constraintEnd_toEndOf="@id/ahmed_card"

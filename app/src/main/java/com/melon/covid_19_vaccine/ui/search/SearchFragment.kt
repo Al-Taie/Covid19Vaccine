@@ -10,8 +10,6 @@ import com.melon.covid_19_vaccine.data.domain.Vaccinated
 import com.melon.covid_19_vaccine.data.interfaces.VaccinatedInteractionListener
 import com.melon.covid_19_vaccine.databinding.FragmentSearchBinding
 import com.melon.covid_19_vaccine.ui.base.BaseFragment
-import com.melon.covid_19_vaccine.ui.search.SearchAdapter.initData
-import com.melon.covid_19_vaccine.util.VaccinatedAdapter
 import com.melon.covid_19_vaccine.util.capitalize
 
 
@@ -40,13 +38,13 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(), VaccinatedInteract
 
     private fun search() {
         binding.searchBar.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
-            override fun onQueryTextSubmit(query: String) = startSearch(query = query.capitalize())
+            override fun onQueryTextSubmit(query: String) = startSearch(query = query.capitalize(), onChanged = true)
 
             override fun onQueryTextChange(query: String) = startSearch(query = query.capitalize())
         })
     }
 
-    private fun startSearch(query: String): Boolean {
+    private fun startSearch(query: String, onChanged: Boolean = false): Boolean {
         binding.apply {
             if (SearchAdapter.isFounded(query)) {
                 val list = DataManager.vaccineMap[query]
@@ -60,8 +58,10 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(), VaccinatedInteract
                 return true
             }
 
-            search404.visibility = View.VISIBLE
-            recyclerVaccinated.visibility = View.INVISIBLE
+            if (onChanged) {
+                search404.visibility = View.VISIBLE
+                recyclerVaccinated.visibility = View.INVISIBLE
+            }
 
             if(query.isEmpty()) {
                 search404.visibility = View.INVISIBLE
