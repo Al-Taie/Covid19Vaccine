@@ -10,7 +10,6 @@ import com.melon.covid_19_vaccine.data.domain.Details
 import com.melon.covid_19_vaccine.data.domain.VaccineInfo
 import com.melon.covid_19_vaccine.databinding.FragmentVaccinesBinding
 import com.melon.covid_19_vaccine.ui.base.BaseFragment
-import com.melon.covid_19_vaccine.ui.fragments.VaccineDetailsFragment
 
 
 /**
