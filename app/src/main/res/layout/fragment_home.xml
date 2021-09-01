@@ -73,6 +73,7 @@
                 android:id="@+id/shapeable_image_view_one"
                 style="@style/shapable_image_view_home_fragment"
                 android:src="@drawable/immunity"
+                app:layout_constraintBottom_toBottomOf="@+id/my_first_card"
                 app:layout_constraintEnd_toEndOf="@id/my_first_card"
                 app:layout_constraintTop_toBottomOf="@+id/text_view_header_inside_first_card" />
 
@@ -163,6 +164,7 @@
                 android:id="@+id/shapeable_image_view_three"
                 style="@style/shapable_image_view_home_fragment"
                 android:src="@drawable/checked"
+                app:layout_constraintBottom_toBottomOf="@+id/my_third_card"
                 app:layout_constraintEnd_toEndOf="@id/my_third_card"
                 app:layout_constraintTop_toBottomOf="@+id/text_view_header_inside_third_card" />
 
@@ -260,7 +262,9 @@
             <ImageView
                 android:id="@+id/shapeable_image_view_fifth"
                 style="@style/shapable_image_view_home_fragment"
+                android:layout_marginBottom="51dp"
                 android:src="@drawable/prescription"
+                app:layout_constraintBottom_toBottomOf="@+id/my_fifth_card"
                 app:layout_constraintEnd_toEndOf="@id/my_fifth_card"
                 app:layout_constraintTop_toBottomOf="@+id/text_view_header_inside_fifth_card" />
 
