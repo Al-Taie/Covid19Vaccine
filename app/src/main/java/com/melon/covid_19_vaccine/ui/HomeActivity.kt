@@ -2,6 +2,7 @@ package com.melon.covid_19_vaccine.ui
 
 import android.view.LayoutInflater
 import androidx.fragment.app.Fragment
+import com.blongho.country_data.World
 import com.melon.covid_19_vaccine.R
 import com.melon.covid_19_vaccine.databinding.ActivityHomeBinding
 import com.melon.covid_19_vaccine.ui.about.AboutFragment
@@ -25,8 +26,7 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>() {
         CsvParser.parseFileData(inputStream)
         initData()
         addNavigationListener()
-
-
+        World.init(applicationContext)
     }
 
     override val theme = R.style.Theme_Covid19Vaccine

@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.animation.DecelerateInterpolator
 import androidx.recyclerview.widget.RecyclerView
+import com.blongho.country_data.World
 import com.melon.covid_19_vaccine.R
 import com.melon.covid_19_vaccine.data.DataManager
 import com.melon.covid_19_vaccine.data.domain.Vaccinated
@@ -36,7 +37,7 @@ class VaccinatedAdapter(
 //        holder.binding.expandableLayout.visibility = View.GONE
         with(list.getVaccinated(position = position)) {
             holder.binding.apply {
-                imageCountryFlag.setImageResource(R.drawable.circle)
+                imageCountryFlag.setImageResource(World.getFlagOf(isoCode))
                 textCountryName.text = country
                 textTotalVaccination.text = totalVaccinations.toString()
                 textFirstDoseVaccinated.text = peopleVaccinated.toString()
