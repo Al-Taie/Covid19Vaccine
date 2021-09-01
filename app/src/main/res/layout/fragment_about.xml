@@ -12,13 +12,13 @@
         android:id="@+id/about_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintGuide_percent="0.53"
-        android:orientation="horizontal"/>
+        app:layout_constraintGuide_percent="0.5"
+        android:orientation="vertical"/>
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/about_image"
         android:layout_width="match_parent"
-        android:layout_height="270dp"
+        android:layout_height="250dp"
         android:scaleType="centerCrop"
         android:src="@drawable/team"
         android:layout_margin="16dp"
@@ -31,7 +31,7 @@
         android:id="@+id/about_headline"
         style="@style/aboutHeadlineText"
         android:text="@string/about_headline_text"
-        android:textSize="26sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/about_image" />
@@ -43,11 +43,12 @@
         android:text="@string/team_description_text"
         android:layout_margin="16dp"
         android:textColor="@color/aboutDescriptionText"
-        android:textSize="17sp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/about_card"
         app:layout_constraintTop_toBottomOf="@+id/about_headline" />
+
 
     <androidx.cardview.widget.CardView
         android:id="@+id/about_card"
@@ -57,21 +58,31 @@
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="16dp"
         android:layout_marginTop="16dp"
-        app:cardElevation="8dp"
+        app:cardElevation="6dp"
         app:cardCornerRadius="12dp"
-        app:cardBackgroundColor="@color/secondaryBrandColor"
+        app:cardBackgroundColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/team_description"
         app:layout_constraintBottom_toBottomOf="parent" />
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ahmed_card"
+        style="@style/teamMembersCard"
+        app:cardBackgroundColor="@color/red"
+        app:layout_constraintVertical_bias="0.25"
+        app:layout_constraintBottom_toBottomOf="@+id/about_card"
+        app:layout_constraintEnd_toEndOf="@+id/about_card"
+        app:layout_constraintStart_toStartOf="@+id/about_card"
+        app:layout_constraintTop_toTopOf="@+id/about_card" />
+
     <TextView
         style="@style/aboutHeadlineText"
         android:id="@+id/team_leader"
         android:elevation="8.5dp"
-        android:text="@string/team_leader"
-        android:textSize="22sp"
-        app:layout_constraintVertical_bias="0.04"
+        android:text="@string/watermelon_team_members"
+        android:textSize="20sp"
+        app:layout_constraintVertical_bias="0.05"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/about_card"
@@ -81,66 +92,79 @@
         android:id="@+id/ahmed_name"
         style="@style/aboutNamesText"
         android:text="@string/ahmed_mones"
-        app:layout_constraintVertical_bias="0.15"
-        app:layout_constraintTop_toTopOf="@id/about_card"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
-
-    <TextView
-        style="@style/aboutHeadlineText"
-        android:id="@+id/team_member"
-        android:text="@string/team_member"
-        android:elevation="8.5dp"
-        android:textSize="22sp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintVertical_bias="0.35"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/about_card"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintTop_toTopOf="@id/ahmed_card"
+        app:layout_constraintStart_toStartOf="@id/ahmed_card"
+        app:layout_constraintEnd_toEndOf="@id/ahmed_card"
+        app:layout_constraintBottom_toBottomOf="@id/ahmed_card"/>
 
 
-    <TextView
-        style="@style/aboutNamesText"
-        android:id="@+id/ammar_name"
-        android:text="@string/ammar_thaaer"
-        app:layout_constraintVertical_bias="0.45"
-        app:layout_constraintTop_toTopOf="@id/about_card"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
-
-
-    <TextView
-        style="@style/aboutNamesText"
-        android:id="@+id/zainab_name"
-        android:text="@string/zainab_mahmood"
-        app:layout_constraintVertical_bias="0.55"
-        app:layout_constraintTop_toTopOf="@id/about_card"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
-
+    <androidx.cardview.widget.CardView
+        android:id="@+id/karrar_card"
+        style="@style/teamMembersCard"
+        android:layout_marginVertical="20dp"
+        app:layout_constraintEnd_toEndOf="@id/about_guideline"
+        app:layout_constraintStart_toStartOf="@+id/about_card"
+        app:layout_constraintTop_toBottomOf="@+id/ahmed_card"/>
 
     <TextView
         style="@style/aboutNamesText"
         android:id="@+id/karrar_name"
         android:text="@string/karrar_mohammed"
-        app:layout_constraintVertical_bias="0.65"
-        app:layout_constraintTop_toTopOf="@id/about_card"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintTop_toTopOf="@id/karrar_card"
+        app:layout_constraintStart_toStartOf="@id/karrar_card"
+        app:layout_constraintEnd_toEndOf="@id/karrar_card"
+        app:layout_constraintBottom_toBottomOf="@id/karrar_card"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ammar_card"
+        style="@style/teamMembersCard"
+        android:layout_marginVertical="20dp"
+        app:layout_constraintEnd_toEndOf="@id/about_guideline"
+        app:layout_constraintStart_toStartOf="@+id/about_card"
+        app:layout_constraintTop_toBottomOf="@+id/karrar_card"/>
+
+    <TextView
+        style="@style/aboutNamesText"
+        android:id="@+id/ammar_name"
+        android:text="@string/ammar_thaaer"
+        app:layout_constraintTop_toTopOf="@id/ammar_card"
+        app:layout_constraintStart_toStartOf="@id/ammar_card"
+        app:layout_constraintEnd_toEndOf="@id/ammar_card"
+        app:layout_constraintBottom_toBottomOf="@id/ammar_card"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/zainab_card"
+        style="@style/teamMembersCard"
+        android:layout_marginVertical="20dp"
+        app:layout_constraintStart_toStartOf="@id/about_guideline"
+        app:layout_constraintEnd_toEndOf="@+id/about_card"
+        app:layout_constraintTop_toBottomOf="@+id/ahmed_card"/>
+
+    <TextView
+        style="@style/aboutNamesText"
+        android:id="@+id/zainab_name"
+        android:text="@string/zainab_mahmood"
+        app:layout_constraintTop_toTopOf="@id/zainab_card"
+        app:layout_constraintStart_toStartOf="@id/zainab_card"
+        app:layout_constraintEnd_toEndOf="@id/zainab_card"
+        app:layout_constraintBottom_toBottomOf="@id/zainab_card"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/zahraa_card"
+        style="@style/teamMembersCard"
+        android:layout_marginVertical="20dp"
+        app:layout_constraintStart_toStartOf="@id/about_guideline"
+        app:layout_constraintEnd_toEndOf="@+id/about_card"
+        app:layout_constraintTop_toBottomOf="@+id/zainab_card"/>
 
     <TextView
         style="@style/aboutNamesText"
         android:id="@+id/zahraa_name"
         android:text="@string/zahraa_zahir"
-        app:layout_constraintVertical_bias="0.75"
-        app:layout_constraintTop_toTopOf="@id/about_card"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintTop_toTopOf="@id/zahraa_card"
+        app:layout_constraintStart_toStartOf="@id/zahraa_card"
+        app:layout_constraintEnd_toEndOf="@id/zahraa_card"
+        app:layout_constraintBottom_toBottomOf="@id/zahraa_card"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
