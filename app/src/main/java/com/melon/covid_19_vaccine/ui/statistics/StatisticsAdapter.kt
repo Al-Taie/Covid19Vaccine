@@ -1,4 +1,4 @@
-package com.melon.covid_19_vaccine.ui.statstics
+package com.melon.covid_19_vaccine.ui.statistics
 
 import android.view.LayoutInflater
 import android.view.View

@@ -1,4 +1,4 @@
-package com.melon.covid_19_vaccine.ui.statstics
+package com.melon.covid_19_vaccine.ui.statistics
 
 import android.graphics.Color
 import android.view.LayoutInflater
@@ -25,18 +25,16 @@ class StatisticsFragment : BaseFragment<FragmentStatisticsBinding>() {
     override val inflate: (LayoutInflater, ViewGroup?, attachToRoot: Boolean) -> FragmentStatisticsBinding
         get() = FragmentStatisticsBinding::inflate
 
-
     override fun setup() {
         DataManager.initTop10()
         configureChartAppearance()
         showStatsBy(ChipType.TOTAL)
 
         binding.recyclerCountry.adapter = StatisticsAdapter(DataManager.getVaccinatedTop10)
-
     }
 
     override fun callBack() {
-        binding.chipGroup.setOnCheckedChangeListener { group, checkedId ->
+        binding.chipGroup.setOnCheckedChangeListener { _, checkedId ->
             when (checkedId) {
                 R.id.chip_total -> showStatsBy(ChipType.TOTAL)
                 R.id.chip_fully -> showStatsBy(ChipType.FULLY)
