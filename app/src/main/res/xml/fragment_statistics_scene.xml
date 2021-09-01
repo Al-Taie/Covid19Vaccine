@@ -4,6 +4,13 @@
 
     <ConstraintSet android:id="@+id/start">
         <Constraint
+            android:id="@+id/search_404"
+            android:alpha="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_visual_data"/>
+
+        <Constraint
             android:id="@+id/my_main_constraint"
             motion:layout_constraintBottom_toBottomOf="parent"
             motion:layout_constraintLeft_toLeftOf="parent"
@@ -20,6 +27,13 @@
     </ConstraintSet>
 
     <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/search_404"
+            android:alpha="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_visual_data"/>
+
         <Constraint
             android:id="@+id/my_main_constraint"
             android:layout_marginTop="100dp"
