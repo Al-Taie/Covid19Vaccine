@@ -45,7 +45,7 @@ class VaccinatedAdapter(
                 textTotalVaccination.text = totalVaccinations.toString()
                 textFirstDoseVaccinated.text = peopleVaccinated.toString()
                 textFullyVaccinated.text = peopleFullyVaccinated.toString()
-                expandableLayout.visibility = if (expanded) View.VISIBLE else View.GONE
+                expanded = setExpandState(holder = holder, state = !expanded)
 
                 textCountryName.setOnClickListener {
                     expanded = setExpandState(holder = holder, state = expanded)
