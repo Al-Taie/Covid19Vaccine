@@ -21,7 +21,7 @@ object DataManager {
     fun initTop10() {
         with(vaccinatedListSorted) {
             sortByDescending { it.last().totalVaccinations }
-            vaccinatedTop10 = slice(0..9)
+            vaccinatedTop10 = slice(0 until 10)
         }
     }
 

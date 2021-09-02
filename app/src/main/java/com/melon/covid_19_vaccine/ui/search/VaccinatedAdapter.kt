@@ -46,31 +46,24 @@ class VaccinatedAdapter(
                 textFirstDoseVaccinated.text = peopleVaccinated.toString()
                 textFullyVaccinated.text = peopleFullyVaccinated.toString()
                 expandableLayout.visibility = if (expanded) View.VISIBLE else View.GONE
-                when (expanded) {
-                    true -> {
-                        expandableLayout.visibility = View.VISIBLE
-                        imageExpandCollapse.setImageResource(R.drawable.ic_baseline_expand_less_24)
-                    }
-                    else -> {
-                        expandableLayout.visibility = View.GONE
-                        imageExpandCollapse.setImageResource(R.drawable.ic_baseline_expand_more_24)
-                    }
-                }
+
                 textCountryName.setOnClickListener {
-                    when (expanded) {
-                        false -> {
-                            expanded = true
-                            expandableLayout.visibility = View.VISIBLE
-                            imageExpandCollapse.setImageResource(R.drawable.ic_baseline_expand_less_24)
-                        }
-                        else -> {
-                            expanded = false
-                            expandableLayout.visibility = View.GONE
-                            imageExpandCollapse.setImageResource(R.drawable.ic_baseline_expand_more_24)
-                        }
-                    }
-                    notifyItemChanged(position)
+                    expanded = setExpandState(holder = holder, state = expanded)
                 }
+            }
+        }
+    }
+
+    private fun setExpandState(holder: VaccinatedViewHolder, state: Boolean): Boolean {
+        holder.binding.apply {
+            return if (!state) {
+                expandableLayout.visibility = View.VISIBLE
+                imageExpandCollapse.setImageResource(R.drawable.ic_baseline_expand_less_24)
+                true
+            } else {
+                expandableLayout.visibility = View.GONE
+                imageExpandCollapse.setImageResource(R.drawable.ic_baseline_expand_more_24)
+                false
             }
         }
     }
