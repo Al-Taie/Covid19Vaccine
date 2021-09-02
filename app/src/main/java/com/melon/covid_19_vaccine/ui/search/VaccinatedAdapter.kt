@@ -29,8 +29,8 @@ class VaccinatedAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VaccinatedViewHolder {
-        val view =
-            LayoutInflater.from(parent.context).inflate(R.layout.item_vaccinated, parent, false)
+        val item = R.layout.item_vaccinated
+        val view = LayoutInflater.from(parent.context).inflate(item, parent, false)
         return VaccinatedViewHolder(view)
     }
 
@@ -48,6 +48,7 @@ class VaccinatedAdapter(
                 expanded = setExpandState(holder = holder, state = !expanded)
 
                 textCountryName.setOnClickListener {
+                    initPieChart(chart = chart, position = position)
                     expanded = setExpandState(holder = holder, state = expanded)
                 }
             }
@@ -78,7 +79,7 @@ class VaccinatedAdapter(
 
     private fun initPieChart(chart: AnimatedPieView, position: Int) {
         val config = AnimatedPieViewConfig()
-        with(DataManager.vaccineListSorted.getVaccinated(position = position)) {
+        with(list.getVaccinated(position = position)) {
             config.apply {
                 startAngle(-40f)
                 duration(1800)
