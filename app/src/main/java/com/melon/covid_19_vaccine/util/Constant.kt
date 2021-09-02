@@ -1,5 +1,7 @@
 package com.melon.covid_19_vaccine.util
 
+import android.graphics.Color
+
 
 object Constant {
     const val DATA_FILE: String = "country_vaccinations.csv"
@@ -36,5 +38,10 @@ object Constant {
         const val NUMBER_OF_SHOT = 6
         const val HOW_GIVEN = 7
         const val IMAGE_SRC = 8
+    }
+
+    object Colors {
+        val RED = Color.rgb(228, 108, 98)
+        val BLUE = Color.rgb(76, 108, 181)
     }
 }

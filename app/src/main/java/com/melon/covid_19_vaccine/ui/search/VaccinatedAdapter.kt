@@ -12,8 +12,8 @@ import com.melon.covid_19_vaccine.data.DataManager
 import com.melon.covid_19_vaccine.data.domain.Vaccinated
 import com.melon.covid_19_vaccine.data.interfaces.VaccinatedInteractionListener
 import com.melon.covid_19_vaccine.databinding.ItemVaccinatedBinding
+import com.melon.covid_19_vaccine.util.Constant
 import com.melon.covid_19_vaccine.util.getVaccinated
-import com.melon.covid_19_vaccine.util.randomColor
 import com.razerdp.widget.animatedpieview.AnimatedPieView
 import com.razerdp.widget.animatedpieview.AnimatedPieViewConfig
 import com.razerdp.widget.animatedpieview.data.SimplePieInfo
@@ -46,7 +46,7 @@ class VaccinatedAdapter(
                 textFirstDoseVaccinated.text = peopleVaccinated.toString()
                 textFullyVaccinated.text = peopleFullyVaccinated.toString()
                 expandableLayout.visibility = if (expanded) View.VISIBLE else View.GONE
-                when (expanded){
+                when (expanded) {
                     true -> {
                         expandableLayout.visibility = View.VISIBLE
                         imageExpandCollapse.setImageResource(R.drawable.ic_baseline_expand_less_24)
@@ -75,8 +75,8 @@ class VaccinatedAdapter(
         }
     }
 
-    fun setData(newList: List<List<Vaccinated>>){
-        val diffResult = DiffUtil.calculateDiff(VaccinatedDiffUtil(list,newList))
+    fun setData(newList: List<List<Vaccinated>>) {
+        val diffResult = DiffUtil.calculateDiff(VaccinatedDiffUtil(list, newList))
         list = newList
         diffResult.dispatchUpdatesTo(this)
     }
@@ -106,13 +106,13 @@ class VaccinatedAdapter(
                 addData(
                     SimplePieInfo(
                         peopleFullyVaccinated.toDouble(),
-                        randomColor, "Fully"
+                        Constant.Colors.BLUE, "Fully"
                     )
                 )
                 addData(
                     SimplePieInfo(
                         peopleVaccinated.toDouble(),
-                        randomColor, "First Dose"
+                        Constant.Colors.RED, "First Dose"
                     )
                 )
             }
