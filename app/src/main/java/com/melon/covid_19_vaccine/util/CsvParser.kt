@@ -22,12 +22,12 @@ object CsvParser {
             totalVaccinations = tokens[Constant.ColumnIndex.TOTAL_VACCINATIONS].toLong(),
             peopleVaccinated = tokens[Constant.ColumnIndex.PEOPLE_VACCINATED].toLong(),
             peopleFullyVaccinated = tokens[Constant.ColumnIndex.PEOPLE_FULLY_VACCINATED].toLong(),
-            dailyVaccinationsRaw = tokens[Constant.ColumnIndex.DAILY_VACCINATIONS_RAW].toLong(),
             dailyVaccinations = tokens[Constant.ColumnIndex.DAILY_VACCINATIONS].toLong(),
-            totalVaccinationsPerHundred = tokens[Constant.ColumnIndex.TOTAL_VACCINATIONS_PER_HUNDRED].toDouble(),
-            peopleVaccinatedPerHundred = tokens[Constant.ColumnIndex.PEOPLE_VACCINATED_PER_HUNDRED].toDouble(),
-            peopleFullyVaccinatedPerHundred = tokens[Constant.ColumnIndex.PEOPLE_FULLY_VACCINATED_PER_HUNDRED].toDouble(),
-            dailyVaccinationsPerMillion = tokens[Constant.ColumnIndex.DAILY_VACCINATIONS_PER_MILLION].toDouble()
+//            dailyVaccinationsRaw = tokens[Constant.ColumnIndex.DAILY_VACCINATIONS_RAW].toLong(),
+//            totalVaccinationsPerHundred = tokens[Constant.ColumnIndex.TOTAL_VACCINATIONS_PER_HUNDRED].toDouble(),
+//            peopleVaccinatedPerHundred = tokens[Constant.ColumnIndex.PEOPLE_VACCINATED_PER_HUNDRED].toDouble(),
+//            peopleFullyVaccinatedPerHundred = tokens[Constant.ColumnIndex.PEOPLE_FULLY_VACCINATED_PER_HUNDRED].toDouble(),
+//            dailyVaccinationsPerMillion = tokens[Constant.ColumnIndex.DAILY_VACCINATIONS_PER_MILLION].toDouble()
         )
     }
 }

@@ -1,28 +1,23 @@
 package com.melon.covid_19_vaccine.data
 
 import com.melon.covid_19_vaccine.data.domain.Vaccinated
+import kotlinx.coroutines.flow.MutableStateFlow
 
 
 object DataManager {
     private val vaccinatedList = mutableListOf<Vaccinated>()
-    private val vaccinatedListSorted = mutableListOf<List<Vaccinated>>()
     private val vaccinatedMap = mutableMapOf<String, List<Vaccinated>>()
-    private lateinit var vaccinatedTop10: List<List<Vaccinated>>
+    private lateinit var vaccinatedContinents: List<List<Vaccinated>>
 
-    val vaccineMap : MutableMap<String,List<Vaccinated>>
-        get() = vaccinatedMap
+    val isDataReady = MutableStateFlow(false)
+    val getVaccinatedMap: Map<String, List<Vaccinated>> get() = vaccinatedMap
+    val vaccineListSorted get() = vaccinatedMap.values.toList()
+    val getVaccinatedContinents get() = vaccinatedContinents
 
-    val vaccineListSorted : MutableList<List<Vaccinated>>
-        get() = vaccinatedListSorted
-
-    val getVaccinatedTop10 : List<List<Vaccinated>>
-        get() = vaccinatedTop10
-
-    fun initTop10() {
-        with(vaccinatedListSorted) {
-            sortByDescending { it.last().totalVaccinations }
-            vaccinatedTop10 = slice(0 until 10)
-        }
+    fun initVaccinatedContinents() {
+        vaccinatedContinents = vaccinatedMap.values.filter {
+            it.last().isoCode.startsWith("OWID")
+        }.sortedByDescending { it.last().totalVaccinations }
     }
 
     /**
@@ -34,18 +29,14 @@ object DataManager {
     fun checkVaccinatedMap(query: String) = vaccinatedMap.containsKey(query)
 
     /**
-     * add list to the vaccinatedListSorted
-     * @param list list of Vaccinated objects
-     * @author Karrar Mohammed
-     */
-    fun addToVaccinatedListSorted(list : List<Vaccinated>) = vaccinatedListSorted.add(list)
-    /**
      * add key and value of type list
      * @param list list of Vaccinated objects
      * @param key key represent the country name
      * @author Karrar Mohammed
      */
-    fun addToVaccinatedMap(key: String, list: List<Vaccinated>) { vaccinatedMap[key] = list }
+    fun addToVaccinatedMap(key: String, list: List<Vaccinated>) {
+        vaccinatedMap[key] = list
+    }
 
     fun addVaccinated(vaccinated: Vaccinated) = vaccinatedList.add(vaccinated)
 

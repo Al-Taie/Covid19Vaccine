@@ -9,7 +9,7 @@ import java.util.*
 
 fun String.toDate(): LocalDate = LocalDate.parse(this)
 
-fun String.toLong() = (this.toDoubleOrNull() ?: 0).toLong()
+fun String.toLong() = (this.toLongOrNull() ?: 0)
 
 fun String.toDouble() = (this.toDoubleOrNull() ?: 0.0)
 
