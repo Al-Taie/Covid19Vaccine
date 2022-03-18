@@ -55,7 +55,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/expandable_layout"
-            android:visibility="gone"
+            android:visibility="visible"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:paddingVertical="4dp"
@@ -68,6 +68,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Total Vaccination"
+                android:textStyle="bold"
                 android:gravity="center"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 app:layout_constraintTop_toTopOf="parent"
@@ -92,12 +93,25 @@
                 android:orientation="vertical"
                 app:layout_constraintGuide_percent="0.5"/>
 
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:background="@drawable/shape_line"
+                android:backgroundTint="@color/red"
+                app:layout_constraintStart_toStartOf="@+id/view_text_first_dose_vaccinated"
+                app:layout_constraintEnd_toEndOf="@+id/view_text_first_dose_vaccinated"
+                app:layout_constraintTop_toBottomOf="@id/view_text_first_dose_vaccinated"
+                app:layout_constraintBottom_toTopOf="@id/text_first_dose_vaccinated"/>
+
             <TextView
                 android:id="@+id/view_text_first_dose_vaccinated"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:text="First Dose Vaccinated"
+                android:text="First Dose"
                 android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/red"
                 android:layout_marginTop="5dp"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 app:layout_constraintTop_toBottomOf="@id/text_total_vaccination"
@@ -126,12 +140,25 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 tools:text="1757780000"/>
 
+            <View
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:background="@drawable/shape_line"
+                android:backgroundTint="@color/brandColor"
+                app:layout_constraintStart_toStartOf="@+id/view_text_fully_vaccinated"
+                app:layout_constraintEnd_toEndOf="@+id/view_text_fully_vaccinated"
+                app:layout_constraintTop_toBottomOf="@id/view_text_fully_vaccinated"
+                app:layout_constraintBottom_toTopOf="@id/text_fully_vaccinated"/>
+
+
             <TextView
                 android:id="@+id/view_text_fully_vaccinated"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:text="Fully Vaccinated"
+                android:text="Fully Dose"
                 android:gravity="center"
+                android:textColor="@color/brandColor"
+                android:textStyle="bold"
                 android:layout_marginTop="5dp"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 app:layout_constraintTop_toBottomOf="@id/text_total_vaccination"

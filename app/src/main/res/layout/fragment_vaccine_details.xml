@@ -26,7 +26,7 @@
     <ImageButton
         android:background="@drawable/arrow_back"
         android:id="@+id/go_back_button"
-        android:visibility="gone"
+        android:visibility="visible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
@@ -156,52 +156,77 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/vaccine_info_card" />
 
-    <TextView
-        style="@style/vaccineInfoHeadlinesDetails"
-        android:id="@+id/name_text"
-        tools:text="@string/name"
-        android:paddingHorizontal="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/description" />
+<ScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="0dp"
+    android:scrollbars="none"
+    app:layout_constraintTop_toBottomOf="@id/description"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/vaccineInfoHeadlinesDetails"
+            android:id="@+id/name_text"
+            tools:text="@string/name"
+            android:paddingHorizontal="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
-    <TextView
-        style="@style/vaccineInfoHeadlinesDetails"
-        android:id="@+id/manufacturer"
-        tools:text="@string/Manufacturer"
-        android:paddingHorizontal="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name_text" />
+        <TextView
+            style="@style/vaccineInfoHeadlinesDetails"
+            android:id="@+id/manufacturer"
+            tools:text="@string/Manufacturer"
+            android:paddingHorizontal="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name_text" />
 
 
-    <TextView
-        android:id="@+id/type_text"
-        style="@style/vaccineInfoHeadlinesDetails"
-        tools:text="@string/type_of_vaccine"
-        android:visibility="gone"
-        android:paddingHorizontal="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/manufacturer" />
+        <TextView
+            android:id="@+id/type_text"
+            style="@style/vaccineInfoHeadlinesDetails"
+            tools:text="@string/type_of_vaccine"
+            android:visibility="gone"
+            android:paddingHorizontal="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/manufacturer" />
 
-    <TextView
-        style="@style/vaccineInfoHeadlinesDetails"
-        android:id="@+id/number_text"
-        tools:text="@string/number_of_shots"
-        android:paddingHorizontal="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/type_text" />
+        <TextView
+            style="@style/vaccineInfoHeadlinesDetails"
+            android:id="@+id/number_text"
+            tools:text="@string/number_of_shots"
+            android:paddingHorizontal="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/type_text" />
 
-    <TextView
-        android:id="@+id/how_given_text"
-        style="@style/vaccineInfoHeadlinesDetails"
-        tools:text="@string/how_given"
-        android:paddingHorizontal="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/number_text" />
+        <TextView
+            style="@style/vaccineInfoHeadlinesDetails"
+            android:id="@+id/booster_text"
+            tools:text="@string/booster_shot"
+            android:visibility="gone"
+            android:paddingHorizontal="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/number_text" />
+
+        <TextView
+            android:id="@+id/how_given_text"
+            style="@style/vaccineInfoHeadlinesDetails"
+            tools:text="@string/how_given"
+            android:paddingHorizontal="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/booster_text" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
