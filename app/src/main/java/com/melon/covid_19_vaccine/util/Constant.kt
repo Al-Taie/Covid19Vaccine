@@ -36,8 +36,9 @@ object Constant {
         const val MANUFACTURER = 4
         const val TYPE_OF_VACCINE = 5
         const val NUMBER_OF_SHOT = 6
-        const val HOW_GIVEN = 7
-        const val IMAGE_SRC = 8
+        const val BOOST_SHOT = 7
+        const val HOW_GIVEN = 8
+        const val IMAGE_SRC = 9
     }
 
     object Colors {

@@ -22,6 +22,7 @@ class VaccineDetailsFragment : BaseFragment<FragmentVaccineDetailsBinding>() {
     override fun setup() {}
 
     override fun callBack() {
+
     }
 
     override val inflate: (LayoutInflater, ViewGroup?, attachToRoot: Boolean) -> FragmentVaccineDetailsBinding
@@ -45,6 +46,7 @@ class VaccineDetailsFragment : BaseFragment<FragmentVaccineDetailsBinding>() {
                 manufacturer.text = data[Constant.VaccineDetailsIndex.MANUFACTURER]
                 typeText.text = data[Constant.VaccineDetailsIndex.TYPE_OF_VACCINE]
                 numberText.text = data[Constant.VaccineDetailsIndex.NUMBER_OF_SHOT]
+                boosterText.text = data[Constant.VaccineDetailsIndex.BOOST_SHOT]
                 howGivenText.text = data[Constant.VaccineDetailsIndex.HOW_GIVEN]
                 vaccineImage.setImageResource(data[Constant.VaccineDetailsIndex.IMAGE_SRC].toInt())
             }

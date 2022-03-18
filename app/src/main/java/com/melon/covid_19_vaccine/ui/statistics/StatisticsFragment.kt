@@ -2,8 +2,11 @@ package com.melon.covid_19_vaccine.ui.statistics
 
 import android.graphics.Color
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import com.github.mikephil.charting.data.BarData
 import com.github.mikephil.charting.data.BarDataSet
 import com.github.mikephil.charting.data.BarEntry
@@ -13,6 +16,7 @@ import com.melon.covid_19_vaccine.data.DataManager
 import com.melon.covid_19_vaccine.databinding.FragmentStatisticsBinding
 import com.melon.covid_19_vaccine.ui.base.BaseFragment
 import com.melon.covid_19_vaccine.util.monthName
+import kotlinx.coroutines.flow.collect
 import com.github.mikephil.charting.utils.ColorTemplate as Colors
 
 
@@ -26,10 +30,20 @@ class StatisticsFragment : BaseFragment<FragmentStatisticsBinding>() {
         get() = FragmentStatisticsBinding::inflate
 
     override fun setup() {
-        DataManager.initTop10()
-        showStatsBy(ChipType.TOTAL)
-
-        binding.recyclerCountry.adapter = StatisticsAdapter(DataManager.getVaccinatedTop10)
+        lifecycleScope.launchWhenStarted {
+            DataManager.isDataReady.collect {
+                if (it) {
+                    DataManager.initVaccinatedContinents()
+                    showStatsBy(ChipType.TOTAL)
+                    binding.recyclerCountry.adapter =
+                        StatisticsAdapter(DataManager.getVaccinatedContinents)
+                }
+                binding.apply {
+                    barChart.visibility = if (it) View.VISIBLE else View.INVISIBLE
+                    loading.isVisible = !it
+                }
+            }
+        }
     }
 
     override fun callBack() {
@@ -47,7 +61,7 @@ class StatisticsFragment : BaseFragment<FragmentStatisticsBinding>() {
         val entries: MutableList<BarEntry> = ArrayList()
         val stackLabels = mutableSetOf<String>()
 
-        DataManager.getVaccinatedTop10.forEachIndexed { index, list ->
+        DataManager.getVaccinatedContinents.forEachIndexed { index, list ->
             val array = list.map {
                 when (chipType) {
                     ChipType.TOTAL -> it.totalVaccinations

@@ -71,6 +71,7 @@
     <string name="daily">Daily</string>
     <string name="vaccinated">Vaccinated</string>
     <string name="watermelon_team_members">Watermelon Team Members</string>
+    <string name="booster_shot">Booster Shot</string>
 
 
 </resources>

@@ -4,13 +4,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.widget.SearchView
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import com.melon.covid_19_vaccine.data.DataManager
 import com.melon.covid_19_vaccine.data.domain.Vaccinated
 import com.melon.covid_19_vaccine.data.interfaces.VaccinatedInteractionListener
 import com.melon.covid_19_vaccine.databinding.FragmentSearchBinding
 import com.melon.covid_19_vaccine.ui.base.BaseFragment
 import com.melon.covid_19_vaccine.util.capitalize
+import kotlinx.coroutines.flow.collect
 
 
 /**
@@ -21,8 +24,15 @@ import com.melon.covid_19_vaccine.util.capitalize
 class SearchFragment : BaseFragment<FragmentSearchBinding>(), VaccinatedInteractionListener {
     lateinit var adapter : VaccinatedAdapter
     override fun setup() {
-        adapter = VaccinatedAdapter(DataManager.vaccineListSorted, this)
-        binding.recyclerVaccinated.adapter = adapter
+        lifecycleScope.launchWhenStarted {
+            DataManager.isDataReady.collect {
+                if (it) {
+                    adapter = VaccinatedAdapter(DataManager.vaccineListSorted, this@SearchFragment)
+                    binding.recyclerVaccinated.adapter = adapter
+                }
+                binding.loading.isVisible = !it
+            }
+        }
     }
 
     override fun callBack() {
@@ -47,7 +57,7 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(), VaccinatedInteract
     private fun startSearch(query: String, onChanged: Boolean = false): Boolean {
         binding.apply {
             if (SearchAdapter.isFounded(query)) {
-                val list = DataManager.vaccineMap[query]
+                val list = DataManager.getVaccinatedMap[query]
                 val newList = mutableListOf<List<Vaccinated>>()
                 list?.let {
                     newList.add(it)
